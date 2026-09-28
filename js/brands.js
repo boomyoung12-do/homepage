@@ -1,7 +1,9 @@
 // 자사 브랜드와 수입 브랜드를 한 페이지에서 보여준다.
 // 두 목록 모두 brands-content 문서 하나에 들어 있고(brands / importedBrands),
 // 히어로 아래에 떠 있는 탭 바로 전체 / 자사 / 수입을 걸러본다.
-let filter = "all";
+let filter = ["own", "imported"].includes(new URLSearchParams(location.search).get("filter"))
+  ? new URLSearchParams(location.search).get("filter")
+  : "all";
 let productCounts = {};
 
 const GROUP_COPY = {

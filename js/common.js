@@ -74,9 +74,13 @@ async function setupBrandMegaMenu() {
     return;
   }
 
+  // 브랜드가 많아져도 팝업이 화면을 덮지 않도록 그룹마다 앞쪽 8개만 보여주고,
+  // 나머지는 "전체 보기"로 브랜드 페이지에 넘긴다.
+  const MEGA_LIMIT = 8;
   const fill = (grid, list, anchor) => {
     grid.innerHTML = "";
-    (list || []).forEach((b) => {
+    const all = list || [];
+    all.slice(0, MEGA_LIMIT).forEach((b) => {
       grid.appendChild(
         el("a", { class: "nav-mega-item", href: `brands.html#${anchor}-${b.id}` }, [
           el("span", { class: "nav-mega-logo" }, b.logo ? [el("img", { src: b.logo, alt: "" })] : []),
@@ -84,9 +88,19 @@ async function setupBrandMegaMenu() {
         ])
       );
     });
+    if (all.length > MEGA_LIMIT) {
+      grid.appendChild(
+        el("a", { class: "nav-mega-item more", href: `brands.html?filter=${anchor}`, "data-mega-more": anchor, "data-total": String(all.length) }, [
+          el("span", { class: "nav-mega-name" }),
+        ])
+      );
+    }
   };
 
   const paint = (lang) => {
+    document.querySelectorAll("[data-mega-more]").forEach((a) => {
+      a.querySelector(".nav-mega-name").textContent = lang === "en" ? `All ${a.dataset.total} →` : `전체 ${a.dataset.total}개 보기 →`;
+    });
     document.querySelectorAll("[data-mega-title]").forEach((node) => {
       const own = node.dataset.megaTitle === "own";
       node.textContent = lang === "en" ? (own ? "Our Brands" : "Imported Brands") : own ? "자체 브랜드" : "수입 브랜드";

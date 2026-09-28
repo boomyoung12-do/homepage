@@ -59,30 +59,25 @@
     </div>
 
     <main class="store">
-      <!-- 스토어 히어로: 대표 제품이 떠 있는 배너 -->
-      <section class="page-hero store-hero" id="store-hero">
-        <div class="wrap store-hero-inner">
-          <div class="store-hero-copy">
-            <p class="store-hero-eyebrow"><span class="dot"></span><span data-ko="BOOMYUNG OFFICIAL STORE" data-en="BOOMYUNG OFFICIAL STORE">BOOMYUNG OFFICIAL STORE</span></p>
-            <h1 data-ko="만든 사람이 직접 파는&#10;믿을 수 있는 펫푸드" data-en="Pet food sold&#10;by the people who make it">만든 사람이 직접 파는
-믿을 수 있는 펫푸드</h1>
-            <p class="store-hero-body" data-ko="직영 공장에서 만든 자사 브랜드와 부명이 고른 수입 브랜드를 한 곳에서. 공식 판매처로 안전하게 연결해 드립니다." data-en="Our own-plant brands and the imports we hand-pick, all in one place — linked straight to official sellers.">직영 공장에서 만든 자사 브랜드와 부명이 고른 수입 브랜드를 한 곳에서. 공식 판매처로 안전하게 연결해 드립니다.</p>
-            <div class="store-hero-actions">
-              <a href="#store-shop" class="store-cta primary"><span data-ko="전체 상품 보기" data-en="Shop all products">전체 상품 보기</span> →</a>
-              <a href="contact.html" class="store-cta ghost"><span data-ko="B2B 대량 구매 문의" data-en="B2B bulk inquiry">B2B 대량 구매 문의</span></a>
-            </div>
-            <ul class="store-trust">
-              <li><strong data-ko="제조사 직영" data-en="Maker-direct">제조사 직영</strong><span data-ko="정품 보증" data-en="Genuine guarantee">정품 보증</span></li>
-              <li><strong data-ko="공식 판매처" data-en="Official sellers">공식 판매처</strong><span data-ko="안전 결제" data-en="Secure checkout">안전 결제</span></li>
-              <li><strong data-ko="B2B 지원" data-en="B2B support">B2B 지원</strong><span data-ko="대량·입점 문의" data-en="Bulk & retail">대량·입점 문의</span></li>
-            </ul>
-          </div>
-          <div class="store-hero-stage" id="store-hero-stage" aria-hidden="true"></div>
+      <!-- 스토어 히어로: 여백이 넉넉한 정물 사진 위에 절제된 타이포그래피 -->
+      <section class="store-hero">
+        <picture class="store-hero-media">
+          <source media="(max-width: 760px)" srcset="assets/store/store-hero-sm.jpg" />
+          <img src="assets/store/store-hero.jpg" alt="" />
+        </picture>
+        <div class="wrap store-hero-copy">
+          <p class="store-hero-eyebrow">BOOMYUNG STORE</p>
+          <h1 data-ko="매일의 한 그릇,&#10;만든 사람이 직접." data-en="The everyday bowl,&#10;from the people who make it.">매일의 한 그릇,
+만든 사람이 직접.</h1>
+          <p class="store-hero-body" data-ko="직영 공장에서 만든 자사 브랜드와 부명이 고른 수입 브랜드를 공식 판매처로 연결해 드립니다." data-en="Brands from our own plants and imports we hand-pick, linked straight to their official sellers.">직영 공장에서 만든 자사 브랜드와 부명이 고른 수입 브랜드를 공식 판매처로 연결해 드립니다.</p>
+          <a href="#store-shop" class="store-hero-link"><span data-ko="상품 둘러보기" data-en="Browse products">상품 둘러보기</span><i aria-hidden="true">→</i></a>
         </div>
       </section>
-
-      <!-- 공지 띠 -->
-      <div class="store-ticker" aria-hidden="true"><div class="store-ticker-track" id="store-ticker"></div></div>
+      <div class="wrap store-facts">
+        <span data-ko="제조사 직영" data-en="Direct from the maker">제조사 직영</span>
+        <span data-ko="공식 판매처 연결" data-en="Official sellers only">공식 판매처 연결</span>
+        <span data-ko="B2B 대량 구매 지원" data-en="B2B bulk orders">B2B 대량 구매 지원</span>
+      </div>
 
       <!-- 브랜드관 -->
       <section class="store-brands">
@@ -199,6 +194,23 @@
 
     <div class="store-modal" id="store-modal" role="dialog" aria-modal="true" aria-hidden="true">
       <div class="store-sheet" id="store-sheet"></div>
+    </div>
+    <div class="store-modal store-dir" id="store-dir" role="dialog" aria-modal="true" aria-hidden="true">
+      <div class="store-dir-sheet">
+        <div class="store-dir-head">
+          <strong data-ko="전체 브랜드" data-en="All brands">전체 브랜드</strong>
+          <button type="button" class="qv-close" id="store-dir-close" aria-label="닫기">&times;</button>
+        </div>
+        <div class="store-dir-tools">
+          <div class="store-search">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <input type="search" id="store-dir-q" data-i18n-placeholder data-ko="브랜드 이름 검색" data-en="Search brands" placeholder="브랜드 이름 검색" />
+          </div>
+          <div class="store-seg" id="store-dir-seg"></div>
+        </div>
+        <div class="store-dir-index" id="store-dir-index"></div>
+        <div class="store-dir-list" id="store-dir-list"></div>
+      </div>
     </div>
     <div class="store-toast" id="store-toast" role="status" aria-live="polite"></div>
 

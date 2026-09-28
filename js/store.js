@@ -19,7 +19,7 @@ const S = {
     reset: "필터 초기화",
     quick: "빠른 보기", buy: "구매하기", buyNow: "바로 구매하기", b2b: "B2B 구매하기", b2bAsk: "B2B 대량 구매 문의",
     soldOut: "품절", soldOutMsg: "현재 품절된 상품입니다.",
-    priceAsk: "가격은 판매처에서 확인", noLink: "판매처 링크 준비 중입니다. 구매 문의를 남겨주세요.",
+    noLink: "판매처 링크 준비 중입니다. 구매 문의를 남겨주세요.",
     wishAdd: "찜 목록에 담았어요", wishDel: "찜 목록에서 뺐어요", copied: "상품 링크를 복사했어요",
     share: "링크 복사", wish: "찜하기", wished: "찜 완료",
     info: { spec: "규격", code: "바코드", origin: "원산지", shelf: "유통기한", itemNo: "품번" },
@@ -27,9 +27,10 @@ const S = {
     features: "이런 점이 좋아요", noDetail: "등록된 상세 이미지가 없습니다.",
     nutrition: { protein: "조단백", fat: "조지방", fiber: "조섬유", moisture: "수분" },
     official: "공식 판매처로 이동합니다",
-    ticker: ["제조사 직영 정품", "공식 판매처 안전 결제", "B2B 대량 구매·입점 문의 환영", "자체 R&D 배합 설계", "HACCP · ISO 22000 공정"],
     badge: { new: "NEW", best: "BEST", soldout: "SOLD OUT" },
     count: (n) => `${n}개`,
+    allBrandsN: (n) => `전체 브랜드 ${n}개`, moreBrands: (n) => `브랜드 ${n}개 더보기`,
+    dirTabs: { all: "전체", own: "자사", imported: "수입" }, dirEmpty: "찾는 브랜드가 없어요.", etc: "기타",
   },
   en: {
     all: "All", allBrands: "All brands", pet: { all: "All", dog: "Dog", cat: "Cat" },
@@ -41,7 +42,7 @@ const S = {
     reset: "Reset filters",
     quick: "Quick view", buy: "Buy", buyNow: "Buy now", b2b: "B2B purchase", b2bAsk: "B2B bulk inquiry",
     soldOut: "Sold out", soldOutMsg: "This product is currently sold out.",
-    priceAsk: "See price at seller", noLink: "Seller link coming soon — send us an inquiry.",
+    noLink: "Seller link coming soon — send us an inquiry.",
     wishAdd: "Added to wishlist", wishDel: "Removed from wishlist", copied: "Product link copied",
     share: "Copy link", wish: "Wishlist", wished: "Saved",
     info: { spec: "Size", code: "Barcode", origin: "Origin", shelf: "Shelf life", itemNo: "Item No." },
@@ -49,9 +50,10 @@ const S = {
     features: "Why you'll like it", noDetail: "No detail images yet.",
     nutrition: { protein: "Crude protein", fat: "Crude fat", fiber: "Crude fiber", moisture: "Moisture" },
     official: "Opens the official seller",
-    ticker: ["Maker-direct genuine products", "Secure checkout at official sellers", "B2B bulk & retail inquiries welcome", "In-house R&D formulation", "HACCP · ISO 22000 production"],
     badge: { new: "NEW", best: "BEST", soldout: "SOLD OUT" },
     count: (n) => `${n}`,
+    allBrandsN: (n) => `All ${n} brands`, moreBrands: (n) => `${n} more brands`,
+    dirTabs: { all: "All", own: "Ours", imported: "Imported" }, dirEmpty: "No brands found.", etc: "Other",
   },
 };
 
@@ -61,6 +63,11 @@ let content = null;
 let lang = "ko";
 let brandMap = {};
 let brandLogos = {};
+let brandType = {};
+let brandCount = {};
+const RAIL_LIMIT = 9; // 브랜드관에 바로 보이는 브랜드 수
+const SIDE_LIMIT = 7; // 필터 목록에 바로 보이는 브랜드 수
+const dirState = { tab: "all", q: "" };
 
 // ---------- 방문자 브라우저 저장 (실패해도 동작) ----------
 const store = {
@@ -168,44 +175,156 @@ function syncUrl() {
 }
 
 // ---------- 그리기 ----------
-function renderHeroStage() {
-  const stage = document.getElementById("store-hero-stage");
-  if (stage.childElementCount) return;
-  // 배지가 붙은 상품을 우선, 없으면 앞쪽 상품으로 세 개를 띄운다
-  const picks = [...content.products].sort((a, b) => (b.storeBadge ? 1 : 0) - (a.storeBadge ? 1 : 0)).filter((p) => p.image).slice(0, 3);
-  picks.forEach((p, i) => {
-    stage.appendChild(el("div", { class: `store-float f${i + 1}` }, [el("img", { src: p.image, alt: "" })]));
-  });
+// 브랜드가 늘어나도 브랜드관이 한 줄로 유지되도록 자사 브랜드 → 상품이 많은 수입
+// 브랜드 순으로 앞쪽 몇 개만 보여주고, 나머지는 "전체 브랜드" 창에서 찾게 한다.
+function brandList() {
+  return content.brands.filter((b) => b.id !== "all" && brandCount[b.id]);
 }
-
-function renderTicker() {
-  const track = document.getElementById("store-ticker");
-  track.innerHTML = "";
-  const items = [...L().ticker, ...L().ticker];
-  items.forEach((t) => track.appendChild(el("span", { text: t })));
+function featuredBrands() {
+  const list = brandList();
+  const own = list.filter((b) => brandType[b.id] !== "imported");
+  const imported = list.filter((b) => brandType[b.id] === "imported").sort((a, b) => brandCount[b.id] - brandCount[a.id]);
+  const picked = [...own, ...imported].slice(0, RAIL_LIMIT);
+  // 지금 고른 브랜드는 목록 밖이어도 보이게 한다
+  if (state.brand !== "all" && !picked.some((b) => b.id === state.brand)) {
+    const cur = list.find((b) => b.id === state.brand);
+    if (cur) picked[picked.length - 1] = cur;
+  }
+  return picked;
 }
 
 function renderBrandRail() {
   const rail = document.getElementById("store-brand-rail");
   rail.innerHTML = "";
-  const counts = {};
-  content.products.forEach((p) => (counts[p.brandId] = (counts[p.brandId] || 0) + 1));
-  const brands = content.brands.filter((b) => b.id !== "all" && counts[b.id]);
-  const mk = (id, label, logo) => {
+  const mk = (id, label, logo, count) => {
     const btn = el("button", { type: "button", class: "store-brand-chip" + (state.brand === id ? " active" : ""), "data-brand": id }, [
       el("span", { class: "logo" }, logo ? [el("img", { src: logo, alt: "", loading: "lazy" })] : [el("em", { text: label.slice(0, 1) })]),
       el("span", { class: "name", text: label }),
-      el("span", { class: "cnt", text: L().count(id === "all" ? content.products.length : counts[id]) }),
+      el("span", { class: "cnt", text: L().count(count) }),
     ]);
-    btn.addEventListener("click", () => {
-      state.brand = state.brand === id && id !== "all" ? "all" : id;
-      update(true);
-      document.getElementById("store-shop").scrollIntoView({ behavior: "smooth", block: "start" });
-    });
+    btn.addEventListener("click", () => pickBrand(state.brand === id && id !== "all" ? "all" : id, true));
     return btn;
   };
-  rail.appendChild(mk("all", L().allBrands, ""));
-  brands.forEach((b) => rail.appendChild(mk(b.id, t(b, "label", lang), brandLogos[b.id])));
+  // 브랜드 칩은 가로로 스크롤되는 영역에, "전체 브랜드" 버튼은 그 바깥 오른쪽 끝에 고정해서
+  // 브랜드가 많아도 항상 보이게 한다.
+  const scroller = el("div", { class: "store-brand-scroll" });
+  rail.appendChild(scroller);
+  scroller.appendChild(mk("all", L().allBrands, "", content.products.length));
+  featuredBrands().forEach((b) => scroller.appendChild(mk(b.id, t(b, "label", lang), brandLogos[b.id], brandCount[b.id])));
+  const total = brandList().length;
+  if (total > RAIL_LIMIT) {
+    const more = el("button", { type: "button", class: "store-brand-chip more" }, [
+      el("span", { class: "logo", html: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h6v6H4zM14 5h6v6h-6zM4 15h6v6H4zM14 15h6v6h-6z"/></svg>' }),
+      el("span", { class: "name", text: L().allBrands }),
+      el("span", { class: "cnt", text: `${L().count(total)} →` }),
+    ]);
+    more.addEventListener("click", openDirectory);
+    rail.appendChild(more);
+  }
+}
+
+function pickBrand(id, scroll) {
+  state.brand = id;
+  renderBrandRail();
+  update(true);
+  if (scroll) document.getElementById("store-shop").scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+// ---------- 전체 브랜드 창 (검색 + 가나다/ABC 색인) ----------
+const CHO = ["ㄱ", "ㄲ", "ㄴ", "ㄷ", "ㄸ", "ㄹ", "ㅁ", "ㅂ", "ㅃ", "ㅅ", "ㅆ", "ㅇ", "ㅈ", "ㅉ", "ㅊ", "ㅋ", "ㅌ", "ㅍ", "ㅎ"];
+const CHO_BASE = { ㄲ: "ㄱ", ㄸ: "ㄷ", ㅃ: "ㅂ", ㅆ: "ㅅ", ㅉ: "ㅈ" };
+const CHO_LABEL = { ㄱ: "가", ㄴ: "나", ㄷ: "다", ㄹ: "라", ㅁ: "마", ㅂ: "바", ㅅ: "사", ㅇ: "아", ㅈ: "자", ㅊ: "차", ㅋ: "카", ㅌ: "타", ㅍ: "파", ㅎ: "하" };
+function initialOf(name) {
+  const c = (name || "").trim().charAt(0);
+  const code = c.charCodeAt(0);
+  if (code >= 0xac00 && code <= 0xd7a3) {
+    const cho = CHO[Math.floor((code - 0xac00) / 588)];
+    // 자음(ㄱ~ㅎ)은 글꼴에 따라 작게 깨져 보여서 색인은 "가·나·다…" 로 표시한다
+    return CHO_LABEL[CHO_BASE[cho] || cho];
+  }
+  if (/[a-z]/i.test(c)) return c.toUpperCase();
+  return "#";
+}
+
+function renderDirectory() {
+  const seg = document.getElementById("store-dir-seg");
+  seg.innerHTML = "";
+  ["all", "own", "imported"].forEach((id) => {
+    const b = el("button", { type: "button", class: dirState.tab === id ? "active" : "", text: L().dirTabs[id] });
+    b.addEventListener("click", () => {
+      dirState.tab = id;
+      renderDirectory();
+    });
+    seg.appendChild(b);
+  });
+
+  const q = dirState.q.toLowerCase();
+  const list = brandList()
+    .filter((b) => dirState.tab === "all" || (dirState.tab === "imported" ? brandType[b.id] === "imported" : brandType[b.id] !== "imported"))
+    .filter((b) => !q || [b.label, b.labelEn, b.id].join(" ").toLowerCase().includes(q))
+    .map((b) => ({ b, name: t(b, "label", lang) }))
+    .sort((x, y) => x.name.localeCompare(y.name, lang === "en" ? "en" : "ko"));
+
+  const groups = new Map();
+  list.forEach((it) => {
+    const k = initialOf(it.name);
+    if (!groups.has(k)) groups.set(k, []);
+    groups.get(k).push(it);
+  });
+  const rank = (k) => (k === "#" ? 3 : /[A-Z]/.test(k) ? 2 : 1);
+  const keys = [...groups.keys()].sort((a, b) => rank(a) - rank(b) || a.localeCompare(b, "ko"));
+
+  const index = document.getElementById("store-dir-index");
+  index.innerHTML = "";
+  keys.forEach((k) => {
+    const a = el("button", { type: "button", text: k === "#" ? L().etc : k });
+    a.addEventListener("click", () => document.getElementById(`dir-${k}`)?.scrollIntoView({ behavior: "smooth", block: "start" }));
+    index.appendChild(a);
+  });
+
+  const box = document.getElementById("store-dir-list");
+  box.innerHTML = "";
+  if (!list.length) {
+    box.appendChild(el("p", { class: "store-dir-empty", text: L().dirEmpty }));
+    return;
+  }
+  keys.forEach((k) => {
+    box.appendChild(el("h4", { id: `dir-${k}`, text: k === "#" ? L().etc : k }));
+    const grid = el("div", { class: "store-dir-grid" });
+    groups.get(k).forEach(({ b, name }) => {
+      const btn = el("button", { type: "button", class: "store-dir-item" + (state.brand === b.id ? " active" : "") }, [
+        el("span", { class: "logo" }, brandLogos[b.id] ? [el("img", { src: brandLogos[b.id], alt: "", loading: "lazy" })] : [el("em", { text: name.slice(0, 1) })]),
+        el("span", { class: "name", text: name }),
+        el("b", { text: String(brandCount[b.id]) }),
+      ]);
+      btn.addEventListener("click", () => {
+        closeDirectory();
+        openFilters(false);
+        pickBrand(b.id, true);
+      });
+      grid.appendChild(btn);
+    });
+    box.appendChild(grid);
+  });
+}
+
+function openDirectory() {
+  dirState.q = "";
+  document.getElementById("store-dir-q").value = "";
+  renderDirectory();
+  const d = document.getElementById("store-dir");
+  d.classList.add("open");
+  d.setAttribute("aria-hidden", "false");
+  document.body.style.overflow = "hidden";
+  setTimeout(() => document.getElementById("store-dir-q").focus(), 50);
+}
+
+function closeDirectory() {
+  const d = document.getElementById("store-dir");
+  if (!d.classList.contains("open")) return;
+  d.classList.remove("open");
+  d.setAttribute("aria-hidden", "true");
+  document.body.style.overflow = "";
 }
 
 function optionRow(listEl, items, current, onPick) {
@@ -230,14 +349,28 @@ function renderFilters() {
     (id) => { state.cat = id; update(true); }
   );
   const brandCounts = (id) => base.filter((p) => matches(p, "brand") && (id === "all" || p.brandId === id)).length;
+  const brandOpts = content.brands
+    .filter((b) => b.id !== "all")
+    .map((b) => ({ id: b.id, label: t(b, "label", lang), count: brandCounts(b.id) }))
+    .filter((b) => b.count > 0 || state.brand === b.id)
+    .sort((a, b) => b.count - a.count);
+  // 상품이 많은 브랜드 몇 개만 바로 보여주고 나머지는 "전체 브랜드" 창으로
+  const visible = brandOpts.slice(0, SIDE_LIMIT);
+  const cur = brandOpts.find((b) => b.id === state.brand);
+  if (cur && !visible.includes(cur)) visible.push(cur);
+  const brandListEl = document.getElementById("store-brand-list");
   optionRow(
-    document.getElementById("store-brand-list"),
-    [{ id: "all", label: L().allBrands, count: brandCounts("all") }].concat(
-      content.brands.filter((b) => b.id !== "all").map((b) => ({ id: b.id, label: t(b, "label", lang), count: brandCounts(b.id) })).filter((b) => b.count > 0 || state.brand === b.id)
-    ),
+    brandListEl,
+    [{ id: "all", label: L().allBrands, count: brandCounts("all") }].concat(visible),
     state.brand,
-    (id) => { state.brand = id; update(true); }
+    (id) => pickBrand(id, false)
   );
+  const hiddenN = brandOpts.length - visible.length;
+  if (hiddenN > 0) {
+    const more = el("button", { type: "button", class: "store-opt more", text: `${L().moreBrands(hiddenN)} →` });
+    more.addEventListener("click", openDirectory);
+    brandListEl.appendChild(more);
+  }
   const seg = document.getElementById("store-pet-seg");
   seg.innerHTML = "";
   ["all", "dog", "cat"].forEach((id) => {
@@ -285,7 +418,8 @@ function badgeEls(p, price) {
 
 function priceEl(p, big) {
   const price = priceOf(p);
-  if (!price) return el("div", { class: "store-price ask" + (big ? " big" : "") }, [el("span", { text: L().priceAsk })]);
+  // 가격이 없는 상품은 가격 줄을 두지 않는다 (같은 안내 문구가 목록에 반복되지 않게)
+  if (!price) return null;
   return el("div", { class: "store-price" + (big ? " big" : "") }, [
     price.off ? el("span", { class: "off", text: `${price.off}%` }) : null,
     el("strong", { text: won(price.now) }),
@@ -329,10 +463,7 @@ function card(p) {
       el("h3", { class: "store-card-name", text: name }),
       el("div", { class: "store-card-spec", text: p.spec || "" }),
       priceEl(p),
-      el("div", { class: "store-card-meta" }, [
-        p.code ? el("span", { text: `CODE ${p.code}` }) : null,
-        p.petType && p.petType !== "all" ? el("span", { class: "pet", text: L().pet[p.petType] || p.petType }) : null,
-      ]),
+      p.petType && p.petType !== "all" ? el("div", { class: "store-card-meta" }, [el("span", { class: "pet", text: L().pet[p.petType] || p.petType })]) : null,
     ]),
   ]);
   const open = () => openQuickView(p);
@@ -543,8 +674,6 @@ function render(newLang) {
   lang = newLang;
   renderFooter(content.footer, lang);
   brandMap = Object.fromEntries(content.brands.filter((b) => b.id !== "all").map((b) => [b.id, t(b, "label", lang)]));
-  renderHeroStage();
-  renderTicker();
   renderBrandRail();
   update(false);
   renderRecent();
@@ -556,8 +685,11 @@ function render(newLang) {
   // 브랜드 로고는 브랜드 문서에서 가져온다 (없어도 이름으로 표시)
   try {
     const brands = await loadContent("/api/brands-content", "content/brands.json");
-    [...(brands.brands || []), ...(brands.importedBrands || [])].forEach((b) => (brandLogos[b.id] = b.logo));
+    (brands.brands || []).forEach((b) => { brandLogos[b.id] = b.logo; brandType[b.id] = "own"; });
+    (brands.importedBrands || []).forEach((b) => { brandLogos[b.id] = b.logo; brandType[b.id] = "imported"; });
   } catch {}
+
+  content.products.forEach((p) => (brandCount[p.brandId] = (brandCount[p.brandId] || 0) + 1));
 
   const params = new URLSearchParams(location.search);
   const pick = (k, ok) => (params.get(k) && ok(params.get(k)) ? params.get(k) : null);
@@ -601,8 +733,18 @@ function render(newLang) {
   modal.addEventListener("click", (e) => {
     if (e.target === modal) closeQuickView();
   });
+  const dir = document.getElementById("store-dir");
+  dir.addEventListener("click", (e) => {
+    if (e.target === dir) closeDirectory();
+  });
+  document.getElementById("store-dir-close").addEventListener("click", closeDirectory);
+  document.getElementById("store-dir-q").addEventListener("input", (e) => {
+    dirState.q = e.target.value.trim();
+    renderDirectory();
+  });
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") {
+      closeDirectory();
       closeQuickView();
       openFilters(false);
     }

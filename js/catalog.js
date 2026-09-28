@@ -23,6 +23,37 @@ function buildFilters(categories, brands) {
   const brandRow = document.getElementById("brand-filter-row");
   brandRow.innerHTML = "";
   brands.forEach((b) => brandRow.appendChild(chip(t(b, "label", lang), b.id, activeBrand, setBrand)));
+  setupBrandCollapse(brandRow, brands.length);
+}
+
+// 브랜드가 많아지면 칩 줄이 끝없이 길어지므로 두 줄까지만 보여주고 "더보기"로 편다.
+// 선택된 브랜드가 접힌 영역에 있으면 처음부터 펼쳐 둔다.
+let brandRowOpen = false;
+function setupBrandCollapse(row, count) {
+  const group = row.closest(".filter-group");
+  group.querySelector(".brand-more")?.remove();
+  row.classList.remove("collapsed");
+  if (count <= 12) return;
+  requestAnimationFrame(() => {
+    const chips = [...row.children];
+    const rows = new Set(chips.map((c) => c.offsetTop)).size;
+    if (rows <= 2) return;
+    const secondRowTop = [...new Set(chips.map((c) => c.offsetTop))].sort((a, b) => a - b)[1];
+    const activeChip = row.querySelector(".filter-chip.active");
+    if (activeChip && activeChip.offsetTop > secondRowTop) brandRowOpen = true;
+    const hidden = chips.filter((c) => c.offsetTop > secondRowTop).length;
+    const btn = el("button", { type: "button", class: "brand-more" });
+    const paint = () => {
+      row.classList.toggle("collapsed", !brandRowOpen);
+      btn.textContent = brandRowOpen ? (lang === "en" ? "Show less ▲" : "접기 ▲") : (lang === "en" ? `+${hidden} more ▼` : `브랜드 ${hidden}개 더보기 ▼`);
+    };
+    btn.addEventListener("click", () => {
+      brandRowOpen = !brandRowOpen;
+      paint();
+    });
+    group.appendChild(btn);
+    paint();
+  });
 }
 
 function chip(label, value, active, onClick) {

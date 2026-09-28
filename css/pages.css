@@ -934,3 +934,17 @@
   .export-network { opacity: .6; }
   .export-route { stroke-dashoffset: 0; }
 }
+
+/* 카탈로그 브랜드 칩: 많아지면 두 줄까지만 보이고 "더보기"로 편다 */
+#brand-filter-row.collapsed { max-height: 92px; overflow: hidden; }
+.brand-more {
+  margin: 10px 0 0;
+  padding: 6px 2px;
+  border: 0;
+  background: none;
+  font: inherit;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--signature);
+  cursor: pointer;
+}

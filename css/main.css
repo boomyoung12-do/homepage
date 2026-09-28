@@ -157,6 +157,8 @@ a { color: inherit; text-decoration: none; }
   transition: background 0.18s ease;
 }
 .nav-mega-item:hover { background: var(--bg-alt); }
+.nav-mega-item.more { justify-content: center; border: 1px dashed var(--line); }
+.nav-mega-item.more .nav-mega-name { color: var(--signature); font-weight: 600; }
 .nav-mega-logo {
   width: 46px;
   height: 34px;
