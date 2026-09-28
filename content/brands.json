@@ -52,6 +52,30 @@
       "descriptionEn": "Pet Food Brand for Healthy Pet Life",
       "color": "#1B2B6B",
       "type": "own"
+    },
+    {
+      "id": "petsmeal",
+      "nameKo": "펫츠밀",
+      "nameEn": "PET'S MEAL",
+      "tagline": "반려동물을 위한 건강한 식단",
+      "taglineEn": "Healthy diet for pets",
+      "logo": "assets/products/migrated/dfa6bea4-c0c3-44f1-bd4a-32ecec5c332c.png",
+      "descriptionKo": "반려동물의 건강을 최우선으로 생각합니다.",
+      "descriptionEn": "Petsmill prioritizes the health of companion animals.",
+      "color": "#f21c67",
+      "type": "own"
+    },
+    {
+      "id": "natures",
+      "nameKo": "네이처스",
+      "nameEn": "NATURE'S",
+      "tagline": "자연이 곧 기준입니다.",
+      "taglineEn": "Nature is the standard.",
+      "logo": "assets/products/migrated/96ccc7fa-c42a-46ab-a28e-525d8cab61f0.png",
+      "descriptionKo": "자연과 함께 하는 반려동물 브랜드",
+      "descriptionEn": "Companion animal brand with nature",
+      "color": "#2dd26c",
+      "type": "own"
     }
   ],
   "importedIntro": {
@@ -117,6 +141,18 @@
       "descriptionKo": "반려동물 장난감 전문 미국 수입 브랜드",
       "descriptionEn": "American imported brand for purposeful pet toys",
       "color": "#D32F2F",
+      "type": "imported"
+    },
+    {
+      "id": "hellskitchen",
+      "nameKo": "헬스키친",
+      "nameEn": "HELL'S KITCHEN",
+      "tagline": "반려동물을 위한 최고의 맛",
+      "taglineEn": "The best taste for pets",
+      "logo": "assets/products/migrated/a5654b4c-c0fa-4e91-beb9-c21a10afe7e8.png",
+      "descriptionKo": "건강과 맛을 모두 챙긴 프리미엄 브랜드",
+      "descriptionEn": "Premium brand that takes care of both health and taste",
+      "color": "#f03841",
       "type": "imported"
     }
   ],

@@ -35,9 +35,21 @@
       "category": "사료",
       "petType": "dog",
       "image": "assets/products/image1.png",
-      "ingredientsEn": "Duck Meal, Hydrolyzed Salmon, Hydrolyzed Chicken, Whey Protein, Flaxseed, Prebiotics, Glucosamine, MSM, Yucca Extract, L-Carnitine",
+      "featuresEn": [
+        "For growing puppies aged 2 months and older",
+        "Duck and salmon used as main ingredients",
+        "Hydrolyzed ingredients used to help prevent allergies",
+        "Soft semi-moist food",
+        "Colostrum added to support immunity during growth",
+        "Prebiotics added for gut health during growth"
+      ],
+      "ingredientsEn": "Duck meat powder, hydrolyzed salmon, hydrolyzed chicken, whey protein, flaxseed, prebiotics, glucosamine, MSM, yucca extract, L-carnitine",
       "originEn": "Republic of Korea",
-      "shelfLifeEn": "18 months from manufacture date"
+      "shelfLifeEn": "18 months from manufacture date",
+      "detailImages": [
+        "assets/products/migrated/f2a55a56-fc81-4ae4-929a-481bfdfacab7.png"
+      ],
+      "buyLink": "https://brand.naver.com/petclub/products/5654181123"
     },
     {
       "id": "데이스포-와이즈-올스테이지",
@@ -66,6 +78,14 @@
       "category": "사료",
       "petType": "dog",
       "image": "assets/products/image3.png",
+      "featuresEn": [
+        "For dogs of all life stages, 2 months and older",
+        "Duck and salmon used as main ingredients",
+        "Hydrolyzed ingredients used to help prevent allergies",
+        "Soft semi-moist food",
+        "Prebiotics added for gut health",
+        "MSM added to support joint health"
+      ],
       "ingredientsEn": "Duck Meal, Hydrolyzed Salmon, Hydrolyzed Chicken, Flaxseed, Prebiotics, Glucosamine, MSM, Yucca Extract, L-Carnitine",
       "originEn": "Republic of Korea",
       "shelfLifeEn": "18 months from manufacture date"
@@ -97,6 +117,14 @@
       "category": "사료",
       "petType": "dog",
       "image": "assets/products/image2.png",
+      "featuresEn": [
+        "Skin-care food for dogs of all life stages, 2 months and older",
+        "Duck and salmon used as main ingredients",
+        "Hydrolyzed ingredients used to help prevent allergies",
+        "Soft semi-moist food",
+        "Prebiotics added for gut health",
+        "MSM added to support joint health"
+      ],
       "ingredientsEn": "Duck Meal, Hydrolyzed Salmon, Hydrolyzed Chicken, Flaxseed, Prebiotics, Glucosamine, MSM, Yucca Extract, L-Carnitine",
       "originEn": "Republic of Korea",
       "shelfLifeEn": "18 months from manufacture date"
@@ -128,6 +156,14 @@
       "category": "사료",
       "petType": "dog",
       "image": "assets/products/image29.png",
+      "featuresEn": [
+        "Joint-care food for dogs of all life stages, 2 months and older",
+        "Duck and salmon used as main ingredients",
+        "Hydrolyzed ingredients used to help prevent allergies",
+        "Soft semi-moist food",
+        "Prebiotics added for gut health",
+        "MSM/glucosamine added to support joint health"
+      ],
       "ingredientsEn": "Duck Meal, Rice Flour, Organic Soybean Meal (20%), Propylene Glycol, Refined Salmon Oil (contains Omega-3 & 6 Fatty Acids), Cellulose, Hydrolyzed Salmon, Barley, Oats, Glucosamine, Green Lipped Mussel Powder, MSM, Shark Cartilage Powder (contains Chondroitin), Prebiotics (FOS), Yucca Extract (Root), Vegetable & Fruit Mixed Powder (Pineapple, Apple, Spinach, Broccoli)",
       "originEn": "Republic of Korea",
       "shelfLifeEn": "18 months from manufacture date"
@@ -159,6 +195,14 @@
       "category": "사료",
       "petType": "dog",
       "image": "assets/products/image26.png",
+      "featuresEn": [
+        "Weight-control food for dogs of all life stages, 2 months and older",
+        "Duck and salmon used as main ingredients",
+        "Hydrolyzed ingredients used to help prevent allergies",
+        "Soft semi-moist food",
+        "Prebiotics added for gut health",
+        "L-carnitine added to support weight control"
+      ],
       "ingredientsEn": "Duck Meal, Rice Flour, Organic Soybean Meal (20%), Propylene Glycol, Refined Salmon Oil (contains Omega-3 & 6 Fatty Acids), Cellulose, Hydrolyzed Salmon, Barley, Oats, Green Lipped Mussel Powder, L-Carnitine, White Kidney Bean Extract, Garcinia Cambogia Extract, Prebiotics (FOS), Yucca Extract (Root), Vegetable & Fruit Mixed Powder",
       "originEn": "Republic of Korea",
       "shelfLifeEn": "18 months from manufacture date"
@@ -190,6 +234,14 @@
       "category": "사료",
       "petType": "dog",
       "image": "assets/products/image28.png",
+      "featuresEn": [
+        "Eye-care food for dogs of all life stages, 2 months and older",
+        "Duck and salmon used as main ingredients",
+        "Hydrolyzed ingredients used to help prevent allergies",
+        "Soft semi-moist food",
+        "Prebiotics added for gut health",
+        "Blueberry added to support eye health"
+      ],
       "ingredientsEn": "Duck Meal, Rice Flour, Organic Soybean Meal (20%), Propylene Glycol, Refined Salmon Oil (contains Omega-3 & 6 Fatty Acids), Cellulose, Hydrolyzed Salmon, Barley, Oats, Marigold Extract, Blueberry, Haematococcus Extract, Hyaluronic Acid, Prebiotics (FOS), Yucca Extract (Root), Vegetable & Fruit Mixed Powder",
       "originEn": "Republic of Korea",
       "shelfLifeEn": "18 months from manufacture date"
@@ -221,6 +273,14 @@
       "category": "사료",
       "petType": "dog",
       "image": "assets/products/image27.png",
+      "featuresEn": [
+        "For senior dogs aged 8 years and older",
+        "Duck and salmon used as main ingredients",
+        "Hydrolyzed ingredients used to help prevent allergies",
+        "Soft semi-moist food",
+        "Prebiotics added for gut health",
+        "Glucosamine added to support joint health"
+      ],
       "ingredientsEn": "Duck Meal, Rice Flour, Organic Soybean Meal (20%), Refined Salmon Oil (contains Omega-3 & 6 Fatty Acids), Cellulose, Hydrolyzed Salmon, Barley, Oats, Green Lipped Mussel Powder, Glucosamine, Blueberry, Haematococcus Extract, Low Molecular Collagen, Fish Collagen, Hyaluronic Acid, Prebiotics, Yucca Extract (Root), Vegetable & Fruit Mixed Powder",
       "originEn": "Republic of Korea",
       "shelfLifeEn": "18 months from manufacture date"
@@ -252,9 +312,20 @@
       "category": "사료",
       "petType": "dog",
       "image": "assets/products/image30.png",
+      "featuresEn": [
+        "Exclusively formulated for Maltese, 2 months and older",
+        "Insect protein and duck used as main ingredients",
+        "Hydrolyzed ingredients used to help prevent allergies",
+        "Grain-free formula to help prevent allergies",
+        "Lutein/blueberry added to support eye health",
+        "Chondroitin added to support joint health"
+      ],
       "ingredientsEn": "Duck Meal, Rice Flour, Kidney Bean, Propylene Glycol, Salmon Oil, Hydrolyzed Salmon, Pea Powder, Sweet Potato Starch, Black Soldier Fly Powder, Cellulose, Calcium Phosphate, Dried Yeast, Prebiotics), Shark Cartilage Powder (contains Chondroitin), MSM, Marigold Extract (contains Lutein), Flaxseed, Carrot, Blueberry, Astaxanthin, Low Molecular Collagen, Coenzyme Q10, Hyaluronic Acid, Yucca Extract, Green Tea Extract",
       "originEn": "Republic of Korea",
-      "shelfLifeEn": "18 months from manufacture date"
+      "shelfLifeEn": "18 months from manufacture date",
+      "detailImages": [
+        "assets/products/migrated/85bd72d7-1c34-4c97-8c7b-f45d077726cc.jpg"
+      ]
     },
     {
       "id": "데이스포-와이즈-인섹트-푸들",
@@ -283,6 +354,14 @@
       "category": "사료",
       "petType": "dog",
       "image": "assets/products/image32.png",
+      "featuresEn": [
+        "Exclusively formulated for Poodles, 2 months and older",
+        "Insect protein and duck used as main ingredients",
+        "Hydrolyzed ingredients used to help prevent allergies",
+        "Grain-free formula to help prevent allergies",
+        "Chondroitin added to support joint health",
+        "Marigold extract added to support eye health"
+      ],
       "ingredientsEn": "Duck Meal, Rice Flour, Kidney Bean, Propylene Glycol, Salmon Oil, Hydrolyzed Salmon, Pea Powder, Sweet Potato Starch, Black Soldier Fly Powder, Cellulose, Calcium Phosphate, Dried Yeast, Prebiotics, Shark Cartilage Powder (contains Chondroitin), Glucosamine, Marigold Extract (contains Lutein), Flaxseed, Carrot, Low Molecular Collagen, Hyaluronic Acid, Yucca Extract, Green Tea Extract",
       "originEn": "Republic of Korea",
       "shelfLifeEn": "18 months from manufacture date"
@@ -314,6 +393,14 @@
       "category": "사료",
       "petType": "dog",
       "image": "assets/products/image31.png",
+      "featuresEn": [
+        "Exclusively formulated for Pomeranians, 2 months and older",
+        "Insect protein and duck used as main ingredients",
+        "Hydrolyzed ingredients used to help prevent allergies",
+        "Grain-free formula to help prevent allergies",
+        "Green-lipped mussel/MSM added to support joint health",
+        "Marigold extract added to support eye health"
+      ],
       "ingredientsEn": "Duck Meal, Rice Flour, Kidney Bean, Propylene Glycol, Salmon Oil, Hydrolyzed Salmon, Pea Powder, Sweet Potato Starch, Black Soldier Fly Powder, Cellulose, Calcium Phosphate, Dried Yeast, Prebiotics, Glucosamine, Shark Cartilage Powder (contains Chondroitin), Green Lipped Mussel, MSM, Marigold Extract (contains Lutein), Flaxseed, Carrot, Low Molecular Collagen, L-Carnitine, Yucca Extract, Green Tea Extract",
       "originEn": "Republic of Korea",
       "shelfLifeEn": "18 months from manufacture date"
@@ -345,6 +432,14 @@
       "category": "사료",
       "petType": "dog",
       "image": "assets/products/image33.png",
+      "featuresEn": [
+        "Exclusively formulated for Pomeranians, 2 months and older",
+        "Single insect-protein source: black soldier fly larvae as the main ingredient",
+        "Hypoallergenic formula to help prevent allergies",
+        "Grain-free formula to help prevent allergies",
+        "Blueberry added to support eye health",
+        "Marigold extract added to support eye health"
+      ],
       "ingredientsEn": "Mealworm Powder, Rice Flour, Kidney Bean, Salmon Oil, Pea Protein, Pea Powder, Sweet Potato Starch, Cellulose, Calcium Phosphate, Dried Yeast, Flaxseed, Blueberry Powder, Carrot, Marigold Extract Powder (contains Lutein), Prebiotics, Mixed Probiotic Powder, Green Tea Extract, Yucca Extract",
       "originEn": "Republic of Korea",
       "shelfLifeEn": "18 months from manufacture date"
@@ -376,6 +471,14 @@
       "category": "사료",
       "petType": "dog",
       "image": "assets/products/image67.png",
+      "featuresEn": [
+        "For dogs of all life stages, 2 months and older",
+        "Duck and salmon used as main ingredients",
+        "Hydrolyzed ingredients used to help prevent allergies",
+        "Glucosamine added to support joint health",
+        "Shark cartilage added to support cartilage health",
+        "Medium bite size suited for small dogs and multi-dog households"
+      ],
       "ingredientsEn": "Duck Meat, Hydrolyzed Salmon, Hydrolyzed Chicken, Blueberry, Probiotics, Yucca Extract, Flaxseed, Taurine, Prebiotics, MSM, Glucosamine, Shark Cartilage",
       "originEn": "Republic of Korea",
       "shelfLifeEn": "18 months from manufacture date"
@@ -407,6 +510,14 @@
       "category": "사료",
       "petType": "dog",
       "image": "assets/products/image66.png",
+      "featuresEn": [
+        "For dogs of all life stages, 2 months and older",
+        "Duck and salmon used as main ingredients",
+        "Hydrolyzed ingredients used to help prevent allergies",
+        "Glucosamine added to support joint health",
+        "Shark cartilage added to support cartilage health",
+        "Large bite size suited for medium-to-large dogs"
+      ],
       "ingredientsEn": "Duck Meat, Hydrolyzed Salmon, Hydrolyzed Chicken, Blueberry, Probiotics, Yucca Extract, Flaxseed, Taurine, Prebiotics, MSM, Glucosamine, Shark Cartilage",
       "originEn": "Republic of Korea",
       "shelfLifeEn": "18 months from manufacture date"
@@ -438,6 +549,14 @@
       "category": "사료",
       "petType": "dog",
       "image": "assets/products/image65.png",
+      "featuresEn": [
+        "Exclusively formulated for large breed dogs, 2 months and older",
+        "Duck and chicken used as main ingredients",
+        "Over 33% high-quality protein for large breeds",
+        "Glucosamine added to support joint health",
+        "IgY added to support oral health",
+        "Large bite size suited for large breed dogs"
+      ],
       "ingredientsEn": "Duck Meal, Chicken Meal, Corn, Beet Pulp, Refined Chicken Oil, Natural Flavoring, Glucosamine, MSM, IgY, Coenzyme Q10, Taurine",
       "originEn": "Republic of Korea",
       "shelfLifeEn": "18 months from manufacture date"
@@ -469,6 +588,14 @@
       "category": "사료",
       "petType": "dog",
       "image": "assets/products/image34.png",
+      "featuresEn": [
+        "For dogs of all life stages, 2 months and older",
+        "Duck and salmon used as main ingredients",
+        "Grain-free formula to help prevent grain allergies",
+        "Hydrolyzed ingredients used to help prevent allergies",
+        "Soft semi-moist food",
+        "Prebiotics added to support gut health"
+      ],
       "ingredientsEn": "Duck Meat, Hydrolyzed Chicken, Hydrolyzed Salmon, Salmon Oil, Glucosamine, Shark Cartilage, Prebiotics, Yucca Extract, Astaxanthin",
       "originEn": "Republic of Korea",
       "shelfLifeEn": "18 months from manufacture date"
@@ -500,6 +627,14 @@
       "category": "사료",
       "petType": "dog",
       "image": "assets/products/image35.png",
+      "featuresEn": [
+        "For dogs of all life stages, 2 months and older",
+        "Duck and salmon used as main ingredients",
+        "Grain-free formula to help prevent grain allergies",
+        "Coenzyme Q10 added to support immunity",
+        "Dried pollack added, rich in essential amino acids",
+        "Glucosamine added to help support joint health"
+      ],
       "ingredientsEn": "Duck Meat, Salmon Oil, Hydrolyzed Chicken, Dried Pollock, Red Ginseng, Hydrolyzed Salmon, Green Lipped Mussel, Glucosamine, Coenzyme Q10, Astaxanthin",
       "originEn": "Republic of Korea",
       "shelfLifeEn": "18 months from manufacture date"
@@ -531,6 +666,14 @@
       "category": "사료",
       "petType": "dog",
       "image": "assets/products/image62.png",
+      "featuresEn": [
+        "Skin-care food for dogs of all life stages, 2 months and older",
+        "Duck and salmon used as main ingredients",
+        "Grain-free formula to help prevent grain allergies",
+        "Hydrolyzed ingredients used to help prevent allergies",
+        "Omega-3 & 6 added to support skin health",
+        "Prebiotics added to support gut health"
+      ],
       "ingredientsEn": "Duck Powder, Tapioca Starch, Salmon Oil, Hydrolyzed Chicken, Hydrolyzed Salmon, Flaxseed, Potato Powder, Banana, Apple, Parsley, Spinach, Kale, Carrot, Acai, Indian Gooseberry, Broccoli, Wheatgrass, Barley Grass, Pineapple, Fructooligosaccharide, Yucca Extract",
       "originEn": "Republic of Korea",
       "shelfLifeEn": "18 months from manufacture date"
@@ -562,6 +705,14 @@
       "category": "사료",
       "petType": "dog",
       "image": "assets/products/image64.png",
+      "featuresEn": [
+        "Weight-management food for dogs of all life stages, 2 months and older",
+        "Duck and salmon used as main ingredients",
+        "Grain-free formula to help prevent grain allergies",
+        "Hydrolyzed ingredients used to help prevent allergies",
+        "L-carnitine added to support weight control",
+        "Prebiotics added to support gut health"
+      ],
       "ingredientsEn": "Duck Powder, Tapioca Starch, Refined Chicken Fat, Hydrolyzed Poultry, Hydrolyzed Salmon, Beet Pulp, Flaxseed, Broccoli, Glycerin, Fructooligosaccharide, Yucca Extract, Green Lipped Mussel Extract, L-Carnitine, Taurine, Beta-Glucan",
       "originEn": "Republic of Korea",
       "shelfLifeEn": "18 months from manufacture date"
@@ -593,6 +744,14 @@
       "category": "사료",
       "petType": "dog",
       "image": "assets/products/image63.png",
+      "featuresEn": [
+        "For senior dogs aged 8 years and older",
+        "Duck and salmon used as main ingredients",
+        "Grain-free formula to help prevent grain allergies",
+        "Hydrolyzed ingredients used to help prevent allergies",
+        "L-carnitine added to support weight management",
+        "Prebiotics added to support gut health"
+      ],
       "ingredientsEn": "Duck Powder, Tapioca Starch, Refined Chicken Fat, Hydrolyzed Poultry, Hydrolyzed Salmon, Beet Pulp, Flaxseed, Glycerin, Fructooligosaccharide, Yucca Extract (Root), Glucosamine, MSM, Chondroitin, Blueberry, L-Carnitine",
       "originEn": "Republic of Korea",
       "shelfLifeEn": "18 months from manufacture date"
@@ -624,9 +783,20 @@
       "category": "사료",
       "petType": "dog",
       "image": "assets/products/image68.png",
+      "featuresEn": [
+        "Exclusively formulated for large breed dogs, 2 months and older",
+        "Duck and chicken used as main ingredients",
+        "Over 33% high-quality protein for large breeds",
+        "Coenzyme Q10 added to support antioxidant activity",
+        "Glucosamine added to support joint health",
+        "IgY added to support oral health"
+      ],
       "ingredientsEn": "Duck Meal, Chicken Meal, Corn, Beet Pulp, Refined Chicken Oil, Natural Flavoring, Coenzyme Q10, Glucosamine, MSM, IgY",
       "originEn": "Republic of Korea",
-      "shelfLifeEn": "18 months from manufacture date"
+      "shelfLifeEn": "18 months from manufacture date",
+      "detailImages": [
+        "assets/products/migrated/0f6ec28c-6f07-4633-b508-d7256ba1355b.jpg"
+      ]
     },
     {
       "id": "데이스포-테라픽-라지브리드-에이징5",
@@ -655,6 +825,14 @@
       "category": "사료",
       "petType": "dog",
       "image": "assets/products/image69.png",
+      "featuresEn": [
+        "Exclusively formulated for large breed dogs, 2 months and older",
+        "Duck and chicken used as main ingredients",
+        "Hydrolyzed ingredients used to help prevent allergies",
+        "Over 32% high-quality protein for large breeds",
+        "Coenzyme Q10 added to support antioxidant activity",
+        "Green-lipped mussel added to support joint health"
+      ],
       "ingredientsEn": "Animal Protein (Duck Meal, Chicken Meal, Oilseed Meal), Corn, Soybean Meal, Distiller's Grain, Mixed Animal Fat, Hydrolyzed Animal Protein, Coenzyme Q10, Green Lipped Mussel, SHMP, IgY, L-Arginine, Blueberry, Phosphatidylserine",
       "originEn": "Republic of Korea",
       "shelfLifeEn": "18 months from manufacture date"
@@ -686,6 +864,14 @@
       "category": "사료",
       "petType": "dog",
       "image": "assets/products/image56.png",
+      "featuresEn": [
+        "For dogs of all life stages, 2 months and older",
+        "Duck used as the main ingredient",
+        "Hydrolyzed ingredients used to help prevent allergies",
+        "Soft, handmade food with excellent palatability",
+        "Grain-free formula to help prevent allergies",
+        "Non-GMO, no genetically modified ingredients used"
+      ],
       "ingredientsEn": "Duck Meat, Tapioca Starch, Fish Meat, Propylene Glycol, Glycerin, Egg Yolk Powder, Hydrolyzed Chicken, Salmon Oil, MSM, Green Lipped Mussel, Glucosamine, Shark Cartilage Powder (contains Chondroitin), Strawberry, Blueberry, Cranberry, Banana, Apple, Cellulose, Bacillus coagulans, Prebiotics, Dextrose, Yucca Extract (Root)",
       "originEn": "Republic of Korea",
       "shelfLifeEn": "18 months from manufacture date"
@@ -717,6 +903,14 @@
       "category": "사료",
       "petType": "dog",
       "image": "assets/products/image57.png",
+      "featuresEn": [
+        "For dogs of all life stages, 2 months and older",
+        "Lamb used as the main ingredient",
+        "Hydrolyzed ingredients used to help prevent allergies",
+        "Soft, handmade food with excellent palatability",
+        "Grain-free formula to help prevent allergies",
+        "Non-GMO, no genetically modified ingredients used"
+      ],
       "ingredientsEn": "Lamb, Chicken, Tapioca Starch, Fish Meat, Propylene Glycol, Glycerin, Carrot, Egg Yolk Powder, Hydrolyzed Chicken, Salmon Oil, Parsley, Spinach, Sweet Pumpkin, Broccoli, Blueberry, L-Carnitine, Cellulose, Prebiotics, Yucca Extract (Root)",
       "originEn": "Republic of Korea",
       "shelfLifeEn": "18 months from manufacture date"
@@ -748,6 +942,14 @@
       "category": "사료",
       "petType": "dog",
       "image": "assets/products/image58.png",
+      "featuresEn": [
+        "For dogs of all life stages, 2 months and older",
+        "Salmon used as the main ingredient",
+        "Hydrolyzed ingredients used to help prevent allergies",
+        "Soft, handmade food with excellent palatability",
+        "Grain-free formula to help prevent allergies",
+        "Non-GMO, no genetically modified ingredients used"
+      ],
       "ingredientsEn": "Salmon, Chicken, Tapioca Starch, Fish Meat, Propylene Glycol, Glycerin, Egg Yolk Powder, Hydrolyzed Chicken, Salmon Oil (contains Omega-3 & 6 Fatty Acids), Dried Pollock Powder, Shrimp Powder, Anchovy Powder, Spirulina, Green Lipped Mussel, Seaweed, Kelp, Blueberry, L-Carnitine, Cellulose, Prebiotics, Yucca Extract",
       "originEn": "Republic of Korea",
       "shelfLifeEn": "18 months from manufacture date"
@@ -779,6 +981,14 @@
       "category": "사료",
       "petType": "dog",
       "image": "assets/products/image59.png",
+      "featuresEn": [
+        "For dogs of all life stages, 2 months and older",
+        "Black soldier fly larvae used as the main ingredient (40% content)",
+        "Hypoallergenic formula to help prevent allergies",
+        "Soft, handmade food with excellent palatability",
+        "Grain-free formula to help prevent allergies",
+        "Marigold extract to support eye health, and"
+      ],
       "ingredientsEn": "Black Soldier Fly, Pea Protein, Potato Starch, Tapioca Starch, Salmon Oil, Propylene Glycol, Glycerin, Blueberry, Haematococcus Extract, Marigold Extract, Milk Thistle, Cranberry, Bacillus coagulans, Prebiotics, Dextrose, Yucca Extract",
       "originEn": "Republic of Korea",
       "shelfLifeEn": "18 months from manufacture date"
@@ -810,6 +1020,14 @@
       "category": "사료",
       "petType": "dog",
       "image": "assets/products/image60.png",
+      "featuresEn": [
+        "Food for Maltese of all life stages, 2 months and older",
+        "Duck and salmon used as main ingredients",
+        "Hydrolyzed ingredients used to help prevent allergies",
+        "Soft semi-moist food",
+        "Marigold extract added to support eye health",
+        "Low-molecular collagen added to support skin health"
+      ],
       "ingredientsEn": "Duck Meat, Hydrolyzed Salmon, Salmon Oil, Hydrolyzed Chicken, Flaxseed, Prebiotics, Marigold Extract, Haematococcus Extract, Milk Thistle, Low Molecular Collagen, Glucosamine",
       "originEn": "Republic of Korea",
       "shelfLifeEn": "18 months from manufacture date"
@@ -841,6 +1059,14 @@
       "category": "사료",
       "petType": "dog",
       "image": "assets/products/image51.png",
+      "featuresEn": [
+        "Food for Poodles of all life stages, 2 months and older",
+        "Duck and salmon used as main ingredients",
+        "Hydrolyzed ingredients used to help prevent allergies",
+        "Soft semi-moist food",
+        "Marigold extract added to support eye health",
+        "L-carnitine added to support weight management"
+      ],
       "ingredientsEn": "Duck Meat, Hydrolyzed Salmon, Salmon Oil, Hydrolyzed Chicken, Flaxseed, Prebiotics, Marigold Extract, Haematococcus Extract, Glucosamine, Shark Cartilage, L-Carnitine",
       "originEn": "Republic of Korea",
       "shelfLifeEn": "18 months from manufacture date"
@@ -872,6 +1098,14 @@
       "category": "사료",
       "petType": "dog",
       "image": "assets/products/image52.png",
+      "featuresEn": [
+        "Food for Maltese of all life stages, 2 months and older",
+        "Duck and salmon used as main ingredients",
+        "Hydrolyzed ingredients used to help prevent allergies",
+        "Soft semi-moist food",
+        "Marigold extract added to support eye health",
+        "Low-molecular collagen added to support skin health"
+      ],
       "ingredientsEn": "Duck Meat, Hydrolyzed Salmon, Salmon Oil, Hydrolyzed Chicken, Flaxseed, Prebiotics, Marigold Extract, Low Molecular Collagen, Glucosamine, Shark Cartilage, MSM, Green Lipped Mussel, L-Carnitine",
       "originEn": "Republic of Korea",
       "shelfLifeEn": "18 months from manufacture date"
@@ -903,6 +1137,14 @@
       "category": "사료",
       "petType": "dog",
       "image": "assets/products/image78.png",
+      "featuresEn": [
+        "Joint-care food for all life stages, 2 months and older",
+        "Duck and salmon used as main ingredients",
+        "Glucosamine to support joint and cartilage health, and",
+        "chondroitin added",
+        "To help nourish joints and cartilage:",
+        "green-lipped mussel and MSM"
+      ],
       "ingredientsEn": "Duck Meal, Corn, Rice Flour, Wheat Flour, Soybean Meal, Hydrolyzed Salmon, Glycerin, Propylene Glycol, Salmon Oil, Hydrolyzed Chicken, Fructooligosaccharide, Yucca Extract, Glucosamine, Shark Cartilage Powder (contains Chondroitin), MSM, Green Lipped Mussel, L-Carnitine",
       "originEn": "Republic of Korea",
       "shelfLifeEn": "18 months from manufacture date"
@@ -934,6 +1176,14 @@
       "category": "사료",
       "petType": "dog",
       "image": "assets/products/image79.png",
+      "featuresEn": [
+        "Weight-control food for all life stages, 2 months and older",
+        "Duck and salmon used as main ingredients",
+        "About 23% lower fat than regular food",
+        "Garcinia cambogia to help support fat breakdown,",
+        "extract and L-carnitine added",
+        "Helps inhibit fat synthesis from carbohydrates:"
+      ],
       "ingredientsEn": "Duck Meal, Corn, Rice Flour, Wheat Flour, Soybean Meal, Hydrolyzed Salmon, Glycerin, Propylene Glycol, Salmon Oil, Hydrolyzed Chicken, Fructooligosaccharide, Yucca Extract, Green Lipped Mussel, L-Carnitine, Garcinia Cambogia Extract, White Kidney Bean Extract",
       "originEn": "Republic of Korea",
       "shelfLifeEn": "18 months from manufacture date"
@@ -965,6 +1215,14 @@
       "category": "사료",
       "petType": "dog",
       "image": "assets/products/image80.png",
+      "featuresEn": [
+        "Eye-care food for all life stages, 2 months and older",
+        "Duck and salmon used as main ingredients",
+        "Lutein and zeaxanthin to support eye health,",
+        "richly contained in the added marigold extract",
+        "To help excrete porphyrins that cause tear staining,",
+        "milk thistle added"
+      ],
       "ingredientsEn": "Duck Meal, Corn, Rice Flour, Wheat Flour, Soybean Meal, Hydrolyzed Salmon, Glycerin, Propylene Glycol, Salmon Oil, Hydrolyzed Chicken, Fructooligosaccharide, Yucca Extract, Marigold Extract, Haematococcus Extract, Milk Thistle, Blueberry",
       "originEn": "Republic of Korea",
       "shelfLifeEn": "18 months from manufacture date"
@@ -996,6 +1254,14 @@
       "category": "사료",
       "petType": "dog",
       "image": "assets/products/image81.png",
+      "featuresEn": [
+        "Skin-care food for all life stages, 2 months and older",
+        "Duck and salmon used as main ingredients",
+        "Low-molecular collagen added to support skin regeneration",
+        "Hyaluronic acid added to support skin hydration",
+        "Flaxseed added to help improve skin and coat",
+        "Rich in Omega-3 to support skin immunity,"
+      ],
       "ingredientsEn": "Duck Meal, Corn, Rice Flour, Wheat Flour, Soybean Meal, Hydrolyzed Salmon, Glycerin, Propylene Glycol, Salmon Oil, Hydrolyzed Chicken, Flaxseed, Fructooligosaccharide, Yucca Extract, Low Molecular Collagen, Hyaluronic Acid, Green Lipped Mussel",
       "originEn": "Republic of Korea",
       "shelfLifeEn": "18 months from manufacture date"
@@ -1027,6 +1293,14 @@
       "category": "사료",
       "petType": "dog",
       "image": "assets/products/image53.png",
+      "featuresEn": [
+        "Food for all life stages, 2 months and older",
+        "Duck to support skin health,",
+        "used as the main ingredient",
+        "Hydrolyzed ingredients used to help prevent allergies",
+        "Salmon oil rich in Omega-3 added",
+        "Low-molecular collagen to support skin health, and"
+      ],
       "ingredientsEn": "Duck Meal, Corn, Rice Flour, Wheat Flour, Soybean Meal, Hydrolyzed Salmon, Salmon Oil, Hydrolyzed Chicken, Fructooligosaccharide, Yucca Extract, Potato Powder, Flaxseed, Low Molecular Collagen, L-Carnitine",
       "originEn": "Republic of Korea",
       "shelfLifeEn": "18 months from manufacture date"
@@ -1058,6 +1332,14 @@
       "category": "사료",
       "petType": "dog",
       "image": "assets/products/image54.png",
+      "featuresEn": [
+        "Food for all life stages, 2 months and older",
+        "High-protein lamb used as the main ingredient",
+        "Hydrolyzed ingredients used to help prevent allergies",
+        "MSM added to support joint health",
+        "Glucosamine to support joint health, and",
+        "chondroitin added"
+      ],
       "ingredientsEn": "Lamb Meal, Chicken Meal, Corn, Rice Flour, Wheat Flour, Soybean Meal, Hydrolyzed Salmon, Salmon Oil, Hydrolyzed Chicken, Fructooligosaccharide, Yucca Extract, Glucosamine, Shark Cartilage Powder (contains Chondroitin), MSM, L-Carnitine",
       "originEn": "Republic of Korea",
       "shelfLifeEn": "18 months from manufacture date"
@@ -1089,6 +1371,14 @@
       "category": "사료",
       "petType": "dog",
       "image": "assets/products/image55.png",
+      "featuresEn": [
+        "Food for all life stages, 2 months and older",
+        "Duck used as the main ingredient to support skin health",
+        "US-sourced colostrum added to support immunity",
+        "Salmon oil added to support skin health",
+        "Glucosamine to support joint health, and",
+        "chondroitin added"
+      ],
       "ingredientsEn": "Duck Meal, Corn, Rice Flour, Wheat Flour, Soybean Meal, Hydrolyzed Salmon, Salmon Oil, Flaxseed, Prebiotics (FOS), Yucca Extract, Glucosamine, Shark Cartilage Powder (contains Chondroitin), IgY, Colostrum Protein Powder, L-Carnitine",
       "originEn": "Republic of Korea",
       "shelfLifeEn": "18 months from manufacture date"
@@ -1118,6 +1408,12 @@
       "category": "사료",
       "petType": "dog",
       "image": "assets/products/image43.png",
+      "featuresEn": [
+        "Joint supplement for all life stages, 2 months and older",
+        "Hydrolyzed ingredients used to help prevent allergies",
+        "Glucosamine added to support joint health",
+        "Glucosamine added to support cartilage health"
+      ],
       "ingredientsEn": "Rice Flour, Soybean Powder, Hydrolyzed Salmon, Yeast, Glycerin, Propylene Glycol, Glucose, Wheat Flour, Refined Chicken Fat, Yucca Extract (Root), Glucosamine, Shark Cartilage Powder (contains Chondroitin)",
       "originEn": "Republic of Korea",
       "shelfLifeEn": "18 months from manufacture date"
@@ -1149,6 +1445,14 @@
       "category": "사료",
       "petType": "dog",
       "image": "assets/products/hseries_skin.png",
+      "featuresEn": [
+        "Skin supplement for all life stages, 2 months and older",
+        "Hydrolyzed ingredients used to help prevent allergies",
+        "Omega-3 & 6 added to support skin health",
+        "Flaxseed added to support skin health",
+        "Hyaluronic acid added to support skin moisture",
+        "Low-molecular collagen added to support skin regeneration"
+      ],
       "ingredientsEn": "Rice Flour, Soybean Powder, Hydrolyzed Salmon, Yeast, Glycerin, Propylene Glycol, Glucose, Wheat Flour, Salmon Oil (contains Omega-3 & 6 Fatty Acids), Flaxseed, Hyaluronic Acid, Low Molecular Collagen",
       "originEn": "Republic of Korea",
       "shelfLifeEn": "18 months from manufacture date"
@@ -1180,6 +1484,14 @@
       "category": "사료",
       "petType": "dog",
       "image": "assets/products/hseries_total.png",
+      "featuresEn": [
+        "Multi-nutrient supplement for all life stages, 2 months and older",
+        "Hydrolyzed ingredients used to help prevent allergies",
+        "Omega-3 & 6 added to support skin health",
+        "Glucosamine added to support joint health",
+        "Beta-glucan added to help boost immunity",
+        "Prebiotics added to support gut health"
+      ],
       "ingredientsEn": "Rice Flour, Soybean Powder, Hydrolyzed Salmon, Yeast, Glycerin, Propylene Glycol, Glucose, Wheat Flour, Refined Chicken Fat, Salmon Oil (contains Omega-3 & 6 Fatty Acids), Yucca Extract (Root), Glucosamine, Shark Cartilage Powder (contains Chondroitin), Lecithin, Prebiotics (Fructooligosaccharide, Inulin), Beta-Glucan, Chlorella, Spirulina",
       "originEn": "Republic of Korea",
       "shelfLifeEn": "18 months from manufacture date"
@@ -1210,6 +1522,13 @@
       "category": "사료",
       "petType": "dog",
       "image": "assets/products/hseries_digest.png",
+      "featuresEn": [
+        "Gut-health supplement for all life stages, 2 months and older",
+        "Hydrolyzed ingredients used to help prevent allergies",
+        "Yucca extract added to help reduce stool odor",
+        "Beta-glucan added to help boost immunity",
+        "Prebiotics added to support gut health"
+      ],
       "ingredientsEn": "Rice Flour, Soybean Powder, Hydrolyzed Salmon, Yeast, Glycerin, Propylene Glycol, Glucose, Wheat Flour, Refined Chicken Fat, Yucca Extract (Root), Beta-Glucan, Prebiotics (Fructooligosaccharide, Inulin)",
       "originEn": "Republic of Korea",
       "shelfLifeEn": "18 months from manufacture date"
@@ -1241,6 +1560,14 @@
       "category": "사료",
       "petType": "dog",
       "image": "assets/products/fucoidan_joint.png",
+      "featuresEn": [
+        "Joint supplement for all life stages, 2 months and older",
+        "Hydrolyzed ingredients used to help prevent allergies",
+        "Fucoidan added to help boost immunity",
+        "Glucosamine to support joint health, and",
+        "MSM added",
+        "Glucosamine to support cartilage health, and"
+      ],
       "ingredientsEn": "Rice Flour, Soybean Powder, Hydrolyzed Salmon, Yeast, Glycerin, Propylene Glycol, Glucose, Fucoidan, Canola Oil, Glucosamine, Green Lipped Mussel, Shark Cartilage Powder (contains Chondroitin), MSM",
       "originEn": "Republic of Korea",
       "shelfLifeEn": "18 months from manufacture date"
@@ -1272,6 +1599,14 @@
       "category": "사료",
       "petType": "dog",
       "image": "assets/products/fucoidan_skin.png",
+      "featuresEn": [
+        "Skin supplement for all life stages, 2 months and older",
+        "Hydrolyzed ingredients used to help prevent allergies",
+        "Fucoidan added to help boost immunity",
+        "Omega-3 & 6 added to support skin health",
+        "Spirulina added to support skin health",
+        "Low-molecular collagen added to support skin regeneration"
+      ],
       "ingredientsEn": "Rice Flour, Soybean Powder, Hydrolyzed Salmon, Yeast, Glycerin, Propylene Glycol, Glucose, Fucoidan, Salmon Oil, Spirulina, Low Molecular Collagen",
       "originEn": "Republic of Korea",
       "shelfLifeEn": "18 months from manufacture date"
@@ -1303,6 +1638,14 @@
       "category": "사료",
       "petType": "dog",
       "image": "assets/products/fucoidan_total.png",
+      "featuresEn": [
+        "Multi-nutrient supplement for all life stages, 2 months and older",
+        "Hydrolyzed ingredients used to help prevent allergies",
+        "Fucoidan added to help boost immunity",
+        "Omega-3 & 6 added to support skin health",
+        "Glucosamine added to support joint health",
+        "L-carnitine added to support weight control"
+      ],
       "ingredientsEn": "Rice Flour, Soybean Powder, Hydrolyzed Salmon, Yeast, Glycerin, Propylene Glycol, Glucose, Fucoidan, Canola Oil, Glucosamine, Shark Cartilage Powder (contains Chondroitin), Garcinia Cambogia Extract, L-Carnitine, Fructooligosaccharide, Yucca Extract",
       "originEn": "Republic of Korea",
       "shelfLifeEn": "18 months from manufacture date"
@@ -1334,6 +1677,14 @@
       "category": "사료",
       "petType": "dog",
       "image": "assets/products/fucoidan_gut.png",
+      "featuresEn": [
+        "Gut-health supplement for all life stages, 2 months and older",
+        "Hydrolyzed ingredients used to help prevent allergies",
+        "Fucoidan added to help boost immunity",
+        "L-carnitine added to support weight control",
+        "Garcinia cambogia to help support fat breakdown,",
+        "extract added"
+      ],
       "ingredientsEn": "Rice Flour, Soybean Powder, Hydrolyzed Salmon, Yeast, Glycerin, Propylene Glycol, Glucose, Fucoidan, Canola Oil, L-Carnitine, Garcinia Cambogia Extract, Yucca Extract (Root), Fructooligosaccharide",
       "originEn": "Republic of Korea",
       "shelfLifeEn": "18 months from manufacture date"
@@ -1365,6 +1716,14 @@
       "category": "간식",
       "petType": "dog",
       "image": "assets/products/image38.png",
+      "featuresEn": [
+        "Dental chew for dogs of all life stages, 2 months and older",
+        "Grain-free formula to help prevent grain allergies",
+        "Hydrolyzed ingredients used to help prevent allergies",
+        "SHMP and IgY used for dental care",
+        "Snowflake shape effective for plaque control",
+        "Marigold extract added to support eye health"
+      ],
       "ingredientsEn": "Fish Meat, Hydrolyzed Chicken, Salmon Oil, SHMP, IgY, Prebiotics, Yucca Extract, Flaxseed, Blueberry, Glucosamine, Astaxanthin, Marigold Extract",
       "originEn": "Republic of Korea",
       "shelfLifeEn": "18 months from manufacture date"
@@ -1396,6 +1755,14 @@
       "category": "간식",
       "petType": "dog",
       "image": "assets/products/image37.png",
+      "featuresEn": [
+        "Dental chew for dogs of all life stages, 2 months and older",
+        "Grain-free formula to help prevent grain allergies",
+        "Hydrolyzed ingredients used to help prevent allergies",
+        "SHMP and IgY used for dental care",
+        "Snowflake shape effective for plaque control",
+        "Marigold extract added to support eye health"
+      ],
       "ingredientsEn": "Fish Meat, Hydrolyzed Chicken, Salmon Oil, SHMP, IgY, Prebiotics, Yucca Extract, Marigold Extract, Milk Thistle, Astaxanthin, Blueberry",
       "originEn": "Republic of Korea",
       "shelfLifeEn": "18 months from manufacture date"
@@ -1427,6 +1794,14 @@
       "category": "간식",
       "petType": "dog",
       "image": "assets/products/image40.png",
+      "featuresEn": [
+        "Dental chew for dogs of all life stages, 2 months and older",
+        "Grain-free formula to help prevent grain allergies",
+        "Hydrolyzed ingredients used to help prevent allergies",
+        "SHMP and IgY used for dental care",
+        "Snowflake shape effective for plaque control",
+        "Glucosamine added to support joint health"
+      ],
       "ingredientsEn": "Fish Meat, Hydrolyzed Chicken, Salmon Oil, SHMP, IgY, Prebiotics, Yucca Extract, Green Lipped Mussel, MSM, Glucosamine, Shark Cartilage",
       "originEn": "Republic of Korea",
       "shelfLifeEn": "18 months from manufacture date"
@@ -1458,6 +1833,14 @@
       "category": "간식",
       "petType": "dog",
       "image": "assets/products/image41.png",
+      "featuresEn": [
+        "Dental chew for dogs of all life stages, 2 months and older",
+        "Grain-free formula to help prevent grain allergies",
+        "Hydrolyzed ingredients used to help prevent allergies",
+        "SHMP and IgY used for dental care",
+        "Snowflake shape effective for plaque control",
+        "Flaxseed added to support skin health"
+      ],
       "ingredientsEn": "Fish Meat, Hydrolyzed Chicken, Salmon Oil, SHMP, IgY, Prebiotics, Yucca Extract, Flaxseed, Low Molecular Collagen, Hyaluronic Acid",
       "originEn": "Republic of Korea",
       "shelfLifeEn": "18 months from manufacture date"
@@ -1486,9 +1869,17 @@
         "moisture": "12.0% (Max)"
       },
       "origin": "대한민국",
-      "category": "용품",
+      "category": "간식",
       "petType": "dog",
       "image": "assets/products/image42.png",
+      "featuresEn": [
+        "For pets of all life stages, 2 months and older",
+        "70% human-grade premium dried pollack added",
+        "Bubble-type design for oral care",
+        "Available in S/M sizes depending on dog size",
+        "Grain-free formula to help improve allergies",
+        "Hydrolyzed ingredients used to help improve allergies"
+      ],
       "ingredientsEn": "Fish Meat, Hydrolyzed Chicken, Salmon Oil, SHMP, IgY, Prebiotics, Yucca Extract, Flaxseed, Low Molecular Collagen, Hyaluronic Acid",
       "originEn": "Republic of Korea",
       "shelfLifeEn": "18 months from manufacture date"
@@ -1520,6 +1911,14 @@
       "category": "간식",
       "petType": "dog",
       "image": "assets/products/image39.png",
+      "featuresEn": [
+        "Dental chew for all life stages, 2 months and older",
+        "Certified by the Korea Companion Animal Standards Institute",
+        "Made with 100% vegan ingredients only",
+        "80% organic ingredients used",
+        "Hypoallergenic / Grain-free",
+        "Oral care / Digestive care / Skin care / Eye health"
+      ],
       "ingredientsEn": "Organic Rice Flour (65%), Organic Sweet Potato (5%), Organic Tapioca (5%), Organic Soybean Powder (5%), Vegetable Glycerin, Propylene Glycol, Coconut Oil, Banana Powder, Dried Yeast, SHMP, Spirulina, Sage Extract, Rosemary Extract, Flaxseed, Marigold Extract, Cranberry, Blueberry, Prebiotics (FOS), Potassium Sorbate",
       "originEn": "Republic of Korea",
       "shelfLifeEn": "18 months from manufacture date"
@@ -1548,9 +1947,17 @@
         "moisture": "12.0% (Max)"
       },
       "origin": "대한민국",
-      "category": "용품",
+      "category": "간식",
       "petType": "dog",
       "image": "assets/products/image36.png",
+      "featuresEn": [
+        "Treat for dogs of all life stages, 2 months and older",
+        "Great taste and nutrition",
+        "Sized ideal for nosework play",
+        "Ideal as a reward or training treat",
+        "Dried pollack added, rich in essential amino acids",
+        "Tuna and salmon rich in Omega-3 added"
+      ],
       "ingredientsEn": "Wheat Flour, Soybean Meal, Hydrolyzed Chicken, Rice Flour, Refined Chicken Fat, Propylene Glycol, Cheese Powder, Tuna Powder, Duck Meal, Hydrolyzed Salmon, Dried Pollock Powder, Spinach, Fructooligosaccharide, Yucca Extract (Root)",
       "originEn": "Republic of Korea",
       "shelfLifeEn": "18 months from manufacture date"
@@ -1582,6 +1989,14 @@
       "category": "간식",
       "petType": "dog",
       "image": "assets/products/image74.png",
+      "featuresEn": [
+        "Treat for dogs of all life stages, 2 months and older",
+        "Soft gel type",
+        "Great taste with balanced nutrition",
+        "Chicken breast and duck used as main ingredients",
+        "Shark cartilage added to support joint health",
+        "Glucosamine added to support joint health"
+      ],
       "ingredientsEn": "Chicken Breast, Purified Water, Tapioca Starch, Duck, Broccoli, Carrot, Shark Cartilage Powder, Glucosamine, Green Lipped Mussel Extract Powder, Pumpkin Juice, Probiotics",
       "originEn": "Republic of Korea",
       "shelfLifeEn": "18 months from manufacture date"
@@ -1613,6 +2028,14 @@
       "category": "간식",
       "petType": "dog",
       "image": "assets/products/image77.png",
+      "featuresEn": [
+        "Treat for dogs of all life stages, 2 months and older",
+        "Soft gel type",
+        "Great taste with balanced nutrition",
+        "Beef and salmon used as main ingredients",
+        "Beef liver added to support eye health",
+        "Blueberry added to support eye health"
+      ],
       "ingredientsEn": "Purified Water, Beef, Salmon, Tapioca, Carrot, Broccoli, Beef Liver, Pumpkin, Blueberry, Goat Milk, Fructooligosaccharide, Lutein, Probiotics",
       "originEn": "Republic of Korea",
       "shelfLifeEn": "18 months from manufacture date"
@@ -1644,6 +2067,14 @@
       "category": "간식",
       "petType": "dog",
       "image": "assets/products/image76.png",
+      "featuresEn": [
+        "Treat for dogs of all life stages, 2 months and older",
+        "Soft gel type",
+        "Great taste with balanced nutrition",
+        "Chicken breast used as the main ingredient",
+        "SHMP added to support oral care",
+        "Beta-glucan added to support immunity"
+      ],
       "ingredientsEn": "Purified Water, Chicken Breast, Tapioca, Banana, Xanthan Gum, Carrot, Broccoli, Pumpkin, Beta-Glucan, Beta-Glucan, Sodium Hexametaphosphate (SHMP), Fucoidan, Propolis",
       "originEn": "Republic of Korea",
       "shelfLifeEn": "18 months from manufacture date"
@@ -1675,6 +2106,14 @@
       "category": "간식",
       "petType": "dog",
       "image": "assets/products/image75.png",
+      "featuresEn": [
+        "Treat for dogs of all life stages, 2 months and older",
+        "Soft gel type",
+        "Great taste with balanced nutrition",
+        "Salmon used as the main ingredient",
+        "L-carnitine added to support weight management",
+        "Garcinia added to support weight management"
+      ],
       "ingredientsEn": "Purified Water, Salmon Meat, Fish Meat, Dried Pollock Powder, Tapioca, Xanthan Gum, Carrot, Broccoli, Pumpkin, Garcinia Cambogia Extract, L-Carnitine",
       "originEn": "Republic of Korea",
       "shelfLifeEn": "18 months from manufacture date"
@@ -1704,6 +2143,12 @@
       "category": "간식",
       "petType": "dog",
       "image": "assets/products/image18.png",
+      "featuresEn": [
+        "For pets of all life stages, 2 months and older",
+        "Lactose-free formula for comfortable digestion",
+        "Glucosamine added to support joint health",
+        "Taurine added to support eye health"
+      ],
       "ingredientsEn": "Milk (Domestic) 99.043%, Calcium Carbonate Mixture (Calcium Carbonate, Soybean Polysaccharide), Collagen, Powder containing Omega-3 DHA, Lactase, Lactobacillus plantarum Culture, Lactobacillus rhamnosus Culture, Yucca Extract",
       "originEn": "Republic of Korea",
       "shelfLifeEn": "18 months from manufacture date"
@@ -1734,6 +2179,13 @@
       "category": "간식",
       "petType": "dog",
       "image": "assets/products/image17.png",
+      "featuresEn": [
+        "For pets of all life stages, 2 months and older",
+        "Lactose-free formula for comfortable digestion",
+        "DHA added to help relieve stress",
+        "Low-molecular collagen to support skin health, and",
+        "Omega-3 added"
+      ],
       "ingredientsEn": "Milk (Domestic) 99.043%, Calcium Carbonate Mixture (Calcium Carbonate, Soybean Polysaccharide), Collagen, Powder containing Omega-3 DHA, Lactase, Lactobacillus plantarum Culture, Lactobacillus rhamnosus Culture, Yucca Extract",
       "originEn": "Republic of Korea",
       "shelfLifeEn": "18 months from manufacture date"
@@ -1760,9 +2212,15 @@
         "moisture": "12.0% (Max)"
       },
       "origin": "대한민국",
-      "category": "용품",
+      "category": "간식",
       "petType": "dog",
       "image": "assets/products/image20.png",
+      "featuresEn": [
+        "Pet milk for pets of all life stages, 2 months and older",
+        "Lactose-free formula for comfortable digestion",
+        "Colostrum added to support immunity",
+        "Probiotics added to support gut health"
+      ],
       "ingredientsEn": "Milk (Domestic) 99.193%, Calcium Carbonate Mixture (Calcium Carbonate, Soybean Polysaccharide), Colostrum, Sodium Bicarbonate, Vitamin Premix, Mineral Premix, Lactase, Yucca Extract, Lactobacillus plantarum Culture, Lactobacillus rhamnosus Culture",
       "originEn": "Republic of Korea",
       "shelfLifeEn": "18 months from manufacture date"
@@ -1790,9 +2248,16 @@
         "moisture": "12.0% (Max)"
       },
       "origin": "대한민국",
-      "category": "용품",
+      "category": "간식",
       "petType": "dog",
       "image": "assets/products/image19.png",
+      "featuresEn": [
+        "Pet milk for pets of all life stages, 2 months and older",
+        "Lactose-free formula for comfortable digestion",
+        "Collagen added to support skin health",
+        "Omega-3 and DHA added to support skin health",
+        "Probiotics added to support gut health"
+      ],
       "ingredientsEn": "Milk (Domestic) 99.043%, Calcium Carbonate Mixture (Calcium Carbonate, Soybean Polysaccharide), Collagen, DHA Omega-3 Powder, Sodium Bicarbonate, Vitamin Premix, Mineral Premix, Lactase, Yucca Extract, Lactobacillus plantarum Culture, Lactobacillus rhamnosus Culture",
       "originEn": "Republic of Korea",
       "shelfLifeEn": "18 months from manufacture date"
@@ -1820,9 +2285,16 @@
         "moisture": "12.0% (Max)"
       },
       "origin": "대한민국",
-      "category": "용품",
+      "category": "간식",
       "petType": "dog",
       "image": "assets/products/image61.png",
+      "featuresEn": [
+        "Pet milk for pets of all life stages, 2 months and older",
+        "Lactose-free formula for comfortable digestion",
+        "Glucosamine added to support joint health",
+        "Taurine added to support eye health",
+        "Probiotics added to support gut health"
+      ],
       "ingredientsEn": "Milk (Domestic) 99.073%, Calcium Carbonate Mixture (Calcium Carbonate, Soybean Polysaccharide), Glucosamine, Taurine, Sodium Bicarbonate, Vitamin Premix, Mineral Premix, Lactase, Yucca Extract, Lactobacillus plantarum Culture, Lactobacillus rhamnosus Culture",
       "originEn": "Republic of Korea",
       "shelfLifeEn": "18 months from manufacture date"
@@ -1854,6 +2326,14 @@
       "category": "사료",
       "petType": "cat",
       "image": "assets/products/image82.png",
+      "featuresEn": [
+        "Food for cats of all life stages, 2 months and older",
+        "Balanced nutrition",
+        "Great taste",
+        "Taurine 3,000mg/kg added for immunity",
+        "Brewer's yeast added for skin health",
+        "Essential vitamins and minerals for cats added"
+      ],
       "ingredientsEn": "Chicken Brown Rice, Brewer's Yeast, Taurine, Vitamin Mix, Mineral Mix",
       "originEn": "Republic of Korea",
       "shelfLifeEn": "18 months from manufacture date"
@@ -1885,6 +2365,14 @@
       "category": "간식",
       "petType": "cat",
       "image": "assets/products/image86.png",
+      "featuresEn": [
+        "Treat for cats of all life stages, 2 months and older",
+        "Soft gel type",
+        "Great taste with balanced nutrition",
+        "Tuna and chicken used as main ingredients",
+        "Essential cat nutrients L-lysine and taurine added",
+        "L-carnitine added to support weight maintenance"
+      ],
       "ingredientsEn": "Tuna, Purified Water, Tapioca Starch, Chicken, Carrot, Broccoli, Pumpkin, L-Lysine, Taurine, Omega-3, L-Carnitine, Green Tea Powder, Probiotics",
       "originEn": "Republic of Korea",
       "shelfLifeEn": "18 months from manufacture date"
@@ -1916,6 +2404,14 @@
       "category": "간식",
       "petType": "cat",
       "image": "assets/products/image87.png",
+      "featuresEn": [
+        "Treat for cats of all life stages, 2 months and older",
+        "Soft gel type",
+        "Great taste with balanced nutrition",
+        "Tuna and salmon used as main ingredients",
+        "Essential cat nutrients L-lysine and taurine added",
+        "Cranberry added to help prevent urinary stones"
+      ],
       "ingredientsEn": "Purified Water, Salmon, Tuna, Tapioca, Carrot, Broccoli, Pumpkin, L-Lysine, Taurine, Omega-3, Cranberry, Green Tea Powder, Probiotics",
       "originEn": "Republic of Korea",
       "shelfLifeEn": "18 months from manufacture date"
@@ -1947,6 +2443,14 @@
       "category": "간식",
       "petType": "cat",
       "image": "assets/products/image85.png",
+      "featuresEn": [
+        "Treat for cats of all life stages, 2 months and older",
+        "Soft gel type",
+        "Great taste with balanced nutrition",
+        "Tuna and crab meat used as main ingredients",
+        "Essential cat nutrients L-lysine and taurine added",
+        "Cranberry added to help prevent urinary stones"
+      ],
       "ingredientsEn": "Tuna, Purified Water, Tapioca Starch, Crab Meat, Carrot, Broccoli, Pumpkin, L-Lysine, Taurine, Omega-3, Cranberry Powder, Green Tea Powder, Probiotics",
       "originEn": "Republic of Korea",
       "shelfLifeEn": "18 months from manufacture date"
@@ -1978,6 +2482,14 @@
       "category": "간식",
       "petType": "cat",
       "image": "assets/products/image83.png",
+      "featuresEn": [
+        "Treat for cats of all life stages, 2 months and older",
+        "Soft gel type",
+        "Great taste with balanced nutrition",
+        "Chicken breast and dried pollack used as main ingredients",
+        "Essential cat nutrients L-lysine and taurine added",
+        "Beta-glucan added to support immunity"
+      ],
       "ingredientsEn": "Purified Water, Chicken Breast, Tapioca, Dried Pollock Powder, Carrot, Broccoli, Pumpkin, Fucoidan, Beta-Glucan, Taurine, Psyllium Husk, Vitamin Mix, Mineral Mix, L-Lysine",
       "originEn": "Republic of Korea",
       "shelfLifeEn": "18 months from manufacture date"
@@ -2009,9 +2521,1042 @@
       "category": "간식",
       "petType": "cat",
       "image": "assets/products/image84.png",
+      "featuresEn": [
+        "Treat for cats of all life stages, 2 months and older",
+        "Soft gel type",
+        "Great taste with balanced nutrition",
+        "Chicken breast used as the main ingredient",
+        "Essential cat nutrients L-lysine and taurine added",
+        "Propolis added to support oral care"
+      ],
       "ingredientsEn": "Purified Water, Chicken Breast, Tapioca, Banana, Carrot, Broccoli, Pumpkin, IgY, Spirulina, SHMP, Taurine, Psyllium Husk, Propolis, Vitamin Mix, Mineral Mix, L-Lysine",
       "originEn": "Republic of Korea",
       "shelfLifeEn": "18 months from manufacture date"
+    },
+    {
+      "id": "product-1789104444757",
+      "nameKo": "헬스키친 후리가케(비프)",
+      "nameEn": "Healthy Kitchen Furikake Beef",
+      "brandId": "hellskitchen",
+      "code": "4580626181490",
+      "spec": "100g",
+      "shelfLife": "제조일로부터 18개월까지",
+      "shelfLifeEn": "From the date of manufacture up to 18 months",
+      "features": [],
+      "featuresEn": [],
+      "ingredients": "소고기, 달걀노른자분말, 닭간분말",
+      "ingredientsEn": "Beef, egg yolk powder, chicken liver powder",
+      "origin": "대한민국",
+      "originEn": "Republic of Korea",
+      "category": "간식",
+      "petType": "dog",
+      "image": "assets/products/migrated/be799af7-5344-450a-a3bf-d8469d98a4d3.png",
+      "nutrition": {
+        "protein": "35% 이상",
+        "fat": "27% 이하",
+        "moisture": "35.00% 이하",
+        "ash": "15.00% 이하"
+      },
+      "detailImages": [
+        "assets/products/migrated/a431b931-c56e-42bf-adb5-6f9ced9ce7ba.jpg"
+      ]
+    },
+    {
+      "id": "product-1789105728433",
+      "nameKo": "펫스테이지도그장난감(30142) [no.30142]",
+      "nameEn": "Pet Stage Dog Toy no 30142",
+      "brandId": "petstage",
+      "code": "0700603301428",
+      "spec": "",
+      "shelfLife": "제조일로부터 18개월까지",
+      "shelfLifeEn": "From the date of manufacture up to 18 months",
+      "features": [],
+      "featuresEn": [
+        "Use of high-quality raw materials",
+        "Strict quality control"
+      ],
+      "ingredients": "나무, PP혼합, 바비큐향료",
+      "ingredientsEn": "Wood, PP mixture, barbecue flavor",
+      "origin": "대한민국",
+      "originEn": "Republic of Korea",
+      "category": "용품",
+      "petType": "dog",
+      "nutrition": null,
+      "image": "assets/products/migrated/d064a0a6-1f49-452d-a07d-afea5ad52449.png",
+      "detailImages": [
+        "assets/products/migrated/53cecc61-829c-4981-95b9-ce22eb294c0d.jpg"
+      ]
+    },
+    {
+      "id": "product-1789106680686",
+      "nameKo": "니나오토슨도그스마트플라스틱(67331) [no.67331]",
+      "nameEn": "Nina Otoson Dog Smart Plastic 67331",
+      "brandId": "ninaottosson",
+      "code": "0700603673310",
+      "spec": "",
+      "shelfLife": "제조일로부터 18개월까지",
+      "shelfLifeEn": "From the date of manufacture up to 18 months",
+      "features": [],
+      "featuresEn": [],
+      "ingredients": "ABS 플라스틱",
+      "ingredientsEn": "ABS plastic",
+      "origin": "대한민국",
+      "originEn": "Republic of Korea",
+      "category": "용품",
+      "petType": "dog",
+      "nutrition": null,
+      "image": "assets/products/migrated/2d523f97-6809-4620-b190-5514a4f72d0c.png",
+      "detailImages": [
+        "assets/products/migrated/c31e8447-98bf-4339-a48b-8207f1da58ba.jpg"
+      ]
+    },
+    {
+      "brandId": "hellskitchen",
+      "code": "4580626181513",
+      "nameKo": "헬스키친 후리가케(오리)",
+      "nameEn": "Healthy Kitchen Furikake Chicken Flavor Roasted Duck",
+      "spec": "100g",
+      "shelfLife": "제조일로부터 18개월까지",
+      "shelfLifeEn": "From the date of manufacture up to 18 months",
+      "origin": "대한민국",
+      "originEn": "Republic of Korea",
+      "features": [],
+      "featuresEn": [],
+      "ingredients": "오리고기, 달걀노른자분말, 닭간분말",
+      "ingredientsEn": "Duck meat, egg yolk powder, chicken liver powder",
+      "category": "간식",
+      "petType": "dog",
+      "image": "assets/products/migrated/785a443b-3f60-4f30-b213-9453ab3cfe74.png",
+      "nutrition": {
+        "fat": "27% 이하",
+        "protein": "35% 이상",
+        "moisture": "35.00%이하",
+        "ash": "15.00% 이하"
+      },
+      "id": "product-1789107708885-0",
+      "detailImages": [
+        "assets/products/migrated/7e597911-e111-4a76-b3a9-a634f40dfebc.jpg"
+      ]
+    },
+    {
+      "brandId": "hellskitchen",
+      "code": "4580626181537",
+      "nameKo": "헬스키친 후리가케(연어)",
+      "nameEn": "Healthy Kitchen Furikake Salmon",
+      "spec": "100g",
+      "shelfLife": "제조일로부터 18개월까지",
+      "shelfLifeEn": "From the date of manufacture up to 18 months",
+      "origin": "대한민국",
+      "originEn": "Republic of Korea",
+      "features": [],
+      "featuresEn": [],
+      "ingredients": "연어, 닭고기, 달걀노른자분말, 닭간분말",
+      "ingredientsEn": "Salmon, chicken, egg yolk powder, chicken liver powder",
+      "category": "간식",
+      "petType": "dog",
+      "image": "assets/products/migrated/6693c6f3-85a2-4d9f-9061-ea1b5cf99cd2.png",
+      "nutrition": {
+        "fat": "27% 이하",
+        "protein": "35% 이상",
+        "moisture": "35.00%이하",
+        "ash": "15.00% 이하"
+      },
+      "id": "product-1789107709120-1",
+      "detailImages": [
+        "assets/products/migrated/ed9dee4e-34c2-4a7b-bccb-ff3780ae7f0c.jpg"
+      ]
+    },
+    {
+      "brandId": "hellskitchen",
+      "code": "4580626182121",
+      "nameKo": "헬스키친 동결건조(닭가슴살)",
+      "nameEn": "Health Kitchen freeze-dried chicken breast",
+      "spec": "100g",
+      "shelfLife": "제조일로부터 18개월까지",
+      "shelfLifeEn": "From the date of manufacture up to 18 months",
+      "origin": "대한민국",
+      "originEn": "Republic of Korea",
+      "features": [],
+      "featuresEn": [],
+      "ingredients": "닭가슴살",
+      "ingredientsEn": "Chicken breast",
+      "category": "간식",
+      "petType": "dog",
+      "image": "assets/products/migrated/d00efb1d-3731-49f0-b6d0-e2ee56ddb450.png",
+      "nutrition": {
+        "fat": "11.2% 이하",
+        "protein": "18.6% 이상",
+        "moisture": "51.9% 이하",
+        "ash": "12.9% 이하"
+      },
+      "id": "product-1789107709242-2",
+      "detailImages": [
+        "assets/products/migrated/0372912a-7926-496c-9ce1-0578c941c80d.jpg"
+      ]
+    },
+    {
+      "brandId": "hellskitchen",
+      "code": "4580626182275",
+      "nameKo": "헬스키친 사사미칩(치킨)",
+      "nameEn": "Healthy Kitchen Sasami Chip Chicken",
+      "spec": "40g",
+      "shelfLife": "제조일로부터 18개월까지",
+      "shelfLifeEn": "From the date of manufacture up to 18 months",
+      "origin": "대한민국",
+      "originEn": "Republic of Korea",
+      "features": [],
+      "featuresEn": [],
+      "ingredients": "닭가슴살, 비타민 E",
+      "ingredientsEn": "Chicken breast, vitamin E",
+      "category": "간식",
+      "petType": "dog",
+      "image": "assets/products/migrated/e09d0f1e-3036-487f-ba8a-209a0fdf7c20.png",
+      "nutrition": {
+        "fat": "9.6% 이하",
+        "protein": "14.8% 이상",
+        "moisture": "44.6% 이하",
+        "ash": "11.8% 이하"
+      },
+      "id": "product-1789107709371-3",
+      "detailImages": [
+        "assets/products/migrated/89666e28-df87-488c-92eb-338048f7792b.jpg"
+      ]
+    },
+    {
+      "brandId": "hellskitchen",
+      "code": "4580626182282",
+      "nameKo": "헬스키친 사사미칩(BBQ)",
+      "nameEn": "Healthy Kitchen Sasami Chip BBQ",
+      "spec": "40g",
+      "shelfLife": "제조일로부터 18개월까지",
+      "shelfLifeEn": "From the date of manufacture up to 18 months",
+      "origin": "대한민국",
+      "originEn": "Republic of Korea",
+      "features": [],
+      "featuresEn": [],
+      "ingredients": "닭가슴살, 비타민 E",
+      "ingredientsEn": "Chicken breast, vitamin E",
+      "category": "간식",
+      "petType": "dog",
+      "image": "assets/products/migrated/c6bc3c0a-c617-4f7d-ab30-2bddbfd2610d.png",
+      "nutrition": {
+        "fat": "9.6% 이하",
+        "protein": "14.8% 이상",
+        "moisture": "44.6% 이하",
+        "ash": "11.8% 이하"
+      },
+      "id": "product-1789107709504-4",
+      "detailImages": [
+        "assets/products/migrated/1a815313-3e1f-4f0d-a945-b53ae3c5ad0d.jpg"
+      ]
+    },
+    {
+      "brandId": "hellskitchen",
+      "code": "4580626182299",
+      "nameKo": "헬스키친 사사미칩(치즈)",
+      "nameEn": "Health Kitchen Sasami Chip Cheese",
+      "spec": "40g",
+      "shelfLife": "제조일로부터 18개월까지",
+      "shelfLifeEn": "From the date of manufacture up to 18 months",
+      "origin": "대한민국",
+      "originEn": "Republic of Korea",
+      "features": [],
+      "featuresEn": [],
+      "ingredients": "닭가슴살, 치즈, 비타민 E",
+      "ingredientsEn": "Chicken breast, cheese, vitamin E",
+      "category": "간식",
+      "petType": "dog",
+      "image": "assets/products/migrated/cf6adc1f-2e44-4024-8561-738a896b8b39.png",
+      "nutrition": {
+        "fat": "9.6% 이하",
+        "protein": "14.8% 이상",
+        "moisture": "44.6% 이하",
+        "ash": "11.8% 이하"
+      },
+      "id": "product-1789107709611-5",
+      "detailImages": [
+        "assets/products/migrated/e830e365-def1-4e66-a444-168a5afef25b.jpg"
+      ]
+    },
+    {
+      "brandId": "hellskitchen",
+      "code": "4580626182749",
+      "nameKo": "헬스키친 동결건조(오리가슴살)",
+      "nameEn": "Health Kitchen freeze-dried (chicken breast)",
+      "spec": "70g",
+      "shelfLife": "제조일로부터 18개월까지",
+      "shelfLifeEn": "From the date of manufacture up to 18 months",
+      "origin": "대한민국",
+      "originEn": "Republic of Korea",
+      "features": [],
+      "featuresEn": [],
+      "ingredients": "오리가슴살",
+      "ingredientsEn": "Duck breast",
+      "category": "간식",
+      "petType": "dog",
+      "image": "assets/products/migrated/d215ca5a-a31f-431d-a915-f71d669ca52c.png",
+      "nutrition": {
+        "fat": "11.2% 이하",
+        "protein": "18.6% 이상",
+        "moisture": "51.9% 이하",
+        "ash": "12.9% 이하"
+      },
+      "id": "product-1789107709721-6",
+      "detailImages": [
+        "assets/products/migrated/5058519c-f66b-419d-835c-fada7c863620.jpg"
+      ]
+    },
+    {
+      "brandId": "hellskitchen",
+      "code": "4580626182756",
+      "nameKo": "헬스키친 동결건조(대구살)",
+      "nameEn": "Health Kitchen freeze-dried (beef strip)",
+      "spec": "15g",
+      "shelfLife": "제조일로부터 18개월까지",
+      "shelfLifeEn": "From the date of manufacture up to 18 months",
+      "origin": "대한민국",
+      "originEn": "Republic of Korea",
+      "features": [],
+      "featuresEn": [],
+      "ingredients": "대구",
+      "ingredientsEn": "Cod",
+      "category": "간식",
+      "petType": "dog",
+      "image": "assets/products/migrated/b9baa8f8-cf72-4b3a-aa72-162c354b4ea9.png",
+      "nutrition": {
+        "fat": "11.2% 이하",
+        "protein": "18.6% 이상",
+        "moisture": "51.9% 이하",
+        "ash": "12.9% 이하"
+      },
+      "id": "product-1789107709848-7",
+      "detailImages": [
+        "assets/products/migrated/eca20a88-c382-4cba-b103-1d90419124f5.jpg"
+      ]
+    },
+    {
+      "brandId": "hellskitchen",
+      "code": "4580626184767",
+      "nameKo": "헬스키친 동결건조(멸치치어)",
+      "nameEn": "Health Kitchen freeze-dried anchovy",
+      "spec": "15g",
+      "shelfLife": "제조일로부터 18개월까지",
+      "shelfLifeEn": "From the date of manufacture up to 18 months",
+      "origin": "대한민국",
+      "originEn": "Republic of Korea",
+      "features": [],
+      "featuresEn": [],
+      "ingredients": "멸치 치어",
+      "ingredientsEn": "Anchovy fry",
+      "category": "간식",
+      "petType": "dog",
+      "image": "assets/products/migrated/51813558-d377-4faf-953f-2e1eab80e16c.png",
+      "nutrition": {
+        "fat": "11.2% 이하",
+        "protein": "18.6% 이상",
+        "moisture": "51.9% 이하",
+        "ash": "12.9% 이하"
+      },
+      "id": "product-1789107709970-8"
+    },
+    {
+      "brandId": "petstage",
+      "code": "0700603301435",
+      "nameKo": "펫스테이지도그장난감(30143) [no.30143]",
+      "nameEn": "Pet Stage dog toy (No. 30143)",
+      "spec": "",
+      "shelfLife": "제조일로부터 18개월까지",
+      "shelfLifeEn": "From the date of manufacture up to 18 months",
+      "origin": "대한민국",
+      "originEn": "Republic of Korea",
+      "features": [],
+      "featuresEn": [],
+      "ingredients": "나무, PP혼합, 바비큐향료",
+      "ingredientsEn": "Wood, PP mixture, barbecue flavor",
+      "category": "용품",
+      "petType": "dog",
+      "image": "assets/products/migrated/6b5888c4-4883-4ad5-ab22-8ff1a6243717.png",
+      "nutrition": null,
+      "id": "product-1789107710090-9",
+      "detailImages": [
+        "assets/products/migrated/4e7ca374-f256-49d8-a229-902859b9a265.jpg"
+      ]
+    },
+    {
+      "brandId": "petstage",
+      "code": "0871864002161",
+      "nameKo": "펫스테이지도그장난감(216) [no.216]",
+      "nameEn": "Pet Stage dog toy (No. 216)",
+      "spec": "",
+      "shelfLife": "제조일로부터 18개월까지",
+      "shelfLifeEn": "From the date of manufacture up to 18 months",
+      "origin": "대한민국",
+      "originEn": "Republic of Korea",
+      "features": [],
+      "featuresEn": [],
+      "ingredients": "나무, PP혼합",
+      "ingredientsEn": "Wood, PP mixture",
+      "category": "용품",
+      "petType": "dog",
+      "image": "assets/products/migrated/7fee87b9-4633-46d7-8f09-7c82e35c42a4.png",
+      "nutrition": null,
+      "id": "product-1789107710214-10",
+      "detailImages": [
+        "assets/products/migrated/32f5de75-2db3-4baa-9638-e1f5902d6e4a.jpg"
+      ]
+    },
+    {
+      "brandId": "petstage",
+      "code": "0871864002178",
+      "nameKo": "펫스테이지도그장난감(217) [no.217]",
+      "nameEn": "Pet Stage dog toy (No. 217)",
+      "spec": "",
+      "shelfLife": "제조일로부터 18개월까지",
+      "shelfLifeEn": "From the date of manufacture up to 18 months",
+      "origin": "대한민국",
+      "originEn": "Republic of Korea",
+      "features": [],
+      "featuresEn": [],
+      "ingredients": "나무, PP혼합",
+      "ingredientsEn": "Wood, PP mixture",
+      "category": "용품",
+      "petType": "dog",
+      "image": "assets/products/migrated/7d89dfbd-3849-4e9b-8189-fa9a36996352.png",
+      "nutrition": null,
+      "id": "product-1789107710351-11",
+      "detailImages": [
+        "assets/products/migrated/080e19ba-e41a-4aba-9460-010601569d41.jpg"
+      ]
+    },
+    {
+      "brandId": "petstage",
+      "code": "871864002185",
+      "nameKo": "펫스테이지도그장난감(218) [no.218]",
+      "nameEn": "Pet Stage dog toy (No. 218)",
+      "spec": "",
+      "shelfLife": "제조일로부터 18개월까지",
+      "shelfLifeEn": "From the date of manufacture up to 18 months",
+      "origin": "대한민국",
+      "originEn": "Republic of Korea",
+      "features": [],
+      "featuresEn": [],
+      "ingredients": "나무, PP혼합",
+      "ingredientsEn": "Wood, PP mixture",
+      "category": "용품",
+      "petType": "dog",
+      "image": "assets/products/migrated/2bf87e9e-6065-4f6e-86b6-d23c0e73a807.png",
+      "nutrition": null,
+      "id": "product-1789107710460-12",
+      "detailImages": [
+        "assets/products/migrated/844d0455-9953-48a7-be1b-2f42c6799466.jpg"
+      ]
+    },
+    {
+      "brandId": "petstage",
+      "code": "871864002307",
+      "nameKo": "펫스테이지도그장난감(230) [no.230]",
+      "nameEn": "Pet Stage dog toy (No. 230)",
+      "spec": "",
+      "shelfLife": "제조일로부터 18개월까지",
+      "shelfLifeEn": "From the date of manufacture up to 18 months",
+      "origin": "대한민국",
+      "originEn": "Republic of Korea",
+      "features": [],
+      "featuresEn": [],
+      "ingredients": "SBS, 면",
+      "ingredientsEn": "SBS cotton",
+      "category": "용품",
+      "petType": "dog",
+      "image": "assets/products/migrated/41ff4f31-fe5f-4a60-9cf4-ed609b390d7a.png",
+      "nutrition": null,
+      "id": "product-1789107710570-13",
+      "detailImages": [
+        "assets/products/migrated/879c7ad4-75c3-4188-a4c7-1ceebd173434.jpg"
+      ]
+    },
+    {
+      "brandId": "petstage",
+      "code": "871864002345",
+      "nameKo": "펫스테이지도그장난감(234) [no.234]",
+      "nameEn": "Pet Stage dog toy (No. 234)",
+      "spec": "",
+      "shelfLife": "제조일로부터 18개월까지",
+      "shelfLifeEn": "From the date of manufacture up to 18 months",
+      "origin": "대한민국",
+      "originEn": "Republic of Korea",
+      "features": [],
+      "featuresEn": [],
+      "ingredients": "TPE, 면",
+      "ingredientsEn": "TPE, cotton",
+      "category": "용품",
+      "petType": "dog",
+      "image": "assets/products/migrated/1b750af5-6ac2-4ca7-bb6e-7a56ee3493b8.png",
+      "nutrition": null,
+      "id": "product-1789107710681-14",
+      "detailImages": [
+        "assets/products/migrated/89cbb9b8-dbb3-4450-a4da-9a0486d22323.jpg"
+      ]
+    },
+    {
+      "brandId": "petstage",
+      "code": "871864002635",
+      "nameKo": "펫스테이지도그장난감(263) [no.263]",
+      "nameEn": "Pet Stage dog toy (No. 263)",
+      "spec": "",
+      "shelfLife": "제조일로부터 18개월까지",
+      "shelfLifeEn": "From the date of manufacture up to 18 months",
+      "origin": "대한민국",
+      "originEn": "Republic of Korea",
+      "features": [],
+      "featuresEn": [],
+      "ingredients": "TPE, PET",
+      "ingredientsEn": "Thermoplastic elastomer, Polyethylene terephthalate",
+      "category": "용품",
+      "petType": "dog",
+      "image": "assets/products/migrated/09b23dac-8137-4aa0-8aa1-f46320ec9a4d.png",
+      "nutrition": null,
+      "id": "product-1789107710791-15",
+      "detailImages": [
+        "assets/products/migrated/28cb7706-2a9a-4c2f-b236-01c3bba3ee57.jpg"
+      ]
+    },
+    {
+      "brandId": "petstage",
+      "code": "871864002659",
+      "nameKo": "펫스테이지도그장난감(265) [no.265]",
+      "nameEn": "Pet Stage dog toy (No. 265)",
+      "spec": "",
+      "shelfLife": "제조일로부터 18개월까지",
+      "shelfLifeEn": "From the date of manufacture up to 18 months",
+      "origin": "대한민국",
+      "originEn": "Republic of Korea",
+      "features": [],
+      "featuresEn": [],
+      "ingredients": "TPE, PET",
+      "ingredientsEn": "Thermoplastic elastomer, Polyethylene terephthalate",
+      "category": "용품",
+      "petType": "dog",
+      "image": "assets/products/migrated/3e99a60b-0b84-4931-a5cf-96e70300cde4.png",
+      "nutrition": null,
+      "id": "product-1789107710941-16",
+      "detailImages": [
+        "assets/products/migrated/71b89d58-e500-4df9-8f0c-631b706a527e.jpg"
+      ]
+    },
+    {
+      "brandId": "ninaottosson",
+      "code": "0700603673327",
+      "nameKo": "니나오토슨도그토네이도(67332) [no.67332]",
+      "nameEn": "Nina Otoson Dog Tornado (No. 67332)",
+      "spec": "",
+      "shelfLife": "제조일로부터 18개월까지",
+      "shelfLifeEn": "From the date of manufacture up to 18 months",
+      "origin": "대한민국",
+      "originEn": "Republic of Korea",
+      "features": [],
+      "featuresEn": [],
+      "ingredients": "ABS 플라스틱",
+      "ingredientsEn": "ABS plastic",
+      "category": "용품",
+      "petType": "dog",
+      "image": "assets/products/migrated/74336bf0-ce43-4115-8c17-1d4e660f8716.png",
+      "nutrition": null,
+      "id": "product-1789107711060-17",
+      "detailImages": [
+        "assets/products/migrated/bc5347eb-188a-4d8e-b6f3-1096355b7f91.jpg"
+      ]
+    },
+    {
+      "brandId": "ninaottosson",
+      "code": "700603673341",
+      "nameKo": "니나오토슨도그카지노(67334) [no.67334]",
+      "nameEn": "Nina Otoson Dog Casino (No. 67334)",
+      "spec": "",
+      "shelfLife": "제조일로부터 18개월까지",
+      "shelfLifeEn": "From the date of manufacture up to 18 months",
+      "origin": "대한민국",
+      "originEn": "Republic of Korea",
+      "features": [],
+      "featuresEn": [],
+      "ingredients": "ABS 플라스틱",
+      "ingredientsEn": "ABS plastic",
+      "category": "용품",
+      "petType": "dog",
+      "image": "assets/products/migrated/bb3aa1dd-1d1f-4d01-9fd4-9a87872dc425.png",
+      "nutrition": null,
+      "id": "product-1789107711161-18",
+      "detailImages": [
+        "assets/products/migrated/741ff33e-1f93-4dcf-bd92-ae47891b3af5.jpg"
+      ]
+    },
+    {
+      "brandId": "ninaottosson",
+      "code": "700603673365",
+      "nameKo": "니나오토슨도그스마트컴포지트(67336) [no.67336]",
+      "nameEn": "Nina Otoson Dog Smart Composite (No. 67336)",
+      "spec": "",
+      "shelfLife": "제조일로부터 18개월까지",
+      "shelfLifeEn": "From the date of manufacture up to 18 months",
+      "origin": "대한민국",
+      "originEn": "Republic of Korea",
+      "features": [],
+      "featuresEn": [],
+      "ingredients": "ABS 플라스틱",
+      "ingredientsEn": "ABS plastic",
+      "category": "용품",
+      "petType": "dog",
+      "image": "assets/products/migrated/a854e72d-bfad-4e72-8da0-21c08fd0c385.png",
+      "nutrition": null,
+      "id": "product-1789107711291-19",
+      "detailImages": [
+        "assets/products/migrated/6493aa4c-9ac4-444c-aac7-b3037d954991.jpg"
+      ]
+    },
+    {
+      "brandId": "ninaottosson",
+      "code": "700603673372",
+      "nameKo": "니나오토슨도그워커컴포지트(67337) [no.67337]",
+      "nameEn": "Nina Ottosson Dog Worker Composite (No. 67337)",
+      "spec": "",
+      "shelfLife": "제조일로부터 18개월까지",
+      "shelfLifeEn": "From the date of manufacture up to 18 months",
+      "origin": "대한민국",
+      "originEn": "Republic of Korea",
+      "features": [],
+      "featuresEn": [],
+      "ingredients": "ABS 플라스틱",
+      "ingredientsEn": "ABS plastic",
+      "category": "용품",
+      "petType": "dog",
+      "image": "assets/products/migrated/a3671e50-72b1-476c-9860-3e8bbe6f0ae7.png",
+      "nutrition": null,
+      "id": "product-1789107711451-20",
+      "detailImages": [
+        "assets/products/migrated/6b552fb4-016d-4ff0-82e7-721c39f01a02.jpg"
+      ]
+    },
+    {
+      "brandId": "ninaottosson",
+      "code": "700603673389",
+      "nameKo": "니나오토슨도그하이드앤슬라이드(67338) [no.67338]",
+      "nameEn": "Nina Ottosson Dog Hide and Slide (No. 67338)",
+      "spec": "",
+      "shelfLife": "제조일로부터 18개월까지",
+      "shelfLifeEn": "From the date of manufacture up to 18 months",
+      "origin": "대한민국",
+      "originEn": "Republic of Korea",
+      "features": [],
+      "featuresEn": [],
+      "ingredients": "ABS 플라스틱",
+      "ingredientsEn": "ABS plastic",
+      "category": "용품",
+      "petType": "dog",
+      "image": "assets/products/migrated/8d30b47f-7111-4353-946e-146bd5a38ef3.png",
+      "nutrition": null,
+      "id": "product-1789107711580-21",
+      "detailImages": [
+        "assets/products/migrated/44793318-e951-4935-9933-acb3d968ef8f.jpg"
+      ]
+    },
+    {
+      "brandId": "ninaottosson",
+      "code": "700603693431",
+      "nameKo": "니나오토슨챌린지슬라이더미트(69343) [no.69343]",
+      "nameEn": "Nina Otoson Challenge Slider Mat (No. 69343)",
+      "spec": "",
+      "shelfLife": "제조일로부터 18개월까지",
+      "shelfLifeEn": "From the date of manufacture up to 18 months",
+      "origin": "대한민국",
+      "originEn": "Republic of Korea",
+      "features": [],
+      "featuresEn": [],
+      "ingredients": "나무, PP",
+      "ingredientsEn": "Wood, PP",
+      "category": "용품",
+      "petType": "dog",
+      "image": "assets/products/migrated/c59710a8-8f29-4a99-8c01-e696dc0bbf4f.png",
+      "nutrition": null,
+      "id": "product-1789107711710-22",
+      "detailImages": [
+        "assets/products/migrated/9c1113da-9193-42e8-b98e-8b62cd273553.jpg"
+      ]
+    },
+    {
+      "brandId": "ninaottosson",
+      "code": "700603693448",
+      "nameKo": "니나오토슨워블볼미트(69344) [no.69344]",
+      "nameEn": "Nina Otoson Whirlball Treat (No. 69344)",
+      "spec": "",
+      "shelfLife": "제조일로부터 18개월까지",
+      "shelfLifeEn": "From the date of manufacture up to 18 months",
+      "origin": "대한민국",
+      "originEn": "Republic of Korea",
+      "features": [],
+      "featuresEn": [],
+      "ingredients": "ABS, PP, TPE",
+      "ingredientsEn": "Acrylonitrile butadiene styrene, polypropylene, thermoplastic elastomer",
+      "category": "용품",
+      "petType": "dog",
+      "image": "assets/products/migrated/897c4acc-1e4b-43d5-a72b-8a95200a9139.png",
+      "nutrition": null,
+      "id": "product-1789107711821-23",
+      "detailImages": [
+        "assets/products/migrated/3ad307bf-0599-438c-8f71-bd587530bf17.jpg"
+      ]
+    },
+    {
+      "brandId": "ninaottosson",
+      "code": "0700603694797",
+      "nameKo": "니나오토슨버건아웃(69479) [no.69479]",
+      "nameEn": "Nina Ottosson Dog Brick (No. 69479)",
+      "spec": "",
+      "shelfLife": "제조일로부터 18개월까지",
+      "shelfLifeEn": "From the date of manufacture up to 18 months",
+      "origin": "대한민국",
+      "originEn": "Republic of Korea",
+      "features": [],
+      "featuresEn": [],
+      "ingredients": "Wood(BIOMASS FIBER), PP",
+      "ingredientsEn": "Wood biomass fiber Polypropylene",
+      "category": "용품",
+      "petType": "dog",
+      "image": "assets/products/migrated/879d4630-43b0-4b6c-ab33-aa88ce62971a.png",
+      "nutrition": null,
+      "id": "product-1789107711961-24",
+      "detailImages": [
+        "assets/products/migrated/3cb49817-14f2-424f-a060-ee865b34ae3c.jpg"
+      ]
+    },
+    {
+      "brandId": "ninaottosson",
+      "code": "700603695398",
+      "nameKo": "니나오토슨도그스마트컴포지션에코(69539) [no.69539]",
+      "nameEn": "Nina Ottosson Dog Smart Composition Eco (No. 69539)",
+      "spec": "",
+      "shelfLife": "제조일로부터 18개월까지",
+      "shelfLifeEn": "From the date of manufacture up to 18 months",
+      "origin": "대한민국",
+      "originEn": "Republic of Korea",
+      "features": [],
+      "featuresEn": [],
+      "ingredients": "나무, PP",
+      "ingredientsEn": "Wood, PP",
+      "category": "용품",
+      "petType": "dog",
+      "image": "assets/products/migrated/c2184f7b-b695-46ed-af11-9ed180522a16.png",
+      "nutrition": null,
+      "id": "product-1789107712091-25",
+      "detailImages": [
+        "assets/products/migrated/291408db-9397-4280-a0f3-e870125ee590.jpg"
+      ]
+    },
+    {
+      "brandId": "ninaottosson",
+      "code": "700603695404",
+      "nameKo": "니나오토슨도그하이드엔슬라이드에코(69540) [no.69540]",
+      "nameEn": "Nina Ottosson Dog Hide N Slide Eco (No. 69540)",
+      "spec": "",
+      "shelfLife": "제조일로부터 18개월까지",
+      "shelfLifeEn": "From the date of manufacture up to 18 months",
+      "origin": "대한민국",
+      "originEn": "Republic of Korea",
+      "features": [],
+      "featuresEn": [],
+      "ingredients": "나무, PP",
+      "ingredientsEn": "Wood, PP",
+      "category": "용품",
+      "petType": "dog",
+      "image": "assets/products/migrated/af7111cb-f23f-42e7-8b32-f6a225c4a9bb.png",
+      "nutrition": null,
+      "id": "product-1789107712211-26",
+      "detailImages": [
+        "assets/products/migrated/ac9a87f6-bfae-4759-8660-f32d180d26b6.jpg"
+      ]
+    },
+    {
+      "brandId": "ninaottosson",
+      "code": "700603695411",
+      "nameKo": "니나오토슨도그워커에코(69541) [no.69541]",
+      "nameEn": "Nina Ottosson Dog Worker Eco (No. 69541)",
+      "spec": "",
+      "shelfLife": "제조일로부터 18개월까지",
+      "shelfLifeEn": "From the date of manufacture up to 18 months",
+      "origin": "대한민국",
+      "originEn": "Republic of Korea",
+      "features": [],
+      "featuresEn": [],
+      "ingredients": "나무, PP",
+      "ingredientsEn": "Wood, PP",
+      "category": "용품",
+      "petType": "dog",
+      "image": "assets/products/migrated/55d06daa-e280-4156-a610-9d8c9e362c88.png",
+      "nutrition": null,
+      "id": "product-1789107712320-27",
+      "detailImages": [
+        "assets/products/migrated/f92f52ff-8fc8-4a0e-a248-1548757e0b35.jpg"
+      ]
+    },
+    {
+      "brandId": "ninaottosson",
+      "code": "700603675758",
+      "nameKo": "니나오토슨트릿메이지(67575) [no.67575]",
+      "nameEn": "Nina Otoson Treat Maze (No. 67575)",
+      "spec": "",
+      "shelfLife": "제조일로부터 18개월까지",
+      "shelfLifeEn": "From the date of manufacture up to 18 months",
+      "origin": "대한민국",
+      "originEn": "Republic of Korea",
+      "features": [],
+      "featuresEn": [],
+      "ingredients": "ABS 플라스틱",
+      "ingredientsEn": "ABS plastic",
+      "category": "용품",
+      "petType": "dog",
+      "image": "assets/products/migrated/40fa5025-23c9-43a8-991b-d768eee04839.png",
+      "nutrition": null,
+      "id": "product-1789107712420-28",
+      "detailImages": [
+        "assets/products/migrated/b115c412-ab4c-4c84-8928-cdaf0da84a93.jpg"
+      ]
+    },
+    {
+      "brandId": "ninaottosson",
+      "code": "0700603695817",
+      "nameKo": "니나오토슨레이니데이(69581) [no.69581]",
+      "nameEn": "Nina Otoson Rainy Day (No. 69581)",
+      "spec": "",
+      "shelfLife": "제조일로부터 18개월까지",
+      "shelfLifeEn": "From the date of manufacture up to 18 months",
+      "origin": "대한민국",
+      "originEn": "Republic of Korea",
+      "features": [],
+      "featuresEn": [],
+      "ingredients": "PP",
+      "ingredientsEn": "Polypropylene",
+      "category": "용품",
+      "petType": "dog",
+      "image": "assets/products/migrated/684e4f30-fa60-4b03-bfbe-228ff27cf6cd.png",
+      "nutrition": null,
+      "id": "product-1789107712531-29",
+      "detailImages": [
+        "assets/products/migrated/e4afa785-2cbc-429b-aaed-acfcadff743b.jpg"
+      ]
+    },
+    {
+      "brandId": "ninaottosson",
+      "code": "0700603695831",
+      "nameKo": "니나오토슨멜론머드니스(69583) [no.69583]",
+      "nameEn": "Nina Otoson Melon Madness (No. 69583)",
+      "spec": "",
+      "shelfLife": "제조일로부터 18개월까지",
+      "shelfLifeEn": "From the date of manufacture up to 18 months",
+      "origin": "대한민국",
+      "originEn": "Republic of Korea",
+      "features": [],
+      "featuresEn": [],
+      "ingredients": "Wood(BIOMASS FIBER), PP",
+      "ingredientsEn": "Wood biomass fiber Polypropylene",
+      "category": "용품",
+      "petType": "dog",
+      "image": "assets/products/migrated/2ffcb596-b185-4886-b962-81f8047dc547.png",
+      "nutrition": null,
+      "id": "product-1789107712661-30",
+      "detailImages": [
+        "assets/products/migrated/718a06aa-05a1-40d4-9a9c-0dca09964c27.jpg"
+      ]
+    },
+    {
+      "brandId": "petstage",
+      "code": "0871864006688",
+      "nameKo": "펫스테이지도그장난감(668) [no.668]",
+      "nameEn": "Pet Stage dog toy (No. 668)",
+      "spec": "",
+      "shelfLife": "제조일로부터 18개월까지",
+      "shelfLifeEn": "From the date of manufacture up to 18 months",
+      "origin": "대한민국",
+      "originEn": "Republic of Korea",
+      "features": [],
+      "featuresEn": [],
+      "ingredients": "PP, 골분, 녹말, 사슴뿔",
+      "ingredientsEn": "PP, bone meal, starch, deer antler",
+      "category": "용품",
+      "petType": "dog",
+      "image": "assets/products/migrated/e0da34d9-8f80-4397-b81b-5f70b4790006.png",
+      "nutrition": null,
+      "id": "product-1789107712780-31",
+      "detailImages": [
+        "assets/products/migrated/3db3309d-b802-428b-a98e-5e3b3d3dd2db.jpg"
+      ]
+    },
+    {
+      "brandId": "petstage",
+      "code": "0871864003298",
+      "nameKo": "펫스테이지캣장난감(329) [no.329]",
+      "nameEn": "Pet Stage Cat Toy (No. 329)",
+      "spec": "",
+      "shelfLife": "제조일로부터 18개월까지",
+      "shelfLifeEn": "From the date of manufacture up to 18 months",
+      "origin": "대한민국",
+      "originEn": "Republic of Korea",
+      "features": [],
+      "featuresEn": [],
+      "ingredients": "TPE, 개박하오일",
+      "ingredientsEn": "TPE, dog rose hip oil",
+      "category": "용품",
+      "petType": "cat",
+      "image": "assets/products/migrated/c0c5aec3-0948-4e76-9a85-ff005f773f9e.png",
+      "nutrition": null,
+      "id": "product-1789107712902-32",
+      "detailImages": [
+        "assets/products/migrated/8114e690-ff14-4259-8c4c-6998f714e328.jpg"
+      ]
+    },
+    {
+      "brandId": "petstage",
+      "code": "0871864003359",
+      "nameKo": "펫스테이지캣장난감(335) [no.335]",
+      "nameEn": "Pet Stage Cat Toy (No. 335)",
+      "spec": "",
+      "shelfLife": "제조일로부터 18개월까지",
+      "shelfLifeEn": "From the date of manufacture up to 18 months",
+      "origin": "대한민국",
+      "originEn": "Republic of Korea",
+      "features": [],
+      "featuresEn": [],
+      "ingredients": "폴리에스테르, 민트",
+      "ingredientsEn": "Polyester, mint",
+      "category": "용품",
+      "petType": "cat",
+      "image": "assets/products/migrated/70d512bc-6daa-4956-b4df-491706286876.png",
+      "nutrition": null,
+      "id": "product-1789107713041-33",
+      "detailImages": [
+        "assets/products/migrated/4c3afd17-a487-41a1-a293-38274777a119.jpg"
+      ]
+    },
+    {
+      "brandId": "reflex",
+      "code": "8698995003537",
+      "nameKo": "리플렉스 플러스 캣 키튼 치킨 15KG [15KG]",
+      "nameEn": "Reflex Plus Cat Kitten Chicken 15KG",
+      "spec": "",
+      "shelfLife": "제조일로부터 18개월까지",
+      "shelfLifeEn": "From the date of manufacture up to 18 months",
+      "origin": "대한민국",
+      "originEn": "Republic of Korea",
+      "features": [],
+      "featuresEn": [],
+      "ingredients": "가공된 닭고기 단백질, 옥수수, 계유, 가수분해 닭고기 단백질, 쌀, 비트펄프, 간향, 비타민{비타민A, 비타민D3, 비타민E, 비타민C, 비타민B1-B2-B3(니아신)-B6-B12-B7 (비오틴)- 비타민B9(엽산), 비타민K3, 콜린, 칼슘 판토텐산염}, 미네랄(철분, 요오드, 구리, 망간, 아연, 셀레늄), 자일로올리고당, 만난올리고당, 양조효모, 아마씨, 소금, 유카, L-카르니틴, 타우린, 구연산- 천연 항산화제",
+      "ingredientsEn": "Processed chicken protein, corn, whey, hydrolyzed chicken protein, rice, beet pulp, flavor, vitamins vitamin A, vitamin D3, vitamin E, vitamin C, vitamin B1-B2-B3 niacin-B6-B12-B7 biotin-vitamin B9 folic acid, vitamin K3, choline, calcium pantothenate, minerals iron, iodine, copper, manganese, zinc, selenium, xylooligosaccharide, mannooligosaccharide, brewer's yeast, flaxseed, salt, yucca, L-carnitine, taurine, citric acid- natural antioxidants",
+      "category": "사료",
+      "petType": "cat",
+      "image": "assets/products/migrated/e7b20a1c-7181-460c-aeec-eb79cb2332db.png",
+      "nutrition": {
+        "phosphorus": "1.3% 이상",
+        "calcium": "2.0% 이상",
+        "fat": "13.5% 이상",
+        "protein": "36% 이상",
+        "moisture": "5.2% 이하",
+        "fiber": "1.5% 이하",
+        "ash": "11.3% 이하"
+      },
+      "id": "product-1789107713161-34",
+      "detailImages": [
+        "assets/products/migrated/abb8474b-a8d0-48d3-a673-e3ac7e40db2f.jpg"
+      ]
+    },
+    {
+      "brandId": "reflex",
+      "code": "8698995003551",
+      "nameKo": "리플렉스 플러스 캣 어덜트 치킨 1.5KG [1.5KG]",
+      "nameEn": "Reflex Plus Cat Adult Chicken 1.5KG",
+      "spec": "",
+      "shelfLife": "제조일로부터 18개월까지",
+      "shelfLifeEn": "From the date of manufacture up to 18 months",
+      "origin": "대한민국",
+      "originEn": "Republic of Korea",
+      "features": [],
+      "featuresEn": [],
+      "ingredients": "가공된 닭고기 단백질, 옥수수, 계유 ,쌀, 가수분해 닭고기 단백질, 비트펄프, 간향, 비타민{비타민A, 비타민D3, 비타민E, 비타민C, 비타민B1-B2-B3(니아신)-B6-B12-B7 (비오틴)- 비타민 B9(엽산), 비타민K3, 콜린, 칼슘 판토텐산염}, 미네랄(철분, 요우드, 구리, 망간, 아연, 셀레늄), 아마씨, 자일로올리고당, 양조효모, 소금, 유카, 타우린,구연산- 천연 항산화제",
+      "ingredientsEn": "Processed chicken protein, corn, whey, rice, hydrolyzed chicken protein, beet pulp, flavor, vitamins vitamin A, vitamin D3, vitamin E, vitamin C, vitamin B1-B2-B3 niacin-B6-B12-B7 biotin-vitamin B9 folic acid, vitamin K3, choline, calcium pantothenate, minerals iron, iodine, copper, manganese, zinc, selenium, flaxseed, xylooligosaccharide, brewer's yeast, salt, yucca, taurine, citric acid- natural antioxidant",
+      "category": "사료",
+      "petType": "cat",
+      "image": "assets/products/migrated/2542276f-27f3-4c0f-b4d9-ed0811cd780a.png",
+      "nutrition": {
+        "phosphorus": "1.1% 이상",
+        "calcium": "1.6% 이상",
+        "fat": "10.6% 이상",
+        "protein": "32% 이상",
+        "moisture": "10.5% 이하",
+        "fiber": "1.9% 이하",
+        "ash": "10.5% 이하"
+      },
+      "id": "product-1789107713270-35",
+      "detailImages": [
+        "assets/products/migrated/ef72b6ca-be33-454d-bba9-086162f3896b.jpg"
+      ]
+    },
+    {
+      "brandId": "reflex",
+      "code": "8698995003636",
+      "nameKo": "리플렉스 플러스 캣 어덜트 헤어볼 연어 1.5KG [1.5KG]",
+      "nameEn": "Reflex Plus Cat Adult Hairball Salmon 1.5KG",
+      "spec": "",
+      "shelfLife": "제조일로부터 18개월까지",
+      "shelfLifeEn": "From the date of manufacture up to 18 months",
+      "origin": "대한민국",
+      "originEn": "Republic of Korea",
+      "features": [],
+      "featuresEn": [],
+      "ingredients": "가공된 연어단백질, 옥수수, 계유, 가수분해 연어 단백질, 쌀, 사탕무, 생선향, 비타민{비타민A, 비타민D3, 비타민E, 비타민C, 비타민B1-B2-B3(니아신)-B6-B12-B7(비오틴)-비타민B9(엽산), 비타민K3, 콜린, 칼슘 판토텐산염}, 미네랄(철분, 요오드, 구리, 망간, 아연, 셀레늄), 연어오일, 자일로올리고당, 양조효모, 차전자피, 소금, 유카, L-카르니틴, 타우린, 구연산- 천연 항산화제",
+      "ingredientsEn": "Processed salmon protein, corn, whey, hydrolyzed salmon protein, rice, beet pulp, fish flavor, vitamins (vitamin A, vitamin D3, vitamin E, vitamin C, vitamin B1-B2-B3 (niacin)-B6-B12-B7 (biotin)-vitamin B9 (folic acid), vitamin K3, choline, calcium pantothenate), minerals (iron, iodine, copper, manganese, zinc, selenium), salmon oil, xylooligosaccharide, brewer's yeast, green tea extract, salt, yucca, L-carnitine, taurine, citric acid - natural antioxidants",
+      "category": "사료",
+      "petType": "cat",
+      "image": "assets/products/migrated/a0613700-5056-4a4c-ba40-d7acf7e4473a.png",
+      "nutrition": {
+        "phosphorus": "1.1% 이상",
+        "calcium": "1.5% 이상",
+        "fat": "9.9% 이상",
+        "protein": "31% 이상",
+        "moisture": "4.0% 이하",
+        "fiber": "3.5% 이하",
+        "ash": "8.4% 이하"
+      },
+      "id": "product-1789107713380-36",
+      "detailImages": [
+        "assets/products/migrated/55574eef-ad3c-464d-8bb7-d358cf65e0a1.jpg"
+      ]
+    },
+    {
+      "brandId": "reflex",
+      "code": "8698995027410",
+      "nameKo": "리플렉스 플러스 캣 어덜트 유리너리 치킨 1.5KG [1.5KG]",
+      "nameEn": "Reflex Plus Cat Adult Urinary Chicken 1.5KG",
+      "spec": "",
+      "shelfLife": "제조일로부터 18개월까지",
+      "shelfLifeEn": "From the date of manufacture up to 18 months",
+      "origin": "대한민국",
+      "originEn": "Republic of Korea",
+      "features": [],
+      "featuresEn": [],
+      "ingredients": "가공된 닭고기 단백질, 옥수수, 쌀, 계유, 가수분해 닭고기 단백질, 옥수수글루텐, 사탕수수 섬유, 비트펄프, 간향, 비타민{비타민A, 비타민D3, 비타민E, 비타민C, 비타민B1-B2-B3(니아신)-B6-B12-B7(비오틴)-비타민 B9(엽산), 비타민K3, 콜린, 칼슘 판토텐산염}, 미네랄(철분,요오드, 구리, 망간, 아연, 셀레늄), 아마씨, 자일로올리고당, 양조효모, 소금, L-카르니틴, DL-메티오닌, 차전자피, 유카, 타우린, 구연산- 천연 항산화제",
+      "ingredientsEn": "Processed chicken protein, corn, rice, whey, hydrolyzed chicken protein, corn gluten, sugar cane fiber, beet pulp, meat flavor, vitamins vitamin A, vitamin D3, vitamin E, vitamin C, vitamins B1-B2-B3 niacin-B6-B12-B7 biotin-vitamin B9 folic acid, vitamin K3, choline, calcium pantothenate, minerals iron, iodine, copper, manganese, zinc, selenium, flaxseed, xylooligosaccharide, brewer's yeast, salt, L-carnitine, DL-methionine, dried kelp, yucca, taurine, citric acid- natural antioxidants",
+      "category": "사료",
+      "petType": "cat",
+      "image": "assets/products/migrated/2a0e64be-d52d-47a1-b24e-dde4f4618fc7.png",
+      "nutrition": {
+        "phosphorus": "1.2% 이상",
+        "calcium": "1.8% 이상",
+        "fat": "7.5% 이상",
+        "protein": "34% 이상",
+        "moisture": "5.9% 이하",
+        "fiber": "3.0% 이하",
+        "ash": "11.3% 이하"
+      },
+      "id": "product-1789107713510-37",
+      "detailImages": [
+        "assets/products/migrated/5ec82132-0dc8-4830-ad63-c67a067f8495.jpg"
+      ]
     }
   ],
   "footer": {
@@ -2102,6 +3647,21 @@
       "id": "petstage",
       "label": "펫스테이지",
       "labelEn": "Petstages"
+    },
+    {
+      "id": "petsmeal",
+      "label": "펫츠밀",
+      "labelEn": "PET'S MEAL"
+    },
+    {
+      "id": "natures",
+      "label": "네이처스",
+      "labelEn": "NATURE'S"
+    },
+    {
+      "id": "hellskitchen",
+      "label": "헬스키친",
+      "labelEn": "HELL'S KITCHEN"
     }
   ]
 }
