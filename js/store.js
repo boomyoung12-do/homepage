@@ -209,7 +209,9 @@ function renderBrandRail() {
   // 브랜드 칩은 가로로 스크롤되는 영역에, "전체 브랜드" 버튼은 그 바깥 오른쪽 끝에 고정해서
   // 브랜드가 많아도 항상 보이게 한다.
   const scroller = el("div", { class: "store-brand-scroll" });
-  rail.appendChild(scroller);
+  const prev = el("button", { type: "button", class: "store-rail-arrow prev", "aria-label": lang === "en" ? "Previous brands" : "이전 브랜드", html: "&#8249;" });
+  const next = el("button", { type: "button", class: "store-rail-arrow next", "aria-label": lang === "en" ? "Next brands" : "다음 브랜드", html: "&#8250;" });
+  rail.appendChild(el("div", { class: "store-brand-viewport" }, [scroller, prev, next]));
   // "전체 브랜드"는 글자 대신 아이콘으로
   const allChip = mk("all", L().allBrands, "", content.products.length);
   allChip.classList.add("all");
@@ -227,6 +229,84 @@ function renderBrandRail() {
     more.addEventListener("click", openDirectory);
     rail.appendChild(more);
   }
+  setupRailScroll();
+}
+
+// ---------- 브랜드관 넘기기 (PC: 좌우 화살표 + 마우스로 끌기, 모바일: 스와이프) ----------
+const railDrag = { scroller: null, dragging: false, moved: false, startX: 0, startLeft: 0, bound: false };
+function setupRailScroll() {
+  const viewport = document.querySelector(".store-brand-viewport");
+  if (!viewport) return;
+  const scroller = viewport.querySelector(".store-brand-scroll");
+  const prev = viewport.querySelector(".store-rail-arrow.prev");
+  const next = viewport.querySelector(".store-rail-arrow.next");
+
+  // 넘칠 때만 화살표를 보이고, 끝에 닿은 쪽은 숨긴다
+  const sync = () => {
+    const max = scroller.scrollWidth - scroller.clientWidth;
+    const overflow = max > 2;
+    viewport.classList.toggle("overflow", overflow);
+    viewport.classList.toggle("at-start", scroller.scrollLeft <= 2);
+    viewport.classList.toggle("at-end", scroller.scrollLeft >= max - 2);
+  };
+  const page = (dir) => scroller.scrollBy({ left: dir * scroller.clientWidth * 0.8, behavior: "smooth" });
+  prev.addEventListener("click", () => page(-1));
+  next.addEventListener("click", () => page(1));
+  scroller.addEventListener("scroll", sync, { passive: true });
+  if (!setupRailScroll.resizeBound) {
+    setupRailScroll.resizeBound = true;
+    addEventListener("resize", () => setupRailScroll.sync && setupRailScroll.sync());
+  }
+  setupRailScroll.sync = sync;
+
+  // 마우스로 끌어서 넘기기. 조금이라도 끌었으면 그 뒤의 클릭(브랜드 선택)은 무시한다.
+  // 창 전체에 거는 이동/놓기 감지는 한 번만 걸고, 지금 그려진 줄(railDrag.scroller)을 쓴다.
+  railDrag.scroller = scroller;
+  scroller.addEventListener("pointerdown", (e) => {
+    if (e.pointerType !== "mouse" || e.button !== 0) return;
+    Object.assign(railDrag, { dragging: true, moved: false, startX: e.clientX, startLeft: scroller.scrollLeft });
+  });
+  if (!railDrag.bound) {
+    railDrag.bound = true;
+    addEventListener("pointermove", (e) => {
+      const sc = railDrag.scroller;
+      if (!railDrag.dragging || !sc) return;
+      const dx = e.clientX - railDrag.startX;
+      if (Math.abs(dx) > 5) {
+        railDrag.moved = true;
+        sc.classList.add("dragging");
+      }
+      if (railDrag.moved) sc.scrollLeft = railDrag.startLeft - dx;
+    });
+    addEventListener("pointerup", () => {
+      if (!railDrag.dragging) return;
+      railDrag.dragging = false;
+      railDrag.scroller?.classList.remove("dragging");
+    });
+  }
+  scroller.addEventListener(
+    "click",
+    (e) => {
+      if (railDrag.moved) {
+        e.stopPropagation();
+        e.preventDefault();
+        railDrag.moved = false;
+      }
+    },
+    true
+  );
+  scroller.addEventListener("dragstart", (e) => e.preventDefault());
+
+  // 선택된 브랜드가 보이도록 필요하면 그쪽으로 넘긴다
+  const active = scroller.querySelector(".store-brand-chip.active");
+  if (active) {
+    const a = active.getBoundingClientRect();
+    const v = scroller.getBoundingClientRect();
+    if (a.left < v.left || a.right > v.right) scroller.scrollLeft += a.left - v.left - 16;
+  }
+  requestAnimationFrame(sync);
+  // 로고 이미지가 늦게 로드되며 폭이 바뀌어도 다시 계산
+  scroller.querySelectorAll("img").forEach((img) => img.complete || img.addEventListener("load", sync, { once: true }));
 }
 
 function pickBrand(id, scroll) {
