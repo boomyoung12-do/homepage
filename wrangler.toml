@@ -1,0 +1,20 @@
+name = "homepage"
+compatibility_date = "2024-09-01"
+pages_build_output_dir = "."
+
+# (주)부명 회사 Cloudflare 계정 (9542ee78…)
+[[d1_databases]]
+binding = "DB"
+database_name = "boomyung-homepage-db"
+database_id = "dfa8590c-102e-47a8-a212-7afbc1996cde"
+
+# 어드민에서 올리는 이미지·영상 저장소
+[[r2_buckets]]
+binding = "MEDIA"
+bucket_name = "boomyung-homepage-media"
+
+[ai]
+binding = "AI"
+
+# ADMIN_PASSWORD 는 비밀값으로 설정한다 (이 파일에 넣지 않는다):
+#   Workers & Pages -> homepage -> Settings -> Variables and Secrets
