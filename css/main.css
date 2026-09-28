@@ -1031,3 +1031,6 @@ img[alt="아무도없개"] {
   line-height: 1;
 }
 .legal-modal-close:hover { background: rgba(15, 23, 42, 0.16); }
+
+/* 어드민 로고 배율(logoScale): 홈 브랜드 카드 로고는 왼쪽 기준으로 커지게 */
+.brand-card img { transform-origin: left center; }

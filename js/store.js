@@ -63,6 +63,7 @@ let content = null;
 let lang = "ko";
 let brandMap = {};
 let brandLogos = {};
+let brandScale = {};
 let brandType = {};
 let brandCount = {};
 const RAIL_LIMIT = 9; // 브랜드관에 바로 보이는 브랜드 수
@@ -198,7 +199,7 @@ function renderBrandRail() {
   rail.innerHTML = "";
   const mk = (id, label, logo, count) => {
     const btn = el("button", { type: "button", class: "store-brand-chip" + (state.brand === id ? " active" : ""), "data-brand": id }, [
-      el("span", { class: "logo" }, logo ? [el("img", { src: logo, alt: "", loading: "lazy" })] : [el("em", { text: label.slice(0, 1) })]),
+      el("span", { class: "logo" }, logo ? [el("img", { src: logo, alt: "", loading: "lazy", style: logoScaleStyle(brandScale[id]) })] : [el("em", { text: label.slice(0, 1) })]),
       el("span", { class: "name", text: label }),
       el("span", { class: "cnt", text: L().count(count) }),
     ]);
@@ -293,7 +294,7 @@ function renderDirectory() {
     const grid = el("div", { class: "store-dir-grid" });
     groups.get(k).forEach(({ b, name }) => {
       const btn = el("button", { type: "button", class: "store-dir-item" + (state.brand === b.id ? " active" : "") }, [
-        el("span", { class: "logo" }, brandLogos[b.id] ? [el("img", { src: brandLogos[b.id], alt: "", loading: "lazy" })] : [el("em", { text: name.slice(0, 1) })]),
+        el("span", { class: "logo" }, brandLogos[b.id] ? [el("img", { src: brandLogos[b.id], alt: "", loading: "lazy", style: logoScaleStyle(brandScale[b.id]) })] : [el("em", { text: name.slice(0, 1) })]),
         el("span", { class: "name", text: name }),
         el("b", { text: String(brandCount[b.id]) }),
       ]);
@@ -685,8 +686,8 @@ function render(newLang) {
   // 브랜드 로고는 브랜드 문서에서 가져온다 (없어도 이름으로 표시)
   try {
     const brands = await loadContent("/api/brands-content", "content/brands.json");
-    (brands.brands || []).forEach((b) => { brandLogos[b.id] = b.logo; brandType[b.id] = "own"; });
-    (brands.importedBrands || []).forEach((b) => { brandLogos[b.id] = b.logo; brandType[b.id] = "imported"; });
+    (brands.brands || []).forEach((b) => { brandLogos[b.id] = b.logo; brandScale[b.id] = b.logoScale; brandType[b.id] = "own"; });
+    (brands.importedBrands || []).forEach((b) => { brandLogos[b.id] = b.logo; brandScale[b.id] = b.logoScale; brandType[b.id] = "imported"; });
   } catch {}
 
   content.products.forEach((p) => (brandCount[p.brandId] = (brandCount[p.brandId] || 0) + 1));

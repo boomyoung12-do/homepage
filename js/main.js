@@ -72,7 +72,7 @@ function renderBrands(intro, brands, imported) {
     const name = t(b, "name", lang);
     grid.appendChild(
       el("a", { class: "brand-card", href: b.href, "data-reveal": "" }, [
-        el("img", { src: b.logo, alt: name, class: b.name === "하우펫" ? "logo-normal" : "" }),
+        el("img", { src: b.logo, alt: name, class: b.name === "하우펫" ? "logo-normal" : "", style: logoScaleStyle(b.logoScale) }),
         el("h3", { text: name }),
         el("p", { text: t(b, "tagline", lang) }),
         el("span", { class: "go", text: goLabel }),

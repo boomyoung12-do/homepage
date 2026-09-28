@@ -492,6 +492,35 @@ function buildBrandFields(prefill) {
   const logoFile = el("input", { type: "file", accept: "image/*" });
   let preview = imagePreview(p.logo);
   const previewSlot = el("div", {}, [preview]);
+
+  // 로고 크기 조절: 로고마다 여백이 달라 같은 칸에 넣으면 크기가 들쭉날쭉해서,
+  // 사이트의 로고 칸과 같은 모양의 미리보기를 보며 배율을 맞춘다.
+  const logoScale = el("input", { type: "range", min: "0.5", max: "2", step: "0.05", value: String(p.logoScale || 1) });
+  const logoScaleLabel = el("span", { class: "logo-scale-value" });
+  const scaleReset = el("button", { type: "button", class: "mini-btn", text: "100%로" });
+  const logoBoxImg = el("img", { alt: "" });
+  const logoCircleImg = el("img", { alt: "" });
+  const logoPreview = el("div", { class: "logo-scale-preview" }, [
+    el("figure", {}, [el("div", { class: "logo-scale-card" }, [logoBoxImg]), el("figcaption", { text: "브랜드 카드" })]),
+    el("figure", {}, [el("div", { class: "logo-scale-circle" }, [logoCircleImg]), el("figcaption", { text: "메뉴·스토어" })]),
+  ]);
+  let previewSrc = p.logo || "";
+  const paintLogo = () => {
+    const v = Number(logoScale.value);
+    logoScaleLabel.textContent = `${Math.round(v * 100)}%`;
+    [logoBoxImg, logoCircleImg].forEach((img) => {
+      if (previewSrc) img.src = previewSrc;
+      img.hidden = !previewSrc;
+      img.style.transform = `scale(${v})`;
+    });
+  };
+  logoScale.addEventListener("input", paintLogo);
+  scaleReset.addEventListener("click", () => {
+    logoScale.value = "1";
+    paintLogo();
+  });
+  paintLogo();
+
   logoFile.addEventListener("change", () => {
     const f = logoFile.files[0];
     if (!f) return;
@@ -500,6 +529,8 @@ function buildBrandFields(prefill) {
       const fresh = imagePreview(reader.result);
       preview.replaceWith(fresh);
       preview = fresh;
+      previewSrc = reader.result;
+      paintLogo();
     };
     reader.readAsDataURL(f);
   });
@@ -521,6 +552,10 @@ function buildBrandFields(prefill) {
       formField("브랜드 로고 이미지 첨부 (권장 400×200 · 잘리지 않게 여백을 두고 맞춤)", logoFile),
     ]),
     previewSlot,
+    formField(
+      "로고 크기 조절 (사이트의 모든 로고 칸에 적용)",
+      el("div", { class: "logo-scale" }, [el("div", { class: "logo-scale-row" }, [logoScale, logoScaleLabel, scaleReset]), logoPreview])
+    ),
   ]);
 
   return {
@@ -550,6 +585,7 @@ function buildBrandFields(prefill) {
         descriptionEn,
         color: colorText.value,
         logo,
+        logoScale: Math.round(Number(logoScale.value) * 100) / 100,
       };
     },
     reset() {
@@ -561,6 +597,9 @@ function buildBrandFields(prefill) {
       descEn.value = "";
       logoFile.value = "";
       currentLogo = "";
+      previewSrc = "";
+      logoScale.value = "1";
+      paintLogo();
       const fresh = imagePreview("");
       preview.replaceWith(fresh);
       preview = fresh;
@@ -606,6 +645,7 @@ async function upsertBrand(fields, existingId) {
       tagline: brand.descriptionKo,
       taglineEn: brand.descriptionEn,
       logo: brand.logo,
+      logoScale: brand.logoScale,
       href: `brands.html#own-${id}`,
     };
     if (homeIdx >= 0) homeData.brands[homeIdx] = teaser;

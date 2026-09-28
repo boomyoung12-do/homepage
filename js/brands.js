@@ -64,7 +64,7 @@ function groupHead(groupId, copy, lang) {
 }
 
 function logoBox(b, name, cls) {
-  return el("div", { class: cls }, b.logo ? [el("img", { src: b.logo, alt: name })] : [el("span", { class: "logo-text", text: name })]);
+  return el("div", { class: cls }, b.logo ? [el("img", { src: b.logo, alt: name, style: logoScaleStyle(b.logoScale) })] : [el("span", { class: "logo-text", text: name })]);
 }
 
 function cardFooter(count, lang, fallbackKo, fallbackEn, linkKo, linkEn) {

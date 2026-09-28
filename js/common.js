@@ -19,6 +19,12 @@ function el(tag, attrs = {}, children = []) {
   return node;
 }
 
+// 어드민에서 정한 브랜드 로고 배율(logoScale). 1 이면 아무 스타일도 붙이지 않는다.
+function logoScaleStyle(scale) {
+  const n = Number(scale);
+  return Number.isFinite(n) && n > 0 && n !== 1 ? `transform:scale(${n})` : "";
+}
+
 function observeReveals() {
   const items = document.querySelectorAll("[data-reveal]");
   if (!("IntersectionObserver" in window)) {
@@ -83,7 +89,7 @@ async function setupBrandMegaMenu() {
     all.slice(0, MEGA_LIMIT).forEach((b) => {
       grid.appendChild(
         el("a", { class: "nav-mega-item", href: `brands.html#${anchor}-${b.id}` }, [
-          el("span", { class: "nav-mega-logo" }, b.logo ? [el("img", { src: b.logo, alt: "" })] : []),
+          el("span", { class: "nav-mega-logo" }, b.logo ? [el("img", { src: b.logo, alt: "", style: logoScaleStyle(b.logoScale) })] : []),
           el("span", { class: "nav-mega-name", "data-brand-id": b.id, text: t(b, "name", currentLang()) || b.nameKo }),
         ])
       );

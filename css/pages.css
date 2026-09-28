@@ -948,3 +948,6 @@
   color: var(--signature);
   cursor: pointer;
 }
+
+/* 어드민 로고 배율(logoScale): 왼쪽 정렬 로고는 왼쪽 기준으로 커지게 */
+.brand-own-logo img, .brand-imported-logo img { transform-origin: left center; }
