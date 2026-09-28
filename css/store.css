@@ -83,21 +83,6 @@
 .store-hero-link i { font-style: normal; transition: transform .3s ease; }
 .store-hero-link:hover i { transform: translateX(6px); }
 
-/* 히어로 아래 한 줄 사실 정보 (가운뎃점으로만 구분) */
-.store-facts {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 0;
-  padding-top: 22px;
-  padding-bottom: 22px;
-  border-bottom: 1px solid var(--line);
-  font-size: 12px;
-  letter-spacing: .06em;
-  color: var(--ink-soft);
-}
-.store-facts span + span::before { content: "·"; margin: 0 18px; color: #b9b2a8; }
-
 /* ---------- 섹션 공통 ---------- */
 .store-sec-head { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; margin-bottom: 20px; }
 .store-sec-head h2 { font-family: var(--serif); font-size: 22px; font-weight: 700; margin: 0; letter-spacing: -.02em; }
@@ -581,8 +566,6 @@
   .store-hero-eyebrow { margin-bottom: 18px; }
   .store-hero h1 { font-size: 29px; }
   .store-hero-body { margin-bottom: 28px; font-size: 13.5px; }
-  .store-facts { justify-content: flex-start; font-size: 11.5px; }
-  .store-facts span + span::before { margin: 0 10px; }
   .store-cta { padding: 13px 20px; font-size: 13.5px; }
   .store-brands { padding-top: 36px; }
   .store-brand-chip { width: 92px; padding: 12px 6px; }
