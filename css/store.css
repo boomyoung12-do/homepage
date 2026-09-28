@@ -119,24 +119,24 @@
 }
 .store-brand-chip:hover { transform: translateY(-3px); box-shadow: 0 12px 24px rgba(15, 23, 42, .08); }
 .store-brand-chip.active { border-color: var(--signature); box-shadow: 0 0 0 3px rgba(0, 102, 179, .14); }
+/* 로고는 배경 원 없이 칸에 바로 얹는다 */
 .store-brand-chip .logo {
   width: 64px;
   height: 64px;
-  border-radius: 50%;
-  background: var(--soft);
   display: grid;
   place-items: center;
-  overflow: hidden;
 }
-.store-brand-chip .logo img { width: 78%; height: 78%; object-fit: contain; }
+.store-brand-chip .logo img { width: 86%; height: 86%; object-fit: contain; }
 .store-brand-chip .logo em { font-style: normal; font-weight: 700; font-size: 20px; color: var(--navy); }
-.store-brand-chip:first-child .logo { background: var(--navy); }
-.store-brand-chip:first-child .logo em { color: #fff; font-size: 13px; }
+/* 전체 브랜드: 네 칸 아이콘 (선택되면 채워진다) */
+.store-brand-chip.all .logo svg { width: 34px; height: 34px; fill: none; stroke: var(--navy); stroke-width: 1.8; transition: fill .25s ease, stroke .25s ease, transform .3s ease; }
+.store-brand-chip.all:hover .logo svg { transform: rotate(45deg); }
+.store-brand-chip.all.active .logo svg { fill: var(--signature); stroke: var(--signature); }
+.store-brand-chip.all.active .logo svg rect:last-child { fill: rgba(0, 102, 179, .35); }
 .store-brand-chip .name { font-size: 12.5px; font-weight: 600; color: var(--ink); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; }
 .store-brand-chip .cnt { font-size: 11px; color: var(--ink-soft); }
 .store-brand-chip.more { border-style: dashed; }
-.store-brand-chip.more .logo { background: transparent; border: 1px dashed var(--line); }
-.store-brand-chip.more .logo svg { width: 22px; height: 22px; fill: none; stroke: var(--navy); stroke-width: 1.6; }
+.store-brand-chip.more .logo svg { width: 30px; height: 30px; fill: var(--navy); }
 .store-brand-chip.more .name { color: var(--signature); }
 .store-brand-chip.more .cnt { color: var(--signature); }
 

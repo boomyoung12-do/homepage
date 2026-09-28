@@ -210,12 +210,17 @@ function renderBrandRail() {
   // 브랜드가 많아도 항상 보이게 한다.
   const scroller = el("div", { class: "store-brand-scroll" });
   rail.appendChild(scroller);
-  scroller.appendChild(mk("all", L().allBrands, "", content.products.length));
+  // "전체 브랜드"는 글자 대신 아이콘으로
+  const allChip = mk("all", L().allBrands, "", content.products.length);
+  allChip.classList.add("all");
+  allChip.querySelector(".logo").innerHTML =
+    '<svg viewBox="0 0 32 32" aria-hidden="true"><rect x="5" y="5" width="9.5" height="9.5" rx="3"/><rect x="17.5" y="5" width="9.5" height="9.5" rx="3"/><rect x="5" y="17.5" width="9.5" height="9.5" rx="3"/><rect x="17.5" y="17.5" width="9.5" height="9.5" rx="4.75"/></svg>';
+  scroller.appendChild(allChip);
   featuredBrands().forEach((b) => scroller.appendChild(mk(b.id, t(b, "label", lang), brandLogos[b.id], brandCount[b.id])));
   const total = brandList().length;
   if (total > RAIL_LIMIT) {
     const more = el("button", { type: "button", class: "store-brand-chip more" }, [
-      el("span", { class: "logo", html: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h6v6H4zM14 5h6v6h-6zM4 15h6v6H4zM14 15h6v6h-6z"/></svg>' }),
+      el("span", { class: "logo", html: '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.6"/><circle cx="12" cy="12" r="1.6"/><circle cx="19" cy="12" r="1.6"/></svg>' }),
       el("span", { class: "name", text: L().allBrands }),
       el("span", { class: "cnt", text: `${L().count(total)} →` }),
     ]);
