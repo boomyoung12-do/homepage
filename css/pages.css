@@ -265,14 +265,30 @@
 .product-card .brand-tag { font-size: 10.5px; letter-spacing: .06em; color: var(--gold-ink); margin-bottom: 6px; text-transform: uppercase; }
 .product-card h4 { font-family: var(--serif); font-size: 14.5px; font-weight: 500; margin: 0 0 6px; line-height: 1.4; }
 .product-card .spec { font-size: 11.5px; color: var(--ink-soft); }
+.product-card .info { flex: 1; }
 .product-card .item-no {
-  margin-top: 12px;
-  padding-top: 10px;
-  border-top: 1px solid var(--line);
+  margin-top: 8px;
   font-size: 11px;
   letter-spacing: .04em;
   color: var(--ink-soft);
 }
+/* 카드 하단 바코드 줄 */
+.product-card .card-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin: 0 18px;
+  padding: 12px 0 16px;
+  border-top: 1px solid var(--line);
+  font-size: 11.5px;
+  letter-spacing: .02em;
+  color: var(--ink-soft);
+  font-variant-numeric: tabular-nums;
+}
+.product-card .card-foot .code { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.product-card .card-foot .arrow { flex: none; color: var(--navy); transition: transform .25s ease; }
+.product-card:hover .card-foot .arrow { transform: translateX(4px); }
 .catalog-empty { text-align: center; padding: 80px 0; color: var(--ink-soft); font-size: 14px; }
 
 /* Product detail overlay */

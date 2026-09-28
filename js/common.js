@@ -160,6 +160,7 @@ const UI_STRINGS = {
   "제품 카탈로그": "Product Catalog",
   "파트너·네트워크": "Partners & Network",
   "문의하기": "Contact",
+  "스토어": "Store",
   "관리자": "Admin",
   "기업 안내": "Company",
   "비즈니스": "Business",

@@ -76,8 +76,13 @@ function renderGrid() {
         el("div", { class: "brand-tag", text: brandLabels[p.brandId] || p.brandId }),
         el("h4", { text: name }),
         el("div", { class: "spec", text: p.spec }),
-        // 관리자에서 품번(Item No.)을 입력한 제품만 카드 하단에 노출한다
+        // 관리자에서 품번(Item No.)을 입력한 제품만 노출한다
         p.itemNo ? el("div", { class: "item-no", text: `ITEM NO. ${p.itemNo}` }) : null,
+      ]),
+      // 카드 맨 아래: 바코드 번호 + 상세보기 화살표
+      el("div", { class: "card-foot" }, [
+        el("span", { class: "code", text: p.code ? `CODE: ${p.code}` : "" }),
+        el("span", { class: "arrow", "aria-hidden": "true", text: "→" }),
       ]),
     ]);
     card.addEventListener("click", () => openModal(p));

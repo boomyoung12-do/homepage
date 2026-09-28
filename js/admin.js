@@ -770,6 +770,17 @@ function buildProductFields(prefill, allBrands, categories) {
   const buyLink = el("input", { type: "text", placeholder: "https://...", value: p.buyLink || "" });
   const b2bLink = el("input", { type: "text", placeholder: "https://... (입력하면 B2B 구매하기 버튼이 노출됩니다)", value: p.b2bLink || "" });
   const itemNo = el("input", { type: "text", placeholder: "예: NO.67332", value: p.itemNo || "" });
+  // 스토어 전용 값 (선택). 카탈로그와 같은 제품 데이터에 함께 저장된다.
+  const priceInput = el("input", { type: "text", inputmode: "numeric", placeholder: "예: 32000 (비워두면 가격 미표시)", value: p.price || "" });
+  const salePriceInput = el("input", { type: "text", inputmode: "numeric", placeholder: "예: 25900 (할인 판매가, 선택)", value: p.salePrice || "" });
+  const storeBadge = el("select", {}, [
+    el("option", { value: "", text: "없음" }),
+    el("option", { value: "new", text: "NEW (신상품)" }),
+    el("option", { value: "best", text: "BEST (인기)" }),
+    el("option", { value: "soldout", text: "SOLD OUT (품절 · 구매 버튼 비활성)" }),
+  ]);
+  storeBadge.value = p.storeBadge || "";
+  const onlyDigits = (v) => String(v || "").replace(/[^0-9]/g, "");
   const features = el("textarea", {
     rows: 4,
     placeholder: "예:\n· 생후 2개월 이상 전연령 반려견 사료\n· 가수분해 오리 원료 사용\n· 관절 건강에 도움을 주는 초유 첨가",
@@ -803,6 +814,11 @@ function buildProductFields(prefill, allBrands, categories) {
     el("div", { class: "form-row-2" }, [formField("제품명 (한글)", nameKo, true), formField("제품명 (영문)", nameEn)]),
     el("div", { class: "form-row-3" }, [formField("반려동물 구분", petType), formField("제품 규격 / 용량", spec), formField("상품 바코드 / 코드", code)]),
     formField("품번 (Item No. · 제품 카드 하단에 표시)", itemNo),
+    el("div", { class: "form-row-3" }, [
+      formField("정가 (원 · 스토어 표시)", priceInput),
+      formField("판매가 (원 · 할인 시)", salePriceInput),
+      formField("스토어 배지", storeBadge),
+    ]),
     formField("제품 대표 이미지 첨부 (권장 1000×1000 · 잘리지 않게 여백을 두고 맞춤)", mainImage),
     mainPreviewSlot,
     formField("상세정보 페이지 이미지 첨부 (여러 장 가능 · 세로로 긴 이미지도 잘리지 않습니다)", detailImages),
@@ -892,6 +908,9 @@ function buildProductFields(prefill, allBrands, categories) {
         buyLink: buyLink.value.trim(),
         b2bLink: b2bLink.value.trim(),
         itemNo: itemNo.value.trim(),
+        price: onlyDigits(priceInput.value),
+        salePrice: onlyDigits(salePriceInput.value),
+        storeBadge: storeBadge.value,
         nutrition: buildNutrition(),
       };
     },
@@ -903,6 +922,9 @@ function buildProductFields(prefill, allBrands, categories) {
       buyLink.value = "";
       b2bLink.value = "";
       itemNo.value = "";
+      priceInput.value = "";
+      salePriceInput.value = "";
+      storeBadge.value = "";
       features.value = "";
       ingredients.value = "";
       mainImage.value = "";
