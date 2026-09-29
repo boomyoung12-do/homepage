@@ -1288,7 +1288,8 @@ async function loadInquiries() {
 }
 
 function inquiryCard(item) {
-  const date = new Date(item.submittedAt).toLocaleString("ko-KR");
+  // API 는 D1 열 이름 그대로(submitted_at) 돌려준다
+  const date = new Date(item.submitted_at || item.submittedAt).toLocaleString("ko-KR");
   const card = el("div", { class: "inquiry-card" + (item.read ? "" : " unread") }, [
     el("div", { class: "inquiry-head" }, [
       el("div", {}, [
