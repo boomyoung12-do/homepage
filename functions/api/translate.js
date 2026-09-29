@@ -19,7 +19,7 @@ export async function onRequestPost({ request, env }) {
   }
 
   // 브랜드명은 뜻을 옮기면 안 되는 고유명사라, 영문 표기를 돌려주는 별도 지시를 쓴다.
-  const namePrompt = `You convert Korean brand names into their English brand spelling. The input is a proper noun, not a phrase to translate. If it is an existing international brand, use its official spelling. If it is a Korean transliteration of English words, return those English words in Title Case; otherwise romanize it. The company name 부명 is always written BOOMYUNG. Output ONLY the brand name on a single line — no quotes, no notes.
+  const namePrompt = `You convert Korean brand names into their English brand spelling. The input is a proper noun, not a phrase to translate. If it is an existing international brand, use its official spelling. If it is a Korean transliteration of English words, return those English words in Title Case; otherwise romanize it. The company name 부명 is always written BOOMYOUNG. Output ONLY the brand name on a single line — no quotes, no notes.
 
 Examples:
 <ko>벨버드</ko>
@@ -33,7 +33,7 @@ Dayspo
 <ko>니나오토슨</ko>
 Nina Ottosson
 <ko>부명케어</ko>
-BOOMYUNG Care
+BOOMYOUNG Care
 
 Now convert this:
 <ko>${text.trim()}</ko>`;

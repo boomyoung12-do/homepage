@@ -187,7 +187,7 @@ const UI_STRINGS = {
   "개인정보처리방침": "Privacy Policy",
   "이용약관": "Terms of Service",
   "B2B 입점 문의": "B2B Inquiry",
-  "(주)부명": "BOOMYUNG",
+  "(주)부명": "BOOMYOUNG",
 };
 const UI_STRINGS_REV = Object.fromEntries(Object.entries(UI_STRINGS).map(([k, v]) => [v, k]));
 
@@ -354,7 +354,7 @@ const LEGAL_TEXT = {
 제12조 (개인정보 처리방침의 변경)
 이 개인정보 처리방침은 2026년 9월 1일 부터 적용됩니다. 법령 및 방침에 따른 변경내용의 추가, 삭제 및 정정이 있는 경우에는 공지사항을 통하여 고지할 것입니다.`,
 
-  privacyEn: `BOOMYUNG CO., LTD. (hereinafter the "Company") complies with the Personal Information Protection Act and related laws to lawfully process personal information and protect the freedom and rights of data subjects. In accordance with Article 30 of the Personal Information Protection Act, the Company establishes and discloses this Privacy Policy to inform data subjects of the procedures and standards for processing personal information, and to promptly and smoothly handle related grievances.
+  privacyEn: `BOOMYOUNG CO., LTD. (hereinafter the "Company") complies with the Personal Information Protection Act and related laws to lawfully process personal information and protect the freedom and rights of data subjects. In accordance with Article 30 of the Personal Information Protection Act, the Company establishes and discloses this Privacy Policy to inform data subjects of the procedures and standards for processing personal information, and to promptly and smoothly handle related grievances.
 
 Article 1 (Purpose of Processing Personal Information)
 The Company processes personal information for the following purposes. Personal information processed will not be used for purposes other than those below, and if the purpose of use changes, the Company will take necessary measures such as obtaining separate consent pursuant to Article 18 of the Personal Information Protection Act.
@@ -508,7 +508,7 @@ This Privacy Policy is effective from September 1, 2026. Any additions, deletion
   termsEn: `Terms of Service
 
 Article 1 (Purpose)
-These Terms of Service ("Terms") govern the rights, obligations, and responsibilities of BOOMYUNG CO., LTD. (hereinafter the "Company") and users in connection with the internet-related services (hereinafter the "Service") provided through the Company's official website (hereinafter the "Website").
+These Terms of Service ("Terms") govern the rights, obligations, and responsibilities of BOOMYOUNG CO., LTD. (hereinafter the "Company") and users in connection with the internet-related services (hereinafter the "Service") provided through the Company's official website (hereinafter the "Website").
 
 Article 2 (Definitions)
 

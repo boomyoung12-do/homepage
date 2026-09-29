@@ -5,7 +5,7 @@
     "title": "직접 만듭니다,\n원료부터 포장까지",
     "titleEn": "We make it ourselves —\nfrom raw material to pack",
     "body": "(주)부명은 펫 전문 식품 공장과 중국 칭다오 벤토나이트 모래 공장을 직접 운영하는 제조 기업입니다. 배합 설계, 생산, 품질 검사, 포장까지 전 공정을 자체 역량으로 책임집니다.",
-    "bodyEn": "BOOMYUNG runs its own pet food plant and a bentonite cat-litter plant in Qingdao, China. Formulation, production, quality testing and packing are all handled in-house.",
+    "bodyEn": "BOOMYOUNG runs its own pet food plant and a bentonite cat-litter plant in Qingdao, China. Formulation, production, quality testing and packing are all handled in-house.",
     "image": "assets/manufacturing/mfg-hero-poster.jpg",
     "video": "assets/manufacturing/mfg-hero.mp4"
   },
@@ -144,7 +144,7 @@
     "title": "보유 특허",
     "body": "(주)부명은 반려동물 사료 및 용품 관련 기술에 대해 특허청(KIPO)에 등록된 특허, 디자인등록, 실용신안을 보유하고 있습니다.",
     "titleEn": "Patents Held",
-    "bodyEn": "BOOMYUNG holds patents, design registrations, and utility model registrations granted by the Korean Intellectual Property Office (KIPO) for pet food and pet product technologies."
+    "bodyEn": "BOOMYOUNG holds patents, design registrations, and utility model registrations granted by the Korean Intellectual Property Office (KIPO) for pet food and pet product technologies."
   },
   "patents": [
     {
@@ -297,14 +297,14 @@
     }
   ],
   "footer": {
-    "company": "(주)부명 BOOMYUNG",
+    "company": "(주)부명 BOOMYOUNG",
     "address": "경기도 구리시 건원대로34번길 19 306",
     "tel": "031-553-8003",
     "fax": "031-592-2460",
     "email": "help@petsb2b.co.kr",
     "brn": "132-81-49973",
-    "copyright": "© 2026 BOOMYUNG Co., Ltd. All Rights Reserved.",
-    "companyEn": "BOOMYUNG Co., Ltd.",
+    "copyright": "© 2026 BOOMYOUNG Co., Ltd. All Rights Reserved.",
+    "companyEn": "BOOMYOUNG Co., Ltd.",
     "addressEn": "306, 19 Geonwondae-ro 34beon-gil, Guri-si, Gyeonggi-do, Republic of Korea"
   }
 }
