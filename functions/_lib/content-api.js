@@ -1,4 +1,5 @@
 import { isAuthed } from "./auth.js";
+import { pingIndexNow } from "./seo.js";
 
 // Shared GET/PUT handlers for a D1-backed content document. GET is public
 // (every visitor reads the same JSON, falling back to the build-time default
@@ -14,7 +15,7 @@ export function makeContentApi(contentKey, defaultContent) {
     return Response.json(content, { headers: { "Cache-Control": "no-store" } });
   }
 
-  async function onRequestPut({ request, env }) {
+  async function onRequestPut({ request, env, waitUntil }) {
     if (!(await isAuthed(request, env))) {
       return new Response("Unauthorized", { status: 401 });
     }
@@ -30,6 +31,8 @@ export function makeContentApi(contentKey, defaultContent) {
     await env.DB.prepare(
       "INSERT INTO content (key, data, updated_at) VALUES (?, ?, datetime('now')) ON CONFLICT(key) DO UPDATE SET data = excluded.data, updated_at = excluded.updated_at"
     ).bind(contentKey, JSON.stringify(body)).run();
+    // 저장 내용을 검색엔진에 바로 알린다 (응답은 기다리지 않는다)
+    if (waitUntil) waitUntil(pingIndexNow(env, new URL(request.url)));
     return Response.json({ ok: true });
   }
 

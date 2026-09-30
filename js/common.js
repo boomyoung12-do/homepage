@@ -201,8 +201,12 @@ function t(obj, key, lang) {
   return obj[key] || "";
 }
 
+// 언어는 주소로 정한다: /en 으로 시작하면 영어, 아니면 한국어.
+// (검색엔진이 언어별 페이지를 따로 색인할 수 있도록 같은 주소가 항상 같은 언어를 보여준다)
+const IS_EN_PATH = location.pathname === "/en" || location.pathname.startsWith("/en/");
+
 function currentLang() {
-  return localStorage.getItem("lang") === "en" ? "en" : "ko";
+  return IS_EN_PATH ? "en" : "ko";
 }
 
 function translateStaticUI(lang) {
@@ -238,10 +242,10 @@ function setupLangToggle(onChange) {
   document.querySelectorAll(".lang-btn").forEach((btn) => {
     if (btn.id === "menu-btn" || btn.tagName === "A") return;
     btn.addEventListener("click", () => {
-      const next = currentLang() === "en" ? "ko" : "en";
-      localStorage.setItem("lang", next);
-      translateStaticUI(next);
-      if (onChange) onChange(next);
+      // 같은 페이지의 다른 언어 주소로 이동한다 (한국어 /about ↔ 영어 /en/about)
+      const path = location.pathname;
+      const target = IS_EN_PATH ? path.slice(3) || "/" : "/en" + (path === "/" ? "" : path);
+      location.href = target + location.search + location.hash;
     });
   });
   if (onChange) onChange(lang);
@@ -604,3 +608,53 @@ function setupLegalModals() {
   if (spans[0]) spans[0].onclick = () => openLegalModal("privacy");
   if (spans[1]) spans[1].onclick = () => openLegalModal("terms");
 }
+
+
+// ---------- 검색 노출 보조 ----------
+// 1) JS가 만든 내부 링크(about.html, catalog.html?brand=… 등)를 깔끔한 주소로 바꾸고, 영어 페이지(/en/…)에서는 영어 주소로 보낸다.
+// 2) alt 가 빠진 이미지에 주변 제목·캡션을 대체 텍스트로 넣는다.
+// 3) 서버가 넣어 준 본문 요약(#seo-snapshot)은 화면이 그려진 뒤 지운다.
+(function seoBoot() {
+  const FILES = { "index.html": "", "about.html": "/about", "manufacturing.html": "/manufacturing", "brands.html": "/brands", "catalog.html": "/catalog", "store.html": "/store", "contact.html": "/contact", "network.html": "/network" };
+  const CLEAN = ["/about", "/manufacturing", "/brands", "/catalog", "/store", "/contact", "/network"];
+
+  function localize(a) {
+    const href = a.getAttribute("href");
+    if (!href || /^(https?:|mailto:|tel:|#|\/en(\/|$)|\/api\/|\/assets\/)/.test(href)) return;
+    const m = href.match(/^\.?\/?([a-z]+\.html)([?#].*)?$/);
+    if (m && m[1] in FILES) return a.setAttribute("href", (IS_EN_PATH ? "/en" + FILES[m[1]] : FILES[m[1]] || "/") + (m[2] || ""));
+    if (!IS_EN_PATH) return;
+    const c = href.match(/^(\/[a-z]+)([?#].*)?$/);
+    if (c && CLEAN.includes(c[1])) a.setAttribute("href", "/en" + c[1] + (c[2] || ""));
+  }
+
+  function altFor(img) {
+    const cap = img.closest("figure")?.querySelector("figcaption")?.textContent;
+    const near = img.closest("a,article,li,section")?.querySelector("h1,h2,h3,h4,strong")?.textContent;
+    return (cap || near || document.title.split("|")[0]).replace(/\s+/g, " ").trim().slice(0, 120);
+  }
+
+  function tidy() {
+    document.querySelectorAll("a[href]").forEach(localize);
+    document.querySelectorAll("img:not([alt])").forEach((img) => img.setAttribute("alt", altFor(img)));
+  }
+
+  let queued = false;
+  function schedule() {
+    if (queued) return;
+    queued = true;
+    requestAnimationFrame(() => {
+      queued = false;
+      tidy();
+    });
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    tidy();
+    new MutationObserver(schedule).observe(document.body, { childList: true, subtree: true });
+  });
+  window.addEventListener("load", () => {
+    document.getElementById("seo-snapshot")?.remove();
+    tidy();
+  });
+})();

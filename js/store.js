@@ -163,6 +163,11 @@ function sorted(list) {
   }
 }
 
+// 제품은 /products/<id>, 영어는 /en/products/<id> 라는 고유 주소를 갖는다
+const langPrefix = () => (location.pathname === "/en" || location.pathname.startsWith("/en/") ? "/en" : "");
+const storePath = () => langPrefix() + "/store";
+const productPath = (id) => langPrefix() + "/products/" + encodeURIComponent(id);
+
 function syncUrl() {
   const params = new URLSearchParams(location.search);
   const set = (k, v, def) => (v && v !== def ? params.set(k, v) : params.delete(k));
@@ -676,13 +681,12 @@ function openQuickView(p) {
 
   const shareBtn = el("button", { type: "button", class: "qv-icon", "aria-label": L().share, html: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg>' });
   shareBtn.addEventListener("click", async () => {
-    const url = new URL(location.href);
-    url.searchParams.set("p", p.id);
+    const shareUrl = location.origin + productPath(p.id);
     try {
-      await navigator.clipboard.writeText(url.toString());
+      await navigator.clipboard.writeText(shareUrl);
       toast(L().copied);
     } catch {
-      prompt(L().share, url.toString());
+      prompt(L().share, shareUrl);
     }
   });
 
@@ -731,9 +735,7 @@ function openQuickView(p) {
   modal.setAttribute("aria-hidden", "false");
   document.body.style.overflow = "hidden";
   sheet.scrollTop = 0;
-  const url = new URL(location.href);
-  url.searchParams.set("p", p.id);
-  history.replaceState(null, "", url);
+  history.replaceState(null, "", productPath(p.id));
   close.focus();
 }
 
@@ -743,9 +745,9 @@ function closeQuickView() {
   modal.classList.remove("open");
   modal.setAttribute("aria-hidden", "true");
   document.body.style.overflow = "";
-  const url = new URL(location.href);
-  url.searchParams.delete("p");
-  history.replaceState(null, "", url);
+  const rest = new URLSearchParams(location.search);
+  rest.delete("p");
+  history.replaceState(null, "", storePath() + (rest.toString() ? "?" + rest : ""));
   renderRecent();
 }
 
@@ -836,7 +838,8 @@ function render(newLang) {
     }
   });
 
-  // 공유 링크(?p=상품id)로 들어오면 해당 상품을 바로 연다
-  const linked = params.get("p") && content.products.find((p) => p.id === params.get("p"));
+  // 제품 주소(/products/상품id) 또는 예전 공유 링크(?p=상품id)로 들어오면 해당 상품을 바로 연다
+  const linkedId = params.get("p") || (window.__SEO__ && window.__SEO__.product);
+  const linked = linkedId && content.products.find((p) => p.id === linkedId);
   if (linked) openQuickView(linked);
 })();

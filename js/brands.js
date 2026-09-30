@@ -189,5 +189,10 @@ function render(content, lang) {
   if (location.hash) {
     const target = document.getElementById(location.hash.slice(1));
     if (target) target.scrollIntoView({ block: "center" });
+  } else if (window.__SEO__ && window.__SEO__.brand) {
+    // 브랜드 주소(/brands/<id>)로 들어오면 해당 브랜드 카드로 이동한다
+    const id = window.__SEO__.brand;
+    const target = document.getElementById(`own-${id}`) || document.getElementById(`imported-${id}`);
+    if (target) target.scrollIntoView({ block: "center" });
   }
 })();
