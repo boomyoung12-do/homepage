@@ -462,6 +462,7 @@ export async function renderPage(context, route) {
   const prodHost = isProdHost(url);
   const headExtra = [
     prodHost ? "" : `<meta name="robots" content="noindex, nofollow" />`,
+    `<meta name="naver-site-verification" content="82617bb9967c85ccd692cc502419f7bbc4858369" />`,
     `<link rel="canonical" href="${esc(canonical)}" />`,
     `<link rel="alternate" hreflang="ko" href="${esc(koUrl)}" />`,
     `<link rel="alternate" hreflang="en" href="${esc(enUrl)}" />`,
