@@ -32,43 +32,43 @@ const DEFAULTS = {
 export const PAGES = {
   home: {
     path: "/", asset: "/", docs: ["home-content", "brands-content"],
-    ko: { title: "(주)부명 | BOOMYOUNG", desc: "(주)부명은 반려동물 제품 제조 및 유통 전문 기업입니다. DAYSPO, Bell bird, HOWPET 등 프리미엄 펫 브랜드를 보유하고 있습니다." },
-    en: { title: "BOOMYOUNG Co., Ltd. | Pet Product Manufacturer & Distributor", desc: "BOOMYOUNG is a pet product manufacturer and distributor with 30 years of experience, owning premium pet brands such as DAYSPO, Bell bird and HOWPET." },
+    ko: { title: "(주)부명 BOOMYOUNG | 반려동물 사료·간식 제조 및 유통", desc: "30년 경력의 반려동물 제품 전문 기업 (주)부명. 사료·간식·고양이 모래를 직접 제조하고 DAYSPO, Bell bird 등 자사 브랜드를 유통하며 OEM/ODM·수출 문의를 받습니다." },
+    en: { title: "BOOMYOUNG | Korean Pet Food & Cat Litter Manufacturer", desc: "BOOMYOUNG is a Korean pet product company with 30 years of experience: pet food, treats and bentonite cat litter, plus OEM/ODM and export partnerships." },
   },
   about: {
     path: "/about", asset: "/about", docs: ["about-content"], crumb: { ko: "회사소개", en: "About Us" },
-    ko: { title: "회사소개 | (주)부명 BOOMYOUNG", desc: "30년 이상 축적된 정직한 기술과 신뢰를 바탕으로 반려동물과 반려인의 행복한 내일을 열어가는 (주)부명을 소개합니다." },
-    en: { title: "About Us | BOOMYOUNG", desc: "BOOMYOUNG builds on more than 30 years of honest technology and trust to create a happier tomorrow for pets and the people who love them." },
+    ko: { title: "회사소개 | 30년 반려동물 제품 제조사 (주)부명 BOOMYOUNG", desc: "1995년 설립 이래 반려동물 사료·간식과 용품을 만들어 온 (주)부명. 자체 공장과 연구개발, 브랜드 사업, 회사 연혁을 소개합니다." },
+    en: { title: "About BOOMYOUNG | Pet Food Manufacturer Since 1995", desc: "Since 1995, BOOMYOUNG has made pet food, treats and supplies in Korea, with its own factories, R&D and brands." },
   },
   manufacturing: {
     path: "/manufacturing", asset: "/manufacturing", docs: ["manufacturing-content"], crumb: { ko: "제조·역량", en: "Manufacturing" },
-    ko: { title: "제조·역량 | (주)부명 BOOMYOUNG", desc: "(주)부명은 펫 전문 식품 공장과 칭다오 벤토나이트 모래 공장을 직접 운영합니다. 배합 설계부터 생산, 품질 인증, 지식재산권까지 자체 제조 역량을 소개합니다." },
-    en: { title: "Manufacturing & Capabilities | BOOMYOUNG", desc: "BOOMYOUNG runs its own pet food plant and a bentonite cat litter plant in Qingdao, China — from formulation and production to quality certification and patents." },
+    ko: { title: "제조·역량 | 펫푸드 공장·고양이 모래 공장 (주)부명", desc: "반려동물 사료·간식 공장과 중국 칭다오 벤토나이트 고양이 모래 공장을 직접 운영합니다. 배합 설계부터 ISO 22000·HACCP 인증 생산, 특허까지 OEM/ODM 제조 역량을 소개합니다." },
+    en: { title: "Manufacturing | Pet Food & Cat Litter Factories | BOOMYOUNG", desc: "Own pet food plant in Korea and bentonite cat litter plant in Qingdao, China — from formulation to certified production and patents, ready for OEM/ODM." },
   },
   brands: {
     path: "/brands", asset: "/brands", docs: ["brands-content", "catalog-content"], crumb: { ko: "브랜드", en: "Brands" },
-    ko: { title: "브랜드 | (주)부명 BOOMYOUNG", desc: "(주)부명이 직접 만드는 자사 브랜드와 엄선한 해외 수입 브랜드를 한 곳에서 소개합니다." },
-    en: { title: "Brands | BOOMYOUNG", desc: "Our own pet brands and carefully selected imported brands, all in one place." },
+    ko: { title: "브랜드 | 데이스포·벨버드·에버그로 펫 브랜드 (주)부명", desc: "(주)부명이 직접 만드는 데이스포, 벨버드, 에버그로, 하우펫 등 자사 펫 브랜드와 엄선한 해외 수입 브랜드를 한 곳에서 소개합니다." },
+    en: { title: "Brands | DAYSPO, Bell bird, Evergrow Pet Brands | BOOMYOUNG", desc: "Our own pet brands — DAYSPO, Bell bird, Evergrow, HOWPET — and carefully selected imported brands, all in one place." },
   },
   catalog: {
     path: "/catalog", asset: "/catalog", docs: ["catalog-content", "brands-content"], crumb: { ko: "제품 카탈로그", en: "Product Catalog" },
-    ko: { title: "제품 카탈로그 | (주)부명 BOOMYOUNG", desc: "데이스포, 벨버드, 에버그로 등 (주)부명 자체 브랜드의 사료·간식 제품 카탈로그입니다." },
-    en: { title: "Product Catalog | BOOMYOUNG", desc: "Product catalog of pet food, treats and care products from BOOMYOUNG's own brands such as DAYSPO, Bell bird and Evergrow." },
+    ko: { title: "제품 카탈로그 | 강아지·고양이 사료·간식 (주)부명 BOOMYOUNG", desc: "데이스포, 벨버드, 에버그로 등 (주)부명 자체 브랜드의 강아지·고양이 사료, 간식, 고양이 모래, 용품 제품 카탈로그입니다." },
+    en: { title: "Product Catalog | Dog & Cat Food, Treats, Litter | BOOMYOUNG", desc: "Product catalog of dog and cat food, treats, cat litter and supplies from BOOMYOUNG's own brands such as DAYSPO, Bell bird and Evergrow." },
   },
   store: {
     path: "/store", asset: "/store", docs: ["catalog-content", "brands-content"], crumb: { ko: "스토어", en: "Store" },
-    ko: { title: "스토어 | (주)부명 BOOMYOUNG", desc: "(주)부명 공식 스토어 — 제조사가 직접 만들고 고른 데이스포·벨버드·에버그로와 수입 브랜드 제품을 만나보세요." },
-    en: { title: "Store | BOOMYOUNG", desc: "BOOMYOUNG official store — products made and hand-picked by the manufacturer, from DAYSPO, Bell bird, Evergrow and imported brands." },
+    ko: { title: "스토어 | 반려동물 사료·간식 공식 스토어 (주)부명", desc: "(주)부명 공식 스토어 — 제조사가 직접 만들고 고른 데이스포·벨버드·에버그로와 수입 브랜드의 강아지·고양이 사료, 간식, 용품을 만나보세요." },
+    en: { title: "Store | Official Pet Food & Treats Store | BOOMYOUNG", desc: "BOOMYOUNG official store — dog and cat food, treats and supplies made and hand-picked by the manufacturer, from DAYSPO, Bell bird, Evergrow and imported brands." },
   },
   network: {
     path: "/network", asset: "/network", docs: ["network-content"], crumb: { ko: "파트너·네트워크", en: "Partners & Network" },
-    ko: { title: "파트너·네트워크 | (주)부명 BOOMYOUNG", desc: "(주)부명이 참가한 국내외 박람회와 전국 유통 채널, 지역 대리점 네트워크를 소개합니다." },
-    en: { title: "Partners & Network | BOOMYOUNG", desc: "Global trade shows, nationwide retail channels and the regional distributor network of BOOMYOUNG." },
+    ko: { title: "파트너·네트워크 | 국내 유통망·해외 박람회 (주)부명", desc: "이마트·홈플러스·코스트코·쿠팡 등 국내 유통 채널과 펫 전문 유통사, 미국 올랜도 글로벌 펫 엑스포 등 해외 박람회 참가 이력을 소개합니다." },
+    en: { title: "Partners & Network | Retail, Distributors & Trade Shows | BOOMYOUNG", desc: "BOOMYOUNG products reach Korean retail chains and pet specialty distributors, and we exhibit at trade shows such as Global Pet Expo in Orlando." },
   },
   contact: {
     path: "/contact", asset: "/contact", docs: ["home-content"], crumb: { ko: "문의하기", en: "Contact" },
-    ko: { title: "문의하기 | (주)부명 BOOMYOUNG", desc: "B2B 입점, 제휴, OEM/ODM 관련 문의를 남겨주시면 담당자가 확인 후 연락드립니다." },
-    en: { title: "Contact | BOOMYOUNG", desc: "Leave an inquiry about B2B partnerships, distribution or OEM/ODM and we will get back to you." },
+    ko: { title: "문의하기 | B2B 입점·OEM/ODM·제휴 문의 (주)부명", desc: "B2B 입점, 제휴, OEM/ODM, 수출 관련 문의를 남겨주시면 담당자가 확인 후 연락드립니다." },
+    en: { title: "Contact | B2B, OEM/ODM & Export Inquiries | BOOMYOUNG", desc: "Leave an inquiry about B2B partnerships, distribution, OEM/ODM or export and we will get back to you." },
   },
 };
 const PAGE_BY_PATH = Object.fromEntries(Object.entries(PAGES).map(([k, v]) => [v.path, k]));
