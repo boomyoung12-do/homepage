@@ -13,6 +13,7 @@ function el(tag, attrs = {}, children = []) {
     if (v === true) node.setAttribute(k, ""); // boolean attribute (autoplay, muted, ...)
     else if (k === "html") node.innerHTML = v;
     else if (k === "text") node.textContent = v;
+    else if (k === "src" && /^(img|video|source)$/.test(tag) && typeof v === "string" && !/^(\/|[a-z][a-z0-9+.-]*:)/i.test(v)) node.setAttribute(k, "/" + v); // 상대 경로(assets/…)는 루트 기준으로 — 제품 보기가 주소를 /products/<id> 로 바꿔도 이미지가 깨지지 않게
     else node.setAttribute(k, v);
   }
   for (const c of [].concat(children)) if (c) node.appendChild(c);

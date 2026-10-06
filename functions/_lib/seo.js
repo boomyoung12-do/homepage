@@ -500,6 +500,7 @@ export async function renderPage(context, route) {
     .on('meta[property^="og:"]', { element: (e) => e.remove() })
     .on('meta[name^="twitter:"]', { element: (e) => e.remove() })
     .on('link[rel="canonical"]', { element: (e) => e.remove() })
+    .on('link[rel="icon"]', { element: (e) => e.setAttribute("href", "/favicon.png") })
     .on("main", { element: (e) => e.prepend(`<div id="seo-snapshot" aria-hidden="true">${snapshot}</div>`, { html: true }) })
     .on("a[href]", {
       element: (e) => {
