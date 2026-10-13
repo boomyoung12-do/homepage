@@ -951,3 +951,9 @@
 
 /* 어드민 로고 배율(logoScale): 왼쪽 정렬 로고는 왼쪽 기준으로 커지게 */
 .brand-own-logo img, .brand-imported-logo img { transform-origin: left center; }
+
+/* 모바일 필터 접기: "CATEGORY: ▼" 글자를 눌러 칩을 펼친다 */
+.filter-label[data-fold] { cursor: pointer; user-select: none; display: inline-flex; align-items: center; gap: 4px; padding: 6px 0; }
+.filter-label[data-fold] .fold-picked { color: var(--ink); letter-spacing: 0; font-size: 13px; }
+.filter-label[data-fold] .fold-arrow { font-size: 12px; color: var(--brand, #0066b3); }
+.filter-row[hidden] { display: none; }

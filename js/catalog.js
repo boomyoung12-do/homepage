@@ -23,8 +23,59 @@ function buildFilters(categories, brands) {
   const brandRow = document.getElementById("brand-filter-row");
   brandRow.innerHTML = "";
   brands.forEach((b) => brandRow.appendChild(chip(t(b, "label", lang), b.id, activeBrand, setBrand)));
-  setupCollapse(catRow, { keepRows: 1, minCount: 5, open: () => categoryRowOpen, setOpen: (v) => (categoryRowOpen = v), label: (n) => (lang === "en" ? `+${n} more ▼` : `카테고리 ${n}개 더보기 ▼`) });
-  setupCollapse(brandRow, { keepRows: 1, minCount: 5, open: () => brandRowOpen, setOpen: (v) => (brandRowOpen = v), label: (n) => (lang === "en" ? `+${n} more ▼` : `브랜드 ${n}개 더보기 ▼`) });
+  if (matchMedia("(max-width: 760px)").matches) {
+    // 모바일: 칩을 통째로 접어 두고 "CATEGORY: ▼" 글자를 눌러 펼친다
+    setupFold(catRow, "category");
+    setupFold(brandRow, "brand");
+  } else {
+    setupCollapse(catRow, { keepRows: 1, minCount: 5, open: () => categoryRowOpen, setOpen: (v) => (categoryRowOpen = v), label: (n) => (lang === "en" ? `+${n} more ▼` : `카테고리 ${n}개 더보기 ▼`) });
+    setupCollapse(brandRow, { keepRows: 1, minCount: 5, open: () => brandRowOpen, setOpen: (v) => (brandRowOpen = v), label: (n) => (lang === "en" ? `+${n} more ▼` : `브랜드 ${n}개 더보기 ▼`) });
+  }
+}
+
+// 모바일에서 칩이 화면을 채우지 않도록 처음에는 칩을 숨기고, 글자 옆 삼각형으로 접고 편다.
+// 접혀 있을 때는 지금 고른 값을 글자 옆에 보여 준다 (예: CATEGORY: 간식 ▼).
+const foldOpen = { category: false, brand: false };
+function paintFolds() {
+  document.querySelectorAll("[data-fold]").forEach((label) => {
+    const kind = label.dataset.fold;
+    const row = document.getElementById(kind + "-filter-row");
+    const id = kind === "category" ? activeCategory : activeBrand;
+    const picked = id !== "all" ? labelFor(kind, id) : "";
+    row.hidden = !foldOpen[kind];
+    label.textContent = "";
+    label.append(label.dataset.base + " ");
+    if (picked && !foldOpen[kind]) label.append(el("strong", { class: "fold-picked", text: picked }), " ");
+    label.append(el("span", { class: "fold-arrow", text: foldOpen[kind] ? "▲" : "▼" }));
+    label.setAttribute("aria-expanded", String(foldOpen[kind]));
+  });
+}
+function setupFold(row, kind) {
+  const group = row.closest(".filter-group");
+  group.querySelector(".brand-more")?.remove();
+  row.classList.remove("collapsed");
+  row.style.maxHeight = "";
+  row.style.overflow = "";
+  const label = group.querySelector(".filter-label");
+  label.dataset.base = label.dataset.base || label.textContent.trim();
+  label.dataset.fold = kind;
+  label.setAttribute("role", "button");
+  label.setAttribute("tabindex", "0");
+  if (!label.dataset.bound) {
+    label.dataset.bound = "1";
+    const toggle = () => {
+      foldOpen[kind] = !foldOpen[kind];
+      paintFolds();
+    };
+    label.addEventListener("click", toggle);
+    label.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        toggle();
+      }
+    });
+  }
+  paintFolds();
 }
 
 // 칩이 많아지면 줄이 끝없이 길어지므로 keepRows 줄까지만 보여주고 "더보기"로 편다.
@@ -89,6 +140,7 @@ function buildFiltersActiveState() {
   document.querySelectorAll("#brand-filter-row .filter-chip").forEach((btn) => {
     btn.classList.toggle("active", btn.textContent === labelFor("brand", activeBrand));
   });
+  paintFolds();
 }
 function labelFor(kind, id) {
   const list = kind === "category" ? window.__catalogCategories : window.__catalogBrands;
