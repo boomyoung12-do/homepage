@@ -6,7 +6,7 @@
 //
 // - seedVersion 이 없으면(처음): 제품·카테고리·브랜드 전부 합친다.
 // - seedVersion 이 예전 값이면: 이미 저장된 문서이므로 어드민에서 지운 제품을 되살리지 않고,
-//   아직 손대지 않은 값(프리런 브랜드, 빈 영문명, 빈 상세 이미지)만 보정한다.
+//   아직 손대지 않은 값(프리런 브랜드 복원, 빈 영문명, 빈 상세 이미지)만 보정한다.
 
 import seed from "../../content/seed-xl.json";
 
@@ -24,7 +24,8 @@ export function applySeed(key, doc) {
       let q = p;
       if (fresh && seed.categoryByCode[code]) q = { ...q, category: seed.categoryByCode[code] };
       if (!(q.detailImages || []).length && seed.detailByCode[code]) q = { ...q, detailImages: seed.detailByCode[code] };
-      if (s && q.brandId === "freerun") q = { ...q, brandId: s.brandId, nameKo: s.nameKo, nameEn: s.nameEn };
+      // 프리런은 독립 브랜드다 (한때 데이스포로 합쳐 보이던 문서를 되돌린다)
+      if (s && s.brandId === "freerun" && String(q.id).startsWith("p-") && q.brandId !== "freerun") q = { ...q, brandId: "freerun", nameKo: s.nameKo, nameEn: s.nameEn };
       if (s && !q.nameEn && s.nameEn && String(q.id).startsWith("p-")) q = { ...q, nameEn: s.nameEn };
       return q;
     });
@@ -52,8 +53,10 @@ export function applySeed(key, doc) {
       seed.brandChips.forEach((b) => chips.some((c) => c.id === b.id) || chips.push(b));
       out.brands = chips;
     }
-    // 쓰는 제품이 없는 프리런 브랜드 칩은 정리한다
-    if (!products.some((p) => p.brandId === "freerun")) out.brands = (out.brands || doc.brands || []).filter((b) => b.id !== "freerun");
+    // 이전 버전에서 프리런 칩이 빠졌다면 되살린다
+    if (!fresh && products.some((p) => p.brandId === "freerun") && !(out.brands || doc.brands || []).some((b) => b.id === "freerun")) {
+      out.brands = [...(out.brands || doc.brands || []), ...seed.brandChips.filter((b) => b.id === "freerun")];
+    }
   }
 
   if (key === "brands-content") {
@@ -62,7 +65,8 @@ export function applySeed(key, doc) {
       const known = new Set([...(doc.brands || []), ...imported].map((b) => b.id));
       seed.importedBrands.forEach((b) => known.has(b.id) || imported.push(b));
     }
-    out.importedBrands = imported.filter((b) => b.id !== "freerun" || b.logo);
+    if (!fresh && !imported.some((b) => b.id === "freerun")) imported.push(...seed.importedBrands.filter((b) => b.id === "freerun"));
+    out.importedBrands = imported;
   }
   return out;
 }
