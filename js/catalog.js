@@ -23,32 +23,40 @@ function buildFilters(categories, brands) {
   const brandRow = document.getElementById("brand-filter-row");
   brandRow.innerHTML = "";
   brands.forEach((b) => brandRow.appendChild(chip(t(b, "label", lang), b.id, activeBrand, setBrand)));
-  setupBrandCollapse(brandRow, brands.length);
+  setupCollapse(catRow, { keepRows: 1, minCount: 5, open: () => categoryRowOpen, setOpen: (v) => (categoryRowOpen = v), label: (n) => (lang === "en" ? `+${n} more ▼` : `카테고리 ${n}개 더보기 ▼`) });
+  setupCollapse(brandRow, { keepRows: 2, minCount: 13, open: () => brandRowOpen, setOpen: (v) => (brandRowOpen = v), label: (n) => (lang === "en" ? `+${n} more ▼` : `브랜드 ${n}개 더보기 ▼`) });
 }
 
-// 브랜드가 많아지면 칩 줄이 끝없이 길어지므로 두 줄까지만 보여주고 "더보기"로 편다.
-// 선택된 브랜드가 접힌 영역에 있으면 처음부터 펼쳐 둔다.
+// 칩이 많아지면 줄이 끝없이 길어지므로 keepRows 줄까지만 보여주고 "더보기"로 편다.
+// 선택된 칩이 접힌 영역에 있으면 처음부터 펼쳐 둔다.
 let brandRowOpen = false;
-function setupBrandCollapse(row, count) {
+let categoryRowOpen = false;
+function setupCollapse(row, { keepRows, minCount, open, setOpen, label }) {
   const group = row.closest(".filter-group");
-  group.querySelector(".brand-more")?.remove();
+  const moreClass = "more-" + row.id;
+  group.querySelector("." + moreClass)?.remove();
   row.classList.remove("collapsed");
-  if (count <= 12) return;
+  row.style.maxHeight = "";
+  if (row.children.length < minCount) return;
   requestAnimationFrame(() => {
     const chips = [...row.children];
-    const rows = new Set(chips.map((c) => c.offsetTop)).size;
-    if (rows <= 2) return;
-    const secondRowTop = [...new Set(chips.map((c) => c.offsetTop))].sort((a, b) => a - b)[1];
+    const tops = [...new Set(chips.map((c) => c.offsetTop))].sort((x, y) => x - y);
+    if (tops.length <= keepRows) return;
+    const limitTop = tops[keepRows]; // 접힌 영역이 시작되는 줄
+    const kept = chips.filter((c) => c.offsetTop < limitTop);
+    const keptBottom = Math.max(...kept.map((c) => c.offsetTop + c.offsetHeight)) - chips[0].offsetTop;
     const activeChip = row.querySelector(".filter-chip.active");
-    if (activeChip && activeChip.offsetTop > secondRowTop) brandRowOpen = true;
-    const hidden = chips.filter((c) => c.offsetTop > secondRowTop).length;
-    const btn = el("button", { type: "button", class: "brand-more" });
+    if (activeChip && activeChip.offsetTop >= limitTop) setOpen(true);
+    const hidden = chips.length - kept.length;
+    const btn = el("button", { type: "button", class: "brand-more " + moreClass });
     const paint = () => {
-      row.classList.toggle("collapsed", !brandRowOpen);
-      btn.textContent = brandRowOpen ? (lang === "en" ? "Show less ▲" : "접기 ▲") : (lang === "en" ? `+${hidden} more ▼` : `브랜드 ${hidden}개 더보기 ▼`);
+      row.classList.toggle("collapsed", !open());
+      row.style.maxHeight = open() ? "" : keptBottom + "px";
+      row.style.overflow = open() ? "" : "hidden";
+      btn.textContent = open() ? (lang === "en" ? "Show less ▲" : "접기 ▲") : label(hidden);
     };
     btn.addEventListener("click", () => {
-      brandRowOpen = !brandRowOpen;
+      setOpen(!open());
       paint();
     });
     group.appendChild(btn);

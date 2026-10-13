@@ -936,7 +936,7 @@
 }
 
 /* 카탈로그 브랜드 칩: 많아지면 두 줄까지만 보이고 "더보기"로 편다 */
-#brand-filter-row.collapsed { max-height: 92px; overflow: hidden; }
+#brand-filter-row.collapsed, #category-filter-row.collapsed { overflow: hidden; } /* 높이는 catalog.js 가 칩 줄 수에 맞춰 정한다 */
 .brand-more {
   margin: 10px 0 0;
   padding: 6px 2px;
