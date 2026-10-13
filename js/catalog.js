@@ -24,7 +24,7 @@ function buildFilters(categories, brands) {
   brandRow.innerHTML = "";
   brands.forEach((b) => brandRow.appendChild(chip(t(b, "label", lang), b.id, activeBrand, setBrand)));
   setupCollapse(catRow, { keepRows: 1, minCount: 5, open: () => categoryRowOpen, setOpen: (v) => (categoryRowOpen = v), label: (n) => (lang === "en" ? `+${n} more ▼` : `카테고리 ${n}개 더보기 ▼`) });
-  setupCollapse(brandRow, { keepRows: 2, minCount: 13, open: () => brandRowOpen, setOpen: (v) => (brandRowOpen = v), label: (n) => (lang === "en" ? `+${n} more ▼` : `브랜드 ${n}개 더보기 ▼`) });
+  setupCollapse(brandRow, { keepRows: 1, minCount: 5, open: () => brandRowOpen, setOpen: (v) => (brandRowOpen = v), label: (n) => (lang === "en" ? `+${n} more ▼` : `브랜드 ${n}개 더보기 ▼`) });
 }
 
 // 칩이 많아지면 줄이 끝없이 길어지므로 keepRows 줄까지만 보여주고 "더보기"로 편다.
