@@ -8,10 +8,12 @@ const SECTIONS = [
   { id: "about", label: "회사소개", endpoint: "/api/about-content", preview: "about.html" },
   { id: "manufacturing", label: "제조·역량", endpoint: "/api/manufacturing-content", preview: "manufacturing.html" },
   { id: "network", label: "파트너·네트워크", endpoint: "/api/network-content", preview: "network.html" },
+  { id: "inquiries", label: "B2B 문의" },
   { id: "security", label: "보안" },
 ];
 
 let activeSection = "home";
+let unreadInquiries = 0; // 메뉴에 붙이는 안 읽은 문의 수
 
 function qs(sel, root = document) {
   return root.querySelector(sel);
@@ -46,7 +48,7 @@ function renderTabs() {
   const nav = qs("#admin-tabs");
   nav.innerHTML = "";
   SECTIONS.forEach((s) => {
-    const btn = el("button", { class: "admin-tab" + (s.id === activeSection ? " active" : ""), type: "button", text: s.label });
+    const btn = el("button", { class: "admin-tab" + (s.id === activeSection ? " active" : ""), type: "button", text: s.id === "inquiries" && unreadInquiries ? `${s.label} (${unreadInquiries})` : s.label });
     btn.addEventListener("click", () => {
       activeSection = s.id;
       renderTabs();
@@ -1239,6 +1241,10 @@ async function renderSecuritySection(panel) {
 }
 
 async function loadSection(id) {
+  // 문의 내역은 자기 메뉴에서만 보이고, 나머지 메뉴에서는 편집 화면만 보인다
+  qs("#inquiry-panel").hidden = id !== "inquiries";
+  qs("#editor-section").hidden = id === "inquiries";
+  if (id === "inquiries") return loadInquiries();
   if (id === "add-brand") return renderAddBrandForm(qs("#editor-panel"));
   if (id === "add-product") return renderAddProductForm(qs("#editor-panel"));
   if (id === "security") return renderSecuritySection(qs("#editor-panel"));
@@ -1279,7 +1285,9 @@ async function loadInquiries() {
   }
 
   list.innerHTML = "";
-  qs("#inquiry-count").textContent = `총 ${items.length}건 (미확인 ${items.filter((i) => !i.read).length}건)`;
+  unreadInquiries = items.filter((i) => !i.read).length;
+  qs("#inquiry-count").textContent = `총 ${items.length}건 (미확인 ${unreadInquiries}건)`;
+  renderTabs();
   if (items.length === 0) {
     list.appendChild(el("p", { class: "admin-empty", text: "접수된 문의가 없습니다." }));
     return;
