@@ -1,45 +1,68 @@
-// 엑셀(홈페이지 상품 리스트)에서 가져온 제품·카테고리·브랜드를 기존 문서에 한 번 합친다.
+// 엑셀(홈페이지 상품 리스트)에서 가져온 제품·카테고리·브랜드를 기존 문서에 합친다.
 //
 // 어드민에서 저장한 문서(D1)가 파일(content/*.json)보다 우선하므로, 파일만 바꾸면 반영되지 않는다.
 // 그래서 문서를 읽을 때 seedVersion 이 다르면 시드를 합쳐 돌려주고(저장은 하지 않음),
 // 어드민이 그 문서를 저장하는 순간 seedVersion 도 함께 저장되어 이후에는 다시 합치지 않는다.
-// → 합친 뒤 어드민에서 지운 제품이 되살아나지 않는다.
+//
+// - seedVersion 이 없으면(처음): 제품·카테고리·브랜드 전부 합친다.
+// - seedVersion 이 예전 값이면: 이미 저장된 문서이므로 어드민에서 지운 제품을 되살리지 않고,
+//   아직 손대지 않은 값(프리런 브랜드, 빈 영문명, 빈 상세 이미지)만 보정한다.
 
 import seed from "../../content/seed-xl.json";
 
+const seedByCode = new Map(seed.products.map((p) => [p.code, p]));
+
 export function applySeed(key, doc) {
   if (!doc || typeof doc !== "object" || doc.seedVersion === seed.version) return doc;
+  const fresh = !doc.seedVersion;
   const out = { ...doc, seedVersion: seed.version };
 
   if (key === "catalog-content") {
-    const products = (doc.products || []).map((p) => (seed.categoryByCode[p.code] ? { ...p, category: seed.categoryByCode[p.code] } : p));
-    const codes = new Set(products.map((p) => String(p.code).trim()));
-    seed.products.forEach((p) => codes.has(p.code) || products.push(p));
+    const products = (doc.products || []).map((p) => {
+      const code = String(p.code).trim();
+      const s = seedByCode.get(code);
+      let q = p;
+      if (fresh && seed.categoryByCode[code]) q = { ...q, category: seed.categoryByCode[code] };
+      if (!(q.detailImages || []).length && seed.detailByCode[code]) q = { ...q, detailImages: seed.detailByCode[code] };
+      if (s && q.brandId === "freerun") q = { ...q, brandId: s.brandId, nameKo: s.nameKo, nameEn: s.nameEn };
+      if (s && !q.nameEn && s.nameEn && String(q.id).startsWith("p-")) q = { ...q, nameEn: s.nameEn };
+      return q;
+    });
+    if (fresh) {
+      const codes = new Set(products.map((p) => String(p.code).trim()));
+      seed.products.forEach((p) => codes.has(p.code) || products.push(p));
+    }
     out.products = products;
 
-    // 카테고리: 엑셀 카테고리 → 그 밖에 아직 쓰는 기존 카테고리 순서
-    const used = new Set(products.map((p) => p.category));
-    const old = (doc.categories || []).filter((c) => c.id !== "all" && !seed.categories.some((s) => s.id === c.id) && used.has(c.id));
-    const usedOld = new Set(old.map((c) => c.id));
-    products.forEach((p) => {
-      if (!seed.categories.some((s) => s.id === p.category) && !usedOld.has(p.category)) {
-        usedOld.add(p.category);
-        old.push({ id: p.category, label: p.category, labelEn: p.category });
-      }
-    });
-    const all = (doc.categories || []).find((c) => c.id === "all") || { id: "all", label: "전체", labelEn: "All" };
-    out.categories = [all, ...seed.categories, ...old];
+    if (fresh) {
+      // 카테고리: 엑셀 카테고리 → 그 밖에 아직 쓰는 기존 카테고리 순서
+      const used = new Set(products.map((p) => p.category));
+      const old = (doc.categories || []).filter((c) => c.id !== "all" && !seed.categories.some((s) => s.id === c.id) && used.has(c.id));
+      const usedOld = new Set(old.map((c) => c.id));
+      products.forEach((p) => {
+        if (!seed.categories.some((s) => s.id === p.category) && !usedOld.has(p.category)) {
+          usedOld.add(p.category);
+          old.push({ id: p.category, label: p.category, labelEn: p.category });
+        }
+      });
+      const all = (doc.categories || []).find((c) => c.id === "all") || { id: "all", label: "전체", labelEn: "All" };
+      out.categories = [all, ...seed.categories, ...old];
 
-    const chips = [...(doc.brands || [])];
-    seed.brandChips.forEach((b) => chips.some((c) => c.id === b.id) || chips.push(b));
-    out.brands = chips;
+      const chips = [...(doc.brands || [])];
+      seed.brandChips.forEach((b) => chips.some((c) => c.id === b.id) || chips.push(b));
+      out.brands = chips;
+    }
+    // 쓰는 제품이 없는 프리런 브랜드 칩은 정리한다
+    if (!products.some((p) => p.brandId === "freerun")) out.brands = (out.brands || doc.brands || []).filter((b) => b.id !== "freerun");
   }
 
   if (key === "brands-content") {
     const imported = [...(doc.importedBrands || [])];
-    const known = new Set([...(doc.brands || []), ...imported].map((b) => b.id));
-    seed.importedBrands.forEach((b) => known.has(b.id) || imported.push(b));
-    out.importedBrands = imported;
+    if (fresh) {
+      const known = new Set([...(doc.brands || []), ...imported].map((b) => b.id));
+      seed.importedBrands.forEach((b) => known.has(b.id) || imported.push(b));
+    }
+    out.importedBrands = imported.filter((b) => b.id !== "freerun" || b.logo);
   }
   return out;
 }
