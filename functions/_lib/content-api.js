@@ -1,5 +1,6 @@
 import { isAuthed } from "./auth.js";
 import { pingIndexNow } from "./seo.js";
+import { applySeed } from "./seed.js";
 
 // Shared GET/PUT handlers for a D1-backed content document. GET is public
 // (every visitor reads the same JSON, falling back to the build-time default
@@ -12,7 +13,7 @@ export function makeContentApi(contentKey, defaultContent) {
       const row = await env.DB.prepare('SELECT data FROM content WHERE key = ?').bind(contentKey).first();
       if (row) content = JSON.parse(row.data);
     }
-    return Response.json(content, { headers: { "Cache-Control": "no-store" } });
+    return Response.json(applySeed(contentKey, content), { headers: { "Cache-Control": "no-store" } });
   }
 
   async function onRequestPut({ request, env, waitUntil }) {

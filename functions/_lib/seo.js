@@ -12,6 +12,7 @@ import manufacturingDefault from "../../content/manufacturing.json";
 import networkDefault from "../../content/network.json";
 import brandsDefault from "../../content/brands.json";
 import catalogDefault from "../../content/catalog.json";
+import { applySeed } from "./seed.js";
 
 export const PROD_ORIGIN = "https://boomyoung.com";
 // 대표 주소(boomyoung.com)로 영구 이동시킬 주소들
@@ -107,14 +108,14 @@ const safeDecode = (s) => {
 // ---------- 데이터 읽기 ----------
 export async function loadDocs(env, keys) {
   const out = {};
-  keys.forEach((k) => (out[k] = { data: DEFAULTS[k], updatedAt: null }));
+  keys.forEach((k) => (out[k] = { data: applySeed(k, DEFAULTS[k]), updatedAt: null }));
   if (!env.DB) return out;
   try {
     const marks = keys.map(() => "?").join(",");
     const { results } = await env.DB.prepare(`SELECT key, data, updated_at FROM content WHERE key IN (${marks})`).bind(...keys).all();
     for (const row of results || []) {
       try {
-        out[row.key] = { data: JSON.parse(row.data), updatedAt: row.updated_at };
+        out[row.key] = { data: applySeed(row.key, JSON.parse(row.data)), updatedAt: row.updated_at };
       } catch {
         /* 깨진 문서는 기본값을 쓴다 */
       }
