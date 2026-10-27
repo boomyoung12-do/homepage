@@ -13,7 +13,7 @@ import seed from "../../content/seed-xl.json";
 const seedByCode = new Map(seed.products.map((p) => [p.code, p]));
 
 // 2차 엑셀: 성분·원료·유통기한·주요 특징·B2B 링크는 비어 있는 칸만 채운다 (어드민에서 입력한 값은 그대로 둔다)
-function fillEmpty(q) {
+function fillKo(q) {
   const f = seed.fillByCode[String(q.code).trim()];
   if (!f) return q;
   const add = {};
@@ -24,6 +24,19 @@ function fillEmpty(q) {
   if (!q.b2bLink && f.b2bLink) add.b2bLink = f.b2bLink;
   return Object.keys(add).length ? { ...q, ...add } : q;
 }
+
+// 영문 번역도 빈 칸만 채운다. 특징은 한글 줄 수가 같을 때만 쓴다 (어드민에서 한글을 고쳤다면 어긋난 번역을 쓰지 않는다)
+function fillEn(q) {
+  const en = seed.enByCode?.[String(q.code).trim()];
+  if (!en) return q;
+  const add = {};
+  if (en.featuresEn && !(q.featuresEn || []).length && en.featuresEn.length === (q.features || []).length) add.featuresEn = en.featuresEn;
+  if (en.ingredientsEn && q.ingredients && !q.ingredientsEn) add.ingredientsEn = en.ingredientsEn;
+  if (en.shelfLifeEn && q.shelfLife && !q.shelfLifeEn) add.shelfLifeEn = en.shelfLifeEn;
+  return Object.keys(add).length ? { ...q, ...add } : q;
+}
+
+const fillEmpty = (q) => fillEn(fillKo(q));
 
 export function applySeed(key, doc) {
   if (!doc || typeof doc !== "object" || doc.seedVersion === seed.version) return doc;
@@ -80,7 +93,8 @@ export function applySeed(key, doc) {
       seed.importedBrands.forEach((b) => known.has(b.id) || imported.push(b));
     }
     if (!fresh && !imported.some((b) => b.id === "freerun")) imported.push(...seed.importedBrands.filter((b) => b.id === "freerun"));
-    out.importedBrands = imported;
+    // 슬로건이 이미 영어인 브랜드는 영문 칸이 비어 있어도 그대로 쓴다
+    out.importedBrands = imported.map((b) => (b.tagline && !b.taglineEn && !/[가-힣]/.test(b.tagline) ? { ...b, taglineEn: b.tagline } : b));
   }
   return out;
 }
