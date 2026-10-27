@@ -1,5 +1,7 @@
-const NUTRITION_LABELS = { protein: "조단백", fat: "조지방", fiber: "조섬유", moisture: "수분" };
-const NUTRITION_LABELS_EN = { protein: "Crude Protein", fat: "Crude Fat", fiber: "Crude Fiber", moisture: "Moisture" };
+const NUTRITION_LABELS = { protein: "조단백", fat: "조지방", fiber: "조섬유", ash: "조회분", calcium: "칼슘", phosphorus: "인", moisture: "수분" };
+const NUTRITION_LABELS_EN = { protein: "Crude Protein", fat: "Crude Fat", fiber: "Crude Fiber", ash: "Crude Ash", calcium: "Calcium", phosphorus: "Phosphorus", moisture: "Moisture" };
+// 기본 4칸은 값이 없어도 "-"로 보이고, 조회분·칼슘·인은 값이 있을 때만 나온다
+const NUTRITION_BASE = ["protein", "fat", "fiber", "moisture"];
 
 let allProducts = [];
 let brandLabels = {};
@@ -228,7 +230,7 @@ function openModal(p) {
     ? el(
         "div",
         { class: "pd-nutrition" },
-        Object.keys(nutritionLabels).map((key) =>
+        Object.keys(nutritionLabels).filter((key) => NUTRITION_BASE.includes(key) || nutrition[key]).map((key) =>
           el("div", {}, [el("div", { class: "label", text: nutritionLabels[key] }), el("div", { class: "value", text: nutrition[key] || "-" })])
         )
       )

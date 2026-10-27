@@ -12,6 +12,19 @@ import seed from "../../content/seed-xl.json";
 
 const seedByCode = new Map(seed.products.map((p) => [p.code, p]));
 
+// 2차 엑셀: 성분·원료·유통기한·주요 특징·B2B 링크는 비어 있는 칸만 채운다 (어드민에서 입력한 값은 그대로 둔다)
+function fillEmpty(q) {
+  const f = seed.fillByCode[String(q.code).trim()];
+  if (!f) return q;
+  const add = {};
+  if (!(q.features || []).length && f.features.length) add.features = f.features;
+  if (!q.ingredients && f.ingredients) add.ingredients = f.ingredients;
+  if (!Object.values(q.nutrition || {}).some(Boolean) && Object.keys(f.nutrition).length) add.nutrition = f.nutrition;
+  if (!q.shelfLife && f.shelfLife) Object.assign(add, { shelfLife: f.shelfLife, shelfLifeEn: f.shelfLifeEn });
+  if (!q.b2bLink && f.b2bLink) add.b2bLink = f.b2bLink;
+  return Object.keys(add).length ? { ...q, ...add } : q;
+}
+
 export function applySeed(key, doc) {
   if (!doc || typeof doc !== "object" || doc.seedVersion === seed.version) return doc;
   const fresh = !doc.seedVersion;
@@ -27,11 +40,12 @@ export function applySeed(key, doc) {
       // 프리런은 독립 브랜드다 (한때 데이스포로 합쳐 보이던 문서를 되돌린다)
       if (s && s.brandId === "freerun" && String(q.id).startsWith("p-") && q.brandId !== "freerun") q = { ...q, brandId: "freerun", nameKo: s.nameKo, nameEn: s.nameEn };
       if (s && !q.nameEn && s.nameEn && String(q.id).startsWith("p-")) q = { ...q, nameEn: s.nameEn };
+      q = fillEmpty(q);
       return q;
     });
     if (fresh) {
       const codes = new Set(products.map((p) => String(p.code).trim()));
-      seed.products.forEach((p) => codes.has(p.code) || products.push(p));
+      seed.products.forEach((p) => codes.has(p.code) || products.push(fillEmpty(p)));
     }
     out.products = products;
 
